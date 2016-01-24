@@ -45,23 +45,33 @@ isPage: true
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="Dates_programmes.html">Dates &amp; Programmes</a></li>
-            <li><a href="Information.html">Information</a></li>
-            <li><a href="Q_A.html">Q&amp;A</a></li>
+      <ul class="nav nav-tabs" role="tablist">
+      <!-- in the list/link elements below, which enable different sections of the html as a tab, 
+         role="presentation" ....
+         role="tab" data-toggle="tab"   ....  owned by the <ul role="tablist"> above and related to the various <div role="tabpanel"> below
+         aria-controls="tickets" href="#tickets"  both refer to the id of the div which is the page tab.
+         If CSS is disabled, .....
+      -->
+            <li role="presentation" class="active"><a aria-controls="home" role="tab" data-toggle="tab" href="#home">Home</a></li>
+            <li role="presentation"><a role="tab" data-toggle="tab" aria-controls="programmes" href="#programmes">Dates &amp; Programmes</a></li>
+            <li role="presentation"><a role="tab" data-toggle="tab" aria-controls="tickets" href="#tickets">Tickets</a></li>
+            <li role="presentation"><a role="tab" data-toggle="tab" aria-controls="Information" href="#Information">Information</a></li>
+            <li role="presentation"><a role="tab" data-toggle="tab" aria-controls="Q_A" href="#Q_A">Q&amp;A</a></li>
             <li><a href="Pictures.html">Pictures</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#credits">Acknowledgments</a></li>
-      </ul>
+            <li role="presentation"><a role="tab" data-toggle="tab" aria-controls="about" href="#about">About Us</a></li>
+            <li role="presentation"><a role="tab" data-toggle="tab" aria-controls="credits" href="#credits">Acknowledgments</a></li>
+        </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
- <div class="alert  alert-info"  role="alert">18 Jan 2016 - Dancing tonight will be <strong>in the Palace</strong> - Yippee!</div>
+ <div class="alert  alert-info"  role="alert">18 Jan 2016 - Dancing tonight will be <strong>in the Palace</strong> - Yippee!
+ </div>
 
+ <div class="tab-content" id="content">  <!-- BS, multi-tab single page -->
+    <div role="tabpanel" class="tab-pane active" id="home">
 
-<div id="content" class="row">  <!-- BS, row 1 -->
+<div class="row">  <!-- BS, row 1 -->
 
 <div class="col-md-12">  <!-- BS, col -->
 
@@ -72,10 +82,12 @@ isPage: true
  of the Palace where Mary Queen of Scots was born! 
  (if the weather is poor, we have an alternative venue)
  </p>
+ 
+ </div> <!-- BS col -->
 
  </div>  <!-- BS, row 1 -->  
  
- <div id="content" class="row">  <!-- BS, row 2-->
+ <div class="row">  <!-- BS, row 2-->
 
 
 
@@ -210,7 +222,9 @@ listed in <a href="#credits">our credits page</a>.
 
   </div>  <!-- BS, row 3 -->  
 
+ </div>  <!-- BS, end of home tab -->
 
+     <div role="tabpanel" class="tab-pane " id="programmes">   <!-- BS tabbed page -->
 
 
 <h1>from Dates Programmes page</h1>
@@ -232,7 +246,7 @@ listed in <a href="#credits">our credits page</a>.
 <p >Saturday Morning Jig</p>
  <p>Virginia Reel</p>
  <p>Britannia Two Step</p>
- <p>Lady Catherine Bruce&#39s Reel</p>
+ <p>Lady Catherine Bruce&#39;s Reel</p>
   <p>Highland Schottische</p>
   <p>Irish Rover  / Isle of Skye</p>
   <p>The Riverside Jig</p>
@@ -372,7 +386,10 @@ listed in <a href="#credits">our credits page</a>.
 
 </div>  <!-- BS, row, programmes -->
 
-               
+</div> <!-- BS end of Programmes tab -->
+
+     <div role="tabpanel" class="tab-pane " id="Information">   <!-- BS tabbed page -->
+             
 
 <h1>mostly from Information page</h1>
 
@@ -388,8 +405,8 @@ listed in <a href="#credits">our credits page</a>.
 
 <!-- This map area is populated by JS, using the Google Maps API. Also needs our custom CSS and JS -->
 <!-- This may be the same map as used for the 2 venues. May need to be different for people driving here. -->
-<div id="map_wrapper">
-    <div id="map_canvas" class="mapping"></div>
+<div id="map_wrapper1">
+    <div id="map_canvas1" class="mapping"></div>
 </div>      
       
       <p><b>Linlithgow Palace</b> (EH49 7AL) is in the town centre. 
@@ -539,8 +556,8 @@ for the sake of the band as well as the dancers.
       <p><strong> Need to tweak the main Linlithgow map so this one (for the 2 venues) also shows</strong></p>
 
 <!-- This map area is populated by JS, using the Google Maps API. Also needs our custom CSS and JS -->
-<div id="map_wrapper">
-    <div id="map_canvas" class="mapping"></div>
+<div id="map_wrapper2">
+    <div id="map_canvas2" class="mapping"></div>
 </div>      
       
 
@@ -570,9 +587,13 @@ for the sake of the band as well as the dancers.
   </div>   <!-- BS panel-body -->
 </div>  <!-- BS panel -->           
 
+</div> <!-- BS end of Information tab -->
+
+<div role="tabpanel" class="tab-pane " id="tickets">   <!-- BS tabbed page -->
+
 <div class="panel panel-default">   <!-- BS -->
   <div class="panel-heading">
-    <h2 class="panel-title" id="tickets">Tickets</h2>
+    <h2 class="panel-title">Tickets</h2>
   </div>
   <div class="panel-body">  <!-- BS -->
 
@@ -605,25 +626,17 @@ for the sake of the band as well as the dancers.
 <p>Please note that we are not responsible for the accuracy of information contained in 
 			external links from this site.</p>     
       
+</div> <!-- BS end of Tickets tab -->
+
  
  
- 
- 
- 
-      
-<h1>from Pictures page</h2>
+<!-- CAREFUL - PICTURES embedded in tabbed page -->       
+<h1>from Pictures page</h1>
 <p>(no text on that page)</p> 
 
 
 
-
-
-
-
-
-
-
-
+     <div role="tabpanel" class="tab-pane " id="Q_A">   <!-- BS tabbed page -->
 
 
 
@@ -697,7 +710,7 @@ for the sake of the band as well as the dancers.
 			<dd>No, but there is Tea/Orange and shortbread provided at the 
 			interval</dd>
 			
-			<dt>Local Restaurants /Bars</dd>
+			<dt>Local Restaurants /Bars</dt>
 			<dd>  Yes - several nearby :
       <ul>
 			<li>Livingstons 01506 846565</li>
@@ -719,7 +732,14 @@ for the sake of the band as well as the dancers.
       <p>Please help us to make Scotland litter free </p>
 
 
-<h1 id="about">Possible &quot;About Us&quot; Page</h1>
+
+      </div> <!-- BS end of Q&A tab -->
+
+     <div role="tabpanel" class="tab-pane " id="about">   <!-- BS tabbed page -->
+
+
+
+<h1>Possible &quot;About Us&quot; Page</h1>
 
 Linlithgow Scotch Hop was first organised in 1981(?) by John Carswell.
 Over the years a committee formed to help John with the increasing workload 
@@ -749,12 +769,20 @@ Before the 2016 season,
        </p>
 
 
-<h1 id="credits">Possible &quot;Credits / Acknowledgments&quot; Page</h1>
+</div> <!-- BS end of About tab -->
+
+     <div role="tabpanel" class="tab-pane " id="credits">   <!-- BS tabbed page -->
+
+
+<h1>Possible &quot;Credits / Acknowledgments&quot; Page</h1>
 
 This can include present and past funding sources.
 
 Also credit for past and present web design, photos etc.
 
+</div> <!-- BS end of Credits tab -->
+
+</div>  <!-- BS end of tabbed single page -->               
 
 
 
