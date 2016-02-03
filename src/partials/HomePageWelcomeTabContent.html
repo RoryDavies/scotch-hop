@@ -17,15 +17,23 @@
  
  <div class="row">  <!-- BS, row 2-->
 
-
+<!--
+The panels below are collapsible.
+Classes including "collapse" belong to Botstrap and control the actual collapsing.
+Some others, including "panel-collapsed" belong to custom JS which swaps the arrow.
+-->
 
 <div class="col-md-4">  <!-- BS, col -->
 <div class="panel panel-default">   <!-- BS -->
   <div class="panel-heading">
-    <h2 class="panel-title">About Tickets</h2>
-					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span> <!--see myJS -->
+    <h2 class="panel-title">About Tickets
+     <a role="button" data-toggle="collapse" href="#collapseHomeTickets" aria-expanded="false" aria-controls="collapseHomeTickets">    <!-- BS -->
+		  <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span> <!--see myJS -->
+     </a>
+    </h2>
+
   </div>
-  <div class="panel-body">  <!-- BS -->
+  <div class="panel-body collapse" id="collapseHomeTickets">  <!-- BS -->
 
 <p>You can simply come along and buy tickets, for each night or for the season.
  For groups, please tell us in advance so we can welcome you.
@@ -49,10 +57,13 @@
 <div class="col-md-4">  <!-- BS, col -->
 <div class="panel panel-default">   <!-- BS -->
   <div class="panel-heading">
-    <h2 class="panel-title">About Dancing</h2>
-					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span> <!--see myJS -->
+    <h2 class="panel-title">About Dancing
+     <a role="button" data-toggle="collapse" href="#collapseHomeDancing" aria-expanded="false" aria-controls="collapseHomeDancing">    <!-- BS -->
+		  <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span> <!--see myJS -->
+     </a>
+    </h2>
   </div>
-  <div class="panel-body">  <!-- BS -->
+  <div class="panel-body collapse" id="collapseHomeDancing">  <!-- BS -->
 
  
 <p>There are no special requirements - you can wear whatever is comfortable. 
@@ -69,10 +80,13 @@ as we give instructions before and during each dance.
 <div class="col-md-4">  <!-- BS, col -->
 <div class="panel panel-default">   <!-- BS -->
   <div class="panel-heading">
-    <h2 class="panel-title">About Linlithgow</h2>
-					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span> <!--see myJS -->
+    <h2 class="panel-title">About Linlithgow
+     <a role="button" data-toggle="collapse" href="#collapseHomeTown" aria-expanded="false" aria-controls="collapseHomeTown">    <!-- BS -->
+		  <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span> <!--see myJS -->
+     </a>
+    </h2>
   </div>
-  <div class="panel-body">  <!-- BS -->
+  <div class="panel-body collapse" id="collapseHomeTown">  <!-- BS -->
 
 
 <p>Linlithgow is a special place in central Scotland, easily acessible by rail and road.
@@ -105,10 +119,13 @@ as we give instructions before and during each dance.
 <div class="col-md-12">  <!-- BS, col -->
 <div class="panel panel-default">   <!-- BS -->
   <div class="panel-heading">
-    <h2 class="panel-title">Acknowledgments</h2>
-					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span> <!--see myJS -->
+    <h2 class="panel-title">Acknowledgments
+     <a role="button" data-toggle="collapse" href="#collapseHomeAcks" aria-expanded="false" aria-controls="collapseHomeAcks">    <!-- BS -->
+		  <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span> <!--see myJS -->
+     </a>
+    </h2>
   </div>
-  <div class="panel-body">  <!-- BS -->
+  <div class="panel-body collapse" id="collapseHomeAcks">  <!-- BS -->
 
 <p>We gratefully acknowledge the funding that has made recent and future Scotch Hops possible.<p>
 		<a href="https://www.biglotteryfund.org.uk/scotland">
@@ -135,10 +152,13 @@ listed in <a href="#credits">our credits page</a>.
 <div class="col-md-12">  <!-- BS, col -->
 <div class="panel panel-default">   <!-- BS -->
   <div class="panel-heading">
-    <h2 class="panel-title">About Us</h2>
-					<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span> <!--see myJS -->
+    <h2 class="panel-title">About Us
+     <a role="button" data-toggle="collapse" href="#collapseHomeAbout" aria-expanded="false" aria-controls="collapseHomeAbout">    <!-- BS -->
+		  <span class="pull-right clickable panel-collapsed"><i class="glyphicon glyphicon-chevron-down"></i></span> <!--see myJS -->
+     </a>
+    </h2>
   </div>
-  <div class="panel-body">  <!-- BS -->
+  <div class="panel-body collapse" id="collapseHomeAbout">  <!-- BS -->
   
   <p>For many years, Linlithgow Scotch Hop has operated successfully as an informal committee.</p>
 

@@ -16,13 +16,17 @@ This is the CSS.  It may need modified to allow more than one map to be displaye
 /* we use JS to let the Bootstrap panels be collapsible, 
 mainly for use on a mobile where there isn't enough space to show all the content permanently.
 */
+/*
 .clickable{
     cursor: pointer;   
 }
-.panel-heading span {   /* the up/down arrow */
+*/
+/* the up/down arrow */
+/*
+.panel-heading span {   
 	margin-top: -20px;
 	font-size: 15px;
 }
-
+*/
 
 

@@ -57,23 +57,7 @@ isPage: true
 <%- @partial('HomePageCreditsTabContent') %>
 </div> <!-- BS end of Credits tab -->
 
-      
-<h2>DISCLAIMER</h2>
-<p>Please note that we are not responsible for the accuracy of information contained in 
-			external links from this site.</p>     
-
- 
- 
-<!-- CAREFUL - PICTURES embedded in tabbed page -->       
-<h1>from Pictures page</h1>
-<p>(no text on that page)</p> 
-
-
-
-
 
 
 </div>  <!-- BS end of tabbed single page -->               
-
-
 
