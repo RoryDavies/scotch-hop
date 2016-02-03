@@ -15,3 +15,11 @@ $(document).on('click', '.panel-heading span.clickable', function(e){
 	}
 })
 
+// from http://jsfiddle.net/technotarek/3hj46/ 
+// to allow a link (in one tab of a page) to link to (and switch to) a different tab.
+$(window).load(function(){
+    $("a[data-tab-destination]").on('click', function() {
+        var tab = $(this).attr('data-tab-destination');
+        $("#"+tab).click();
+    });
+})

@@ -70,7 +70,14 @@
 
 <body class="body">
 
+<div class="container"> <!-- bootstrap outer container (other Bootstrap markup described with BS) -->
+
 <%- @content %>
+
+</div> <!-- BS outer container -->
+
+
+
     <%- @getBlock("scripts").toHTML() %>
 
 
