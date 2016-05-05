@@ -36,6 +36,7 @@
 <!-- This setup is specifically for our masthead logo --> 
 <!-- We need to adapt this somehow so we don't need to replicate for each individual image -->
 <!-- Bootstrap's .visible-*-* classes hide content - may prevent loading too?? -->
+
 <style>
  .logo-image {  /* by default (and for small devices) show no image */
     display:none;
@@ -45,7 +46,7 @@
    .logo-image {
       display: block;    
       width:661px; height: 141px; 
-      background-image: url("images/Scotch_Hop_logo.jpg");
+      background-image: url("images/site/Scotch_Hop_logo.jpg");
    }
 }
 </style> 
@@ -55,7 +56,7 @@
 <style>
  @media (min-width:661px) { /* above about col-md-9, show the image */    
    .body {
-/*      background-image: url("images/backgroundtr.jpg");   */
+      background-image: url("images/site/backgroundtr.jpg");   */
    }
 }
 </style>     
