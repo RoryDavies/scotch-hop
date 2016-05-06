@@ -7,7 +7,7 @@
 // There may be a better BS way to detect the transition.
 $(document).on('click', '.panel-heading span.clickable', function(e){
   var $this = $(this);
-	var $panel = $($this.parents('.panel').find('.panel-body'));
+//	var $panel = $($this.parents('.panel').find('.panel-body'));  // BS now does this.
 	if(!$this.hasClass('panel-collapsed')) {
 		$this.addClass('panel-collapsed');
 		$this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
