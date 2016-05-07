@@ -65,3 +65,8 @@ mainly for use on a mobile where there isn't enough space to show all the conten
 .vspacer50 { height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
 .vspacer100 { height: 100px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
 .vspacer200 { height: 200px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+
+/* In our dance programmes, we want to show the tea break */
+/* In the html we use an empty <p> with a class, which makes some semantic sense.*/
+/* Here we add some standardised content */
+p.dance-tea:before {content:"(tea will be served about here)" ; color:green ;}

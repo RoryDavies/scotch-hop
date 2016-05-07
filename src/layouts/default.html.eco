@@ -27,7 +27,7 @@
 <!-- We use a google map, inserted per http://wrightshq.com/playground/placing-multiple-markers-on-a-google-map-using-api-3/  -->
 <!-- The JS is in its own file - this needs to be loaded after JQuery, so it's right at the end of this file -->
 <!-- The CSS is in its/my own file. -->
-<!-- Some of these pieces will need modified to allow use fo multiple different maps -->
+<!-- Some of these pieces will need modified to allow use of multiple different maps -->
    <link href="myCSS/myCSS.css" rel="stylesheet"> 
 
  
