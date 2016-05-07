@@ -18,29 +18,25 @@ isPage: true
 <%- @partial('HomePageWelcomeTabContent') %>
 </div>  <!-- BS, end of home tab -->
 
-<div role="tabpanel" class="tab-pane "  id="twitter">   <!-- BS tabbed page -->
-<%- @partial('HomePageTwitterTabContent') %>
-</div> <!-- BS end of Programmes tab -->
-
 <div role="tabpanel" class="tab-pane "  id="dancing">   <!-- BS tabbed page -->
 <%- @partial('HomePageProgrammesTabContent') %>
 </div> <!-- BS end of Programmes tab -->
+
+<div role="tabpanel" class="tab-pane " id="travel">   <!-- BS tabbed page -->
+<%- @partial('HomePageTravelTabContent') %>
+</div> <!-- BS end of Travel tab -->
 
 <div role="tabpanel" class="tab-pane " id="Information">   <!-- BS tabbed page -->
 <%- @partial('HomePageInfoTabContent') %>
 </div> <!-- BS end of Information tab -->
 
-<div role="tabpanel" class="tab-pane " id="travel">   <!-- BS tabbed page -->
-<%- @partial('HomePageTravelTabContent') %>
-</div> <!-- BS end of Information tab -->
-
 <div role="tabpanel" class="tab-pane " id="venues">   <!-- BS tabbed page -->
 <%- @partial('HomePageVenuesTabContent') %>
-</div> <!-- BS end of Information tab -->
+</div> <!-- BS end of Venues tab -->
 
 <div role="tabpanel" class="tab-pane " id="tourism">   <!-- BS tabbed page -->
 <%- @partial('HomePageTourismTabContent') %>
-</div> <!-- BS end of Information tab -->
+</div> <!-- BS end of Tourism tab -->
 
 <div role="tabpanel" class="tab-pane " id="tickets">   <!-- BS tabbed page -->
 <%- @partial('HomePageTicketsTabContent') %>

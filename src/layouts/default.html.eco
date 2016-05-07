@@ -70,18 +70,26 @@
 <!-- BS tail material - JS loads after page -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+
     <script src="BootstrapCSS/js/bootstrap.min.js"></script>
+
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug - per view-source:http://getbootstrap.com/examples/jumbotron/#-->
         <!-- NB the dir referenced does not exist in our installation. http://getbootstrap.com/css/#grid-example-basic mentions it as part of Sass etc -->
+<!--
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    
-<!-- JS for google maps (see above) -->    
-     <script src="myJS/myGoogle.js"></script>
-   
-<!-- JS for panel collapsing (see above) -->    
-     <script src="myJS/myJS.js"></script>
+-->    
 
+<!-- JS for panel collapsing (see above) -->   
+     <script src="myJS/myJS.js"></script>
+ 
+
+
+<!-- JS for google maps (see above) -->    
+<script src="myJS/myGoogle.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+   
  <!-- end of BS -->
 
 </body>

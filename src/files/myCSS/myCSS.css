@@ -28,7 +28,10 @@ The JS is in its own file, called by the html file.
 This is the CSS.  It may need modified to allow more than one map to be displayed.
 */
 #map_wrapper {
-    height: 200px; width: 300px;
+    height: 400px; width: 600px;
+}
+#map2 {
+    height: 400px; width: 600px; background:green; 
 }
 #map_canvas {
     width: 100%;
