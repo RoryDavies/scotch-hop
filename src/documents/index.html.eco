@@ -25,6 +25,9 @@ isPage: true
 <%- @partial('HomePageTicketsTabContent') %>
 </div> <!-- BS end of Tickets tab -->
 
+<div role="tabpanel" class="tab-pane " id="travel">   <!-- BS tabbed page -->
+<%- @partial('HomePageTravelTabContent') %>
+</div> <!-- BS end of Travel tab -->
 
 
 <div role="tabpanel" class="tab-pane " id="Q_A">   <!-- BS tabbed page -->
@@ -38,6 +41,10 @@ isPage: true
 <div role="tabpanel" class="tab-pane " id="credits">   <!-- BS tabbed page -->
 <%- @partial('HomePageCreditsTabContent') %>
 </div> <!-- BS end of Credits tab -->
+
+
+
+
 
 
 
