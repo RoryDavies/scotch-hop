@@ -19,7 +19,9 @@ $(document).on('click', '.panel-heading span.clickable', function(e){
 
 
 // from http://jsfiddle.net/technotarek/3hj46/ 
-// to allow a link (in one tab of a page) to link to (and switch to) a different tab.
+// to allow a link (in one tab of a page) to link to (and switch to) a different tab in the same page.
+// The link must include <a data-tab-destination="..." ...> with the id of the tab (header, not content).
+// The code causes the link to have the same effect as clicking on the tab, as we want.
 $(window).load(function(){
     $("a[data-tab-destination]").on('click', function() {
         var tab = $(this).attr('data-tab-destination');
