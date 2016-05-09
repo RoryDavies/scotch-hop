@@ -20,9 +20,10 @@
          role="presentation" ....
          id="tab-xxxx" (optional) uses JS to allow links in one tab to switch to another tab.
          role="tab" data-toggle="tab"   ....  owned by the <ul role="tablist"> above 
-         and related to the various <div role="tabpanel"> below (each enabled by one of the nav links).
+         and related to the various <div role="tabpanel"> further below (each enabled by one of the nav links).
          role="tablist" (<UL> above) is a list of role="tab" elements, which are references to role="tabpanel" elements.
          aria-controls="tickets" href="#tickets"  both refer to the id of the div which is the related tabpanel.
+         Normally one of the tabs in the nav area, and the corresponding tabpanel div, have class="active". 
          If CSS is disabled (tabbed display does not work), these do not appear to function as links - odd ?
          This may be a side effect of the tab role of each link. Fix unknown, if needed.
       -->
@@ -33,12 +34,10 @@
             <li role="presentation"               ><a                  role="tab" data-toggle="tab" aria-controls="Q_A"     href="#Q_A"    >Q&amp;A</a></li>
             <li role="presentation"               ><a                  role="tab" data-toggle="tab" aria-controls="about"   href="#about"  >About Us</a></li>
             <li role="presentation"               ><a                  role="tab" data-toggle="tab" aria-controls="credits" href="#credits">Acknowledgments</a></li>
-            
-            <li role="presentation"               ><a href="Information.html">Info*</a></li>
             <li role="presentation"               ><a                  role="tab" data-toggle="tab" aria-controls="Information" href="#Information">Information</a></li>
-            <li role="presentation"               ><a id="tab-travel"  role="tab" data-toggle="tab" aria-controls="travel"      href="#travel"     >Travel*</a></li>
-            <li role="presentation"               ><a id="tab-venues"  role="tab" data-toggle="tab" aria-controls="venues"      href="#venues"     >Venues*</a></li>
-            <li role="presentation"               ><a id="tab-tourism" role="tab" data-toggle="tab" aria-controls="tourism"     href="#tourism"    >Tourism*</a></li>
+            <li role="presentation"               ><a id="tab-travel"  role="tab" data-toggle="tab" aria-controls="travel"      href="#travel"     >Travel</a></li>
+            <li role="presentation"               ><a id="tab-venues"  role="tab" data-toggle="tab" aria-controls="venues"      href="#venues"     >Venues</a></li>
+            <li role="presentation"               ><a id="tab-tourism" role="tab" data-toggle="tab" aria-controls="tourism"     href="#tourism"    >Tourism</a></li>
 
             <li role="presentation"               ><a href="Pictures.html">Pictures*</a></li>
         </ul>
