@@ -14,10 +14,6 @@ isPage: true
 <%- @partial('HomePageWelcomeTabContent') %>
 </div>  <!-- BS, end of home tab -->
 
-<div role="tabpanel" class="tab-pane "  id="twitter">   <!-- BS tabbed page -->
-<%- @partial('HomePageTwitterTabContent') %>
-</div> <!-- BS end of Twitter tab -->
-
 <div role="tabpanel" class="tab-pane "  id="dancing">   <!-- BS tabbed page -->
 <%- @partial('HomePageProgrammesTabContent') %>
 </div> <!-- BS end of Programmes tab -->
