@@ -1,6 +1,7 @@
 
 
 
+
 <div class="panel panel-default">   <!-- BS -->
   <div class="panel-heading">
 <h1 class="panel-title" id="linlithgow">Travelling to Linlithgow</h1>
@@ -10,6 +11,21 @@
 			<p >Linlithgow is  20 miles west of Edinburgh, Scotland.
 			</p>   
 
+      <p><b>Linlithgow Palace</b> (EH49 7AL) is in the town centre. 
+      <b>Low Port Centre</b> (EH49 7HZ) is on Blackness Road on the east side of the town, opposite Tesco.      
+      </p>            
+
+<div class="panel panel-default">   <!-- BS nested panel -->
+  <div class="panel-heading">
+        <h2 class="panel-title">Map of Linlithgow and the Venues</h2>
+	  <a role="button" data-toggle="collapse" href="#here-map2" aria-expanded="false" aria-controls="here-map2">
+       <span class="pull-right clickable panel-collapsed">
+        <i class="glyphicon glyphicon-chevron-down"></i>
+       </span> <!-- see myJS -->
+    </a>
+  </div>
+  <div class="panel-body collapse" id="here-map2">  <!-- BS -->
+
 <!--
 This is intended as a map of Linlithgow, showing the Palace and Low Port,
 intended mainly to help people coming to Linlithgow.  
@@ -17,16 +33,27 @@ Our custom CSS controls its size etc. Our JS defines the content (area, markers 
 CSS and JS both locate it by its id. 
 CSS and JS both locate it by its id. If the CSS/JS does not know this id, the map will not appear. 
 -->
-<div id="map2">
+<div id="map2">  <!-- the expanding panel is named here-map2 to match - change both together for sanity --> 
+</div>  
     
-</div>      
+  </div>   <!-- BS panel-body -->
+</div>  <!-- BS panel -->           
 
 
 
       
-      <p><b>Linlithgow Palace</b> (EH49 7AL) is in the town centre. 
-      <b>Low Port Centre</b> (EH49 7HZ) is on Blackness Road on the east side of the town, opposite Tesco.      
-      </p>            
+
+
+<div class="panel panel-default">   <!-- BS nested panel -->
+  <div class="panel-heading">
+        <h2 class="panel-title">Getting Here by Road</h2>
+	  <a role="button" data-toggle="collapse" href="#here-by-road" aria-expanded="false" aria-controls="here-by-road">
+       <span class="pull-right clickable panel-collapsed">
+        <i class="glyphicon glyphicon-chevron-down"></i>
+       </span> <!-- see myJS -->
+    </a>
+  </div>
+  <div class="panel-body collapse" id="here-by-road">  <!-- BS -->
  
  <h2>by Road</h2>     
  <p>From Edinburgh or the East - M9 Junction 3 (20 miles from Princes St).
@@ -35,25 +62,42 @@ CSS and JS both locate it by its id. If the CSS/JS does not know this id, the ma
  <br />Then follow A803 towards the town centre.
 </p> 
 <p>      There is limited parking at the Palace itself, with some spaces reserved for Blue Badge holders.
-      There is also plenty of parking at the bottom of the approach hill, a short walk away - please consider using this.
-      At the Low Port, parking is also limited, but there is a large car park over the road near Tesco.
+      If possible park away from the Palace. 
+      Please do not park by the Palace half an hour before dancing - Pipe band may be playing.
+      </p>
+      <p>
+      Parking for the Low Port is across the road behind Tesco.
 </p>
+  </div>   <!-- BS panel-body -->
+</div>  <!-- BS panel -->           
 
- <h2>by Rail</h2> 
+
+<div class="panel panel-default">   <!-- BS nested panel -->
+  <div class="panel-heading">
+        <h2 class="panel-title">Getting Here by Train</h2>
+	  <a role="button" data-toggle="collapse" href="#here-by-rail" aria-expanded="false" aria-controls="here-by-rail">
+       <span class="pull-right clickable panel-collapsed">
+        <i class="glyphicon glyphicon-chevron-down"></i>
+       </span> <!-- see myJS -->
+    </a>
+  </div>
+  <div class="panel-body collapse" id="here-by-rail">  <!-- BS -->
 
 			<p>Linlithgow is on the main Edinburgh-Glasgow railway line, 
-      with trains as often as every 15 minutes.
-      Travel is about 20 minutes from Edinburgh, 45 minutes from Glasgow Queen Street.
-       
+      with trains as often as every 15 minutes,  
+      and on the line from Stirling, with trains usually every 30 minutes.
+      Travel is about 20 minutes from Edinburgh, 45 minutes from Glasgow Queen Street, 30 minutes from Stirling.
+      
 			You can check timetables and buy tickets at 
-      <a href="https://www.scotrail.co.uk/plan-your-journey/stations-and-facilities/lin">
+      <a target="_blank" class="fa fa-external-link" href="https://www.scotrail.co.uk/plan-your-journey/stations-and-facilities/lin">
       Scotrail
       </a> and similar websites.
       </p>
       
 <div class="alert alert-info" role="alert">
-<p>UntilAugust 2016, major work on Queen Street Station may delay you boarding a train.
-  More details at <a href="https://www.scotrail.co.uk/QueenStreettunnel" class="alert-link">Scotrail's Queen St status board</a>.
+<p>Until August 2016, major work on Queen Street Station may delay you boarding a train.
+  More details at 
+  <a target="_blank" class="fa fa-external-link alert-link" href="https://www.scotrail.co.uk/QueenStreettunnel">Scotrail's Queen St status board</a>.
   As of May 2016, work is expected to be complete by August 8 - just in time for the last Scotch Hop.
 </p>
 </div>      
@@ -61,25 +105,50 @@ CSS and JS both locate it by its id. If the CSS/JS does not know this id, the ma
 
  <p> The station is about 0.5km from either venue.
  If coming from Glasgow, leave the station down onto the High Street.
- If coming from Edinburgh, enter the shelter and use the pedestrian tunnel under the railway then leave for the High Street.
+ If coming from Edinburgh, enter the shelter and use the pedestrian tunnel under the railway then leave to the High Street.
  </p>
- <p>Once on the High Street, for the Palace, go left, after 200m (at the Square) turn right up to the Palace.
- Or for the Low Port, go right, then at the mini-roundabout, go left. 
- Low Port is on the left at the pedestrian crossing.    
+ <p>On the High Street, for the Palace, turn left, then after 200m (at the Square) turn right up to the Palace.
+ Or for the Low Port, turn right, then after 50m, at the mini-roundabout, go left, 
+ and the  Low Port Centre is on the left at the pedestrian crossing.    
 </p>
+  </div>   <!-- BS panel-body -->
+</div>  <!-- BS panel -->           
 
-<h2>by Bus</h2>
+
+<div class="panel panel-default">   <!-- BS nested panel -->
+  <div class="panel-heading">
+        <h2 class="panel-title">Getting Here by Bus</h2>
+	  <a role="button" data-toggle="collapse" href="#here-by-bus" aria-expanded="false" aria-controls="here-by-bus">
+       <span class="pull-right clickable panel-collapsed">
+        <i class="glyphicon glyphicon-chevron-down"></i>
+       </span> <!-- see myJS -->
+    </a>
+  </div>
+  <div class="panel-body collapse" id="here-by-bus">  <!-- BS -->
 
 <p> 
-<a href="https://www.firstgroup.com/south-east-and-central-scotland/plan-journey/journey-planner">
+<a target="_blank" class="fa fa-external-link" 
+href="https://www.firstgroup.com/south-east-and-central-scotland/plan-journey/journey-planner">
 FirstBus
 </a>
 service 38 operates between Edinburgh and Stirling, 
 stopping at the Cross (very near the Palace),
-and at the railway station (handier for the Low Port).
+and at the railway station (better for the Low Port).
 </p>
+  </div>   <!-- BS panel-body -->
+</div>  <!-- BS panel -->           
 
-<h2>by Bike</h2>
+
+<div class="panel panel-default">   <!-- BS nested panel -->
+  <div class="panel-heading">
+        <h2 class="panel-title">Getting Here by Bike</h2>
+	  <a role="button" data-toggle="collapse" href="#here-by-bike" aria-expanded="false" aria-controls="here-by-bike">
+       <span class="pull-right clickable panel-collapsed">
+        <i class="glyphicon glyphicon-chevron-down"></i>
+       </span> <!-- see myJS -->
+    </a>
+  </div>
+  <div class="panel-body collapse" id="here-by-bike">  <!-- BS -->
 
 <p>Yes, some people do arrive this way!</p>
 <p>
@@ -88,17 +157,47 @@ Leave the canal at the Canal Centre, ride towards the railway station but do not
 Instead continue down the hill then left under the railway.
 At the roundabout go left (to the Palace) or right (to the Low Port).
 </p>
+<p>The 
+<a target="_blank" class="fa fa-external-link alert-link" 
+href="https://westlothian.cyclestreets.net/">CycleStreets</a> 
+website can help you plan a route from anywhere.
+</p>
+ 
+  </div>   <!-- BS panel-body -->
+</div>  <!-- BS panel -->           
 
-<h2>by Air</h2>
-<p>Although we haven't heard of anyone coming this way for just one evening,
-we have some regular visitors who come for a week or two,
+
+<div class="panel panel-default">   <!-- BS nested panel -->
+  <div class="panel-heading">
+        <h2 class="panel-title">Getting Here by Air</h2>
+	  <a role="button" data-toggle="collapse" href="#here-by-air" aria-expanded="false" aria-controls="here-by-air">
+       <span class="pull-right clickable panel-collapsed">
+        <i class="glyphicon glyphicon-chevron-down"></i>
+       </span> <!-- see myJS -->
+    </a>
+  </div>
+  <div class="panel-body collapse" id="here-by-air">  <!-- BS -->
+
+<p>We have some regular visitors who come for a week or two,
 and enjoy the surroundings as well as our dances.
 </p>
 
 <p>There are frequent UK and international flights to
-<a href="http://www.glasgowairport.com/">Glasgow</a>
-and <a href="http://www.edinburghairport.com/">Edinburgh</a>
+<a target="_blank" class="fa fa-external-link" 
+href="http://www.glasgowairport.com/">Glasgow</a>
+and 
+<a target="_blank" class="fa fa-external-link"
+href="http://www.edinburghairport.com/">Edinburgh</a>
 </p>
+
+  </div>   <!-- BS panel-body -->
+</div>  <!-- BS panel -->           
+
+
+
+
+
+
 
   </div>   <!-- BS panel-body -->
 </div>  <!-- BS panel -->           
