@@ -27,13 +27,9 @@ isPage: true
 <%- @partial('HomePageVenuesTabContent') %>
 </div> <!-- BS end of Travel/Venues tab -->
 
-<div role="tabpanel" class="tab-pane " id="tourism">   <!-- BS tabbed page -->
-<%- @partial('HomePageTourismTabContent') %>
-</div> <!-- BS end of Tourism tab -->
-
-<div role="tabpanel" class="tab-pane " id="Q_A">   <!-- BS tabbed page -->
+<div role="tabpanel" class="tab-pane " id="FAQ">   <!-- BS tabbed page -->
 <%- @partial('HomePageQATabContent') %>
-</div> <!-- BS end of Q&A tab -->
+</div> <!-- BS end of FAQ tab -->
 
 <div role="tabpanel" class="tab-pane " id="about">   <!-- BS tabbed page -->
 <%- @partial('HomePageAboutTabContent') %>
