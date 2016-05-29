@@ -31,13 +31,10 @@ isPage: true
 <%- @partial('HomePageQATabContent') %>
 </div> <!-- BS end of FAQ tab -->
 
-<div role="tabpanel" class="tab-pane " id="about">   <!-- BS tabbed page -->
-<%- @partial('HomePageAboutTabContent') %>
-</div> <!-- BS end of About tab -->
-
-<div role="tabpanel" class="tab-pane " id="credits">   <!-- BS tabbed page -->
+<div role="tabpanel" class="tab-pane " id="thanks">   <!-- BS tabbed page -->
 <%- @partial('HomePageCreditsTabContent') %>
-</div> <!-- BS end of Credits tab -->
+<%- @partial('HomePageAboutTabContent') %>
+</div> <!-- BS end of thanks tab -->
 
 
 
