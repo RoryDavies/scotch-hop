@@ -36,11 +36,7 @@ isPage: true
 <%- @partial('HomePageAboutTabContent') %>
 </div> <!-- BS end of thanks tab -->
 
-
-
-
-
-
-
 </div>  <!-- BS end of tabbed single page -->               
 
+ <!-- Google Analytics tracking code -->
+<%- @partial('GA-tracker') %>
