@@ -24,42 +24,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<!--
- When we embed google maps inside a bootstrap tab, we get (had) a problem that 
- the map would be displayed incorrectly unless its tab was active on first page load. 
- The CSS fix below (9/5/16) overrides the BS definitions used when showing/hiding tabs,
- and the google maps show correctly.
- Taken from http://stackoverflow.com/questions/13635903/google-map-in-bootstrap-tab 
--->
-<style>
-.tab-content > .tab-pane {
-    display: block;
-    height:0;
-    overflow:hidden;
-}
-.tab-content > .active {
-    display: block;
-    height:auto;
-}
-</style>
-
-<!-- the CSS override above works for tabs (in conjunction with navigation)
-to show a google map.
-It doesn't work for collapsible panels inside a tab.
-The CSS overrides below do that.
--->
-
-<style>
-.panel.map > .collapse {
-    display: block;  
-    height:0;   
-   overflow:hidden;  
-} 
-.panel.map > .collapse.in {
-    height:auto;
-} 
-</style>
-
 
 
 <!-- FontAwesome -->
@@ -81,14 +45,6 @@ The CSS overrides below do that.
 <!-- We need to adapt this somehow so we don't need to replicate for each individual image -->
 <!-- Bootstrap's .visible-*-* classes hide content - may prevent loading too?? -->
  
-<!-- When we want a background for the overall page we can do this -->      
-<style>
- @media (min-width:661px) { /* above about col-md-9, show the image */    
-   .body {
-      background-image: url("images/site/backgroundtr.jpg");   */
-   }
-}
-</style>     
 
 
 
