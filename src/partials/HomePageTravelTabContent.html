@@ -18,16 +18,27 @@
       <b>Low Port Centre</b> (EH49 7HZ) is on Blackness Road on the east side of the town, opposite TESCO.      
       </p>            
 
-<div class="panel panel-default">   <!-- BS nested panel -->
+<!--
+<div class="panel panel-default">  
   <div class="panel-heading">
         <h2 class="panel-title">Map of Linlithgow and the Venues</h2>
 	  <a role="button" data-toggle="collapse" href="#here-map2" aria-expanded="false" aria-controls="here-map2">
-       <span class="pull-right clickable panel-collapsed">
-        <i class="glyphicon glyphicon-chevron-down"></i>
-       </span> <!-- see myJS -->
+       <span class="pull-right clickable  ">
+        <i class="glyphicon glyphicon-chevron-up"></i>
+       </span> 
     </a>
   </div>
-  <div class="panel-body collapse" id="here-map2">  <!-- BS -->
+  <div class="panel-body " id="here-map2">  
+-->
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="collapse ">
+  <div class="panel-body " id="here-map2">  
 
 <!--
 This is intended as a map of Linlithgow, showing the Palace and Low Port,
@@ -40,7 +51,8 @@ CSS and JS both locate it by its id. If the CSS/JS does not know this id, the ma
 </div>  
     
   </div>   <!-- BS panel-body -->
-</div>  <!-- BS panel -->           
+ </div>
+ </div>  <!-- BS panel -->           
 
 
 

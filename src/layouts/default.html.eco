@@ -43,6 +43,25 @@
 }
 </style>
 
+<!-- the CSS override above works for tabs (in conjunction with navigation)
+to show a google map.
+It doesn't work for collapsible panels inside a tab.
+The CSS overrides below do that.
+-->
+<style>
+.panel > .collapse {
+    display: block;
+    height:0;
+    overflow:hidden;
+} 
+.panel > .collapse.in {
+    display: block;
+    height:auto;
+} 
+</style>
+
+
+
 <!-- FontAwesome -->
 <!-- The location here may rely on symlinks, or copies of the FA dirs, in our server. -->
 <link rel="stylesheet" href="FontAwesome/css/font-awesome.min.css">
