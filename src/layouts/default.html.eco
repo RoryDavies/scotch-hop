@@ -48,14 +48,14 @@ to show a google map.
 It doesn't work for collapsible panels inside a tab.
 The CSS overrides below do that.
 -->
+
 <style>
-.panel > .collapse {
-    display: block;
-    height:0;
-    overflow:hidden;
+.panel.map > .collapse {
+    display: block;  
+    height:0;   
+   overflow:hidden;  
 } 
-.panel > .collapse.in {
-    display: block;
+.panel.map > .collapse.in {
     height:auto;
 } 
 </style>
