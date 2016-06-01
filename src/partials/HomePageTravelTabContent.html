@@ -1,107 +1,102 @@
 
-
-
+<!-- start of HomePageTravelTabContent.html -->
 
 <div class="panel panel-default">   <!-- BS -->
   <div class="panel-heading">
-<h1 class="panel-title" id="linlithgow">
-  <i class="fa fa-map-o" aria-hidden="true" title=""></i>
+    <h1 class="panel-title" id="linlithgow">
+     <i class="fa fa-map-o" aria-hidden="true" title=""></i>
       Travelling to Linlithgow
-      </h1>
+    </h1>
   </div>
   <div class="panel-body">  <!-- BS -->
 
-			<p >Linlithgow is  20 miles west of Edinburgh, Scotland.
-			</p>   
+	  <p >Linlithgow is  20 miles west of Edinburgh, Scotland.
+		</p>   
 
-      <p><b>Linlithgow Palace</b> (EH49 7AL) is in the town centre. 
-      <b>Low Port Centre</b> (EH49 7HZ) is on Blackness Road on the east side of the town, opposite TESCO.      
-      </p>            
+    <p><b>Linlithgow Palace</b> (EH49 7AL) is in the town centre. 
+    <b>Low Port Centre</b> (EH49 7HZ) is on Blackness Road on the east side of the town, opposite TESCO.      
+    </p>            
 
-<!--
-<div class="panel panel-default">  
-  <div class="panel-heading">
-        <h2 class="panel-title">Map of Linlithgow and the Venues</h2>
-	  <a role="button" data-toggle="collapse" href="#here-map2" aria-expanded="false" aria-controls="here-map2">
-       <span class="pull-right clickable  ">
-        <i class="glyphicon glyphicon-chevron-up"></i>
-       </span> 
-    </a>
-  </div>
-  <div class="panel-body " id="here-map2">  
+<!-- This sub-panel included a google map. We've found we need special treatment for that,
+to allow the google map to show correctly.
+a)an extra class (map) is applied to the outer div, to direct the extra CSS needed,
+b)an extra div around the panel body div. 
 -->
-
-    <div class="panel panel-default map">
+    <div class="panel panel-default map">    <!-- BS nested panel -->
       <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" href="#collapse1">Map of Linlithgow and the Venues</a>
-        </h4>
+        <h2 class="panel-title">
+          <a role="button" data-toggle="collapse" href="#here-map2c" aria-expanded="false" aria-controls="here-map2c">
+            Map of Linlithgow and the Venues
+            <span class="pull-right clickable  panel-collapsed ">
+              <i class="glyphicon glyphicon-chevron-down "></i>
+            </span> <!-- see myJS -->
+          </a>
+        </h2>
       </div>
-      <div id="collapse1" class="collapse ">  
+      
+      <div id="here-map2c" class="collapse ">  
         <div class="panel-body " id="here-map2">  
 
+          <div id="map2">  <!-- the expanding panel is named here-map2 to match - change both together for sanity --> 
 <!--
 This is intended as a map of Linlithgow, showing the Palace and Low Port,
 intended mainly to help people coming to Linlithgow.  
 Our custom CSS controls its size etc. Our JS defines the content (area, markers etc).
 CSS and JS both locate it by its id - if they don't all match, the map will not appear. 
 -->
-          <div id="map2">  <!-- the expanding panel is named here-map2 to match - change both together for sanity --> 
           </div>  
     
         </div>   <!-- BS panel-body -->
       </div>  
-    </div>  <!-- BS panel -->           
-
-
-
-      
-
-
-<div class="panel panel-default">   <!-- BS nested panel -->
-  <div class="panel-heading">
-        <h2 class="panel-title">
-        <i class="fa fa-car" aria-hidden="true" title=""></i>
-        <i class="fa fa-motorcycle" aria-hidden="true" title=""></i>
-        Getting Here by Road</h2>
-	  <a role="button" data-toggle="collapse" href="#here-by-road" aria-expanded="false" aria-controls="here-by-road">
-       <span class="pull-right clickable panel-collapsed">
-        <i class="glyphicon glyphicon-chevron-down"></i>
-       </span> <!-- see myJS -->
-    </a>
-  </div>
-  <div class="panel-body collapse" id="here-by-road">  <!-- BS -->
+    </div>  <!-- BS sub panel -->           
      
- <p>From Edinburgh or the East - M9 Junction 3 (20 miles from Princes St).
- <br />From Falkirk / Stirling - M9 Junction 4  (xx miles from Stirling).
- <br />From Glasgow - M8 to Junction 2 then M9 to Junction 3 (xx miles from Glasgow centre). 
- <br />Then follow A803 towards the town centre.
-</p> 
-<p>      There is limited parking at the Palace itself, with some spaces reserved for Blue Badge holders.
-      If possible park away from the Palace. 
-      Please do not park by the Palace half an hour before dancing - Pipe band may be playing.
-      </p>
-      <p>
-      There is limited parking for Blue Badge holders at the Low Port Centre.
-      Parking for others is across the road behind TESCO.
-</p>
-  </div>   <!-- BS panel-body -->
-</div>  <!-- BS panel -->           
 
 
-<div class="panel panel-default">   <!-- BS nested panel -->
-  <div class="panel-heading">
+    <div class="panel panel-default">   <!-- BS nested panel -->
+      <div class="panel-heading">
         <h2 class="panel-title">
-         <i class="fa fa-train" aria-hidden="true" title=""></i>
-       Getting Here by Train
-    </h2>
-	  <a role="button" data-toggle="collapse" href="#here-by-rail" aria-expanded="false" aria-controls="here-by-rail">
-       <span class="pull-right clickable panel-collapsed">
-        <i class="glyphicon glyphicon-chevron-down"></i>
-       </span> <!-- see myJS -->
-    </a>
-  </div>
-  <div class="panel-body collapse" id="here-by-rail">  <!-- BS -->
+      	  <a role="button" data-toggle="collapse" href="#here-by-road" aria-expanded="false" aria-controls="here-by-road">
+            <i class="fa fa-car" aria-hidden="true" title=""></i>
+            <i class="fa fa-motorcycle" aria-hidden="true" title=""></i>
+            Getting Here by Road
+            <span class="pull-right clickable panel-collapsed">
+              <i class="glyphicon glyphicon-chevron-down"></i>
+            </span> <!-- see myJS -->  
+          </a>
+        </h2>
+      </div>
+      <div class="panel-body collapse" id="here-by-road">  <!-- BS -->
+     
+      <p>From Edinburgh or the East - M9 Junction 3 (20 miles from Princes St).
+       <br />From Falkirk / Stirling - M9 Junction 4  (xx miles from Stirling).
+       <br />From Glasgow - M8 to Junction 2 then M9 to Junction 3 (xx miles from Glasgow centre). 
+       <br />Then follow A803 towards the town centre.
+      </p> 
+      <p>      There is limited parking at the Palace itself, with some spaces reserved for Blue Badge holders.
+       If possible park away from the Palace. 
+       Please do not park by the Palace half an hour before dancing - Pipe band may be playing.
+       </p>
+      <p>
+       There is limited parking for Blue Badge holders at the Low Port Centre.
+       Parking for others is across the road behind TESCO.
+      </p>
+    </div>   <!-- BS panel-body -->
+  </div>  <!-- BS panel -->           
+
+
+    <div class="panel panel-default">   <!-- BS nested panel -->
+      <div class="panel-heading">
+        <h2 class="panel-title">
+	        <a role="button" data-toggle="collapse" href="#here-by-rail" aria-expanded="false" aria-controls="here-by-rail">
+            <i class="fa fa-train" aria-hidden="true" title=""></i>
+            Getting Here by Train
+            <span class="pull-right clickable panel-collapsed">
+              <i class="glyphicon glyphicon-chevron-down"></i>
+            </span> <!-- see myJS -->
+          </a>
+        </h2>
+      </div>
+      <div class="panel-body collapse" id="here-by-rail">  <!-- BS -->
 
 			<p>Linlithgow is on the main Edinburgh-Glasgow railway line, 
       with trains as often as every 15 minutes,  
@@ -114,110 +109,105 @@ CSS and JS both locate it by its id - if they don't all match, the map will not 
       </a> and similar websites.
       </p>      
 
- <p> The station is about 0.5km from either venue.
- If coming from Glasgow, leave the station down onto the High Street.
- If coming from Edinburgh, enter the shelter and use the pedestrian tunnel under the railway then leave to the High Street.
- </p>
- <p>On the High Street, for the Palace, turn left, then after 200m (at the Square) turn right up to the Palace.
- <br />Or for the Low Port, turn right, then after 50m, at the mini-roundabout, go left, 
- and the  Low Port Centre is on the left at the pedestrian crossing, opposite TESCO.    
-</p>
-  </div>   <!-- BS panel-body -->
-</div>  <!-- BS panel -->           
+      <p> The station is about 0.5km from either venue.
+       If coming from Glasgow, leave the station down onto the High Street.
+       If coming from Edinburgh, enter the shelter and use the pedestrian tunnel under the railway then leave to the High Street.
+       </p>
+       <p>On the High Street, for the Palace, turn left, then after 200m (at the Square) turn right up to the Palace.
+       <br />Or for the Low Port, turn right, then after 50m, at the mini-roundabout, go left, 
+       and the  Low Port Centre is on the left at the pedestrian crossing, opposite TESCO.    
+      </p>
+      </div>   <!-- BS panel-body -->
+    </div>  <!-- BS panel -->           
 
 
-<div class="panel panel-default">   <!-- BS nested panel -->
-  <div class="panel-heading">
+    <div class="panel panel-default">   <!-- BS nested panel -->
+      <div class="panel-heading">
         <h2 class="panel-title">
-          <i class="fa fa-bus" aria-hidden="true" title=""></i>
-        Getting Here by Bus
+	       <a role="button" data-toggle="collapse" href="#here-by-bus" aria-expanded="false" aria-controls="here-by-bus">
+           <i class="fa fa-bus" aria-hidden="true" title=""></i>
+            Getting Here by Bus
+            <span class="pull-right clickable panel-collapsed">
+              <i class="glyphicon glyphicon-chevron-down"></i>
+            </span> <!-- see myJS -->
+          </a>
         </h2>
-	  <a role="button" data-toggle="collapse" href="#here-by-bus" aria-expanded="false" aria-controls="here-by-bus">
-       <span class="pull-right clickable panel-collapsed">
-        <i class="glyphicon glyphicon-chevron-down"></i>
-       </span> <!-- see myJS -->
-    </a>
-  </div>
-  <div class="panel-body collapse" id="here-by-bus">  <!-- BS -->
-
-<p> 
-<a target="_blank" class="fa fa-external-link" 
-href="https://www.firstgroup.com/south-east-and-central-scotland/plan-journey/journey-planner">
-FirstBus
-</a>
-service 38 operates between Edinburgh and Stirling, 
-stopping at the Cross (very near the Palace),
-and at the railway station (better for the Low Port).
-</p>
-  </div>   <!-- BS panel-body -->
-</div>  <!-- BS panel -->           
+      </div>
+      <div class="panel-body collapse" id="here-by-bus">  <!-- BS -->
+        <p> 
+        <a target="_blank" class="fa fa-external-link" 
+          href="https://www.firstgroup.com/south-east-and-central-scotland/plan-journey/journey-planner">
+          FirstBus
+        </a>
+        service 38 operates between Edinburgh and Stirling, 
+        stopping at the Cross (very near the Palace),
+        and at the railway station (better for the Low Port).
+        </p>
+      </div>   <!-- BS panel-body -->
+    </div>  <!-- BS panel -->           
 
 
-<div class="panel panel-default">   <!-- BS nested panel -->
-  <div class="panel-heading">
+    <div class="panel panel-default">   <!-- BS nested panel -->
+      <div class="panel-heading">
         <h2 class="panel-title">
-         <i class="fa fa-bicycle" aria-hidden="true" title=""></i>
-        Getting Here by Bike
+      	  <a role="button" data-toggle="collapse" href="#here-by-bike" aria-expanded="false" aria-controls="here-by-bike">
+            <i class="fa fa-bicycle" aria-hidden="true" title=""></i>
+            Getting Here by Bike
+            <span class="pull-right clickable panel-collapsed">
+             <i class="glyphicon glyphicon-chevron-down"></i>
+            </span> <!-- see myJS -->
+          </a>
         </h2>
-	  <a role="button" data-toggle="collapse" href="#here-by-bike" aria-expanded="false" aria-controls="here-by-bike">
-       <span class="pull-right clickable panel-collapsed">
-        <i class="glyphicon glyphicon-chevron-down"></i>
-       </span> <!-- see myJS -->
-    </a>
-  </div>
-  <div class="panel-body collapse" id="here-by-bike">  <!-- BS -->
+      </div>
+      <div class="panel-body collapse" id="here-by-bike">  <!-- BS -->
 
-<p>Yes, some people do arrive this way!</p>
-<p>
-The canal offers a fairly flat route, from Edinburgh or Falkirk.
-Leave the canal at the Canal Centre, ride towards the railway station but do not enter it.
-Instead continue down the hill then left under the railway.
-At the roundabout go left (to the Palace) or right (to the Low Port).
-</p>
-<p>The 
-<a target="_blank" class="fa fa-external-link alert-link" 
-href="https://westlothian.cyclestreets.net/">CycleStreets</a> 
-website can help you plan a route from anywhere.
-</p>
+        <p>Yes, some people do arrive this way!</p>
+        <p>
+         The canal offers a fairly flat route, from Edinburgh or Falkirk.
+          Leave the canal at the Canal Centre, ride towards the railway station but do not enter it.
+          Instead continue down the hill then left under the railway.
+          At the roundabout go left (to the Palace) or right (to the Low Port).
+        </p>
+        <p>The 
+          <a target="_blank" class="fa fa-external-link alert-link" 
+            href="https://westlothian.cyclestreets.net/">CycleStreets</a> 
+            website can help you plan a route from anywhere.
+           </p>
  
-  </div>   <!-- BS panel-body -->
-</div>  <!-- BS panel -->           
+      </div>   <!-- BS panel-body -->
+    </div>  <!-- BS panel -->           
 
 
-<div class="panel panel-default">   <!-- BS nested panel -->
-  <div class="panel-heading">
+    <div class="panel panel-default">   <!-- BS nested panel -->
+      <div class="panel-heading">
         <h2 class="panel-title">
-         <i class="fa fa-plane" aria-hidden="true" title=""></i>
-        Getting Here by Air
+      	  <a role="button" data-toggle="collapse" href="#here-by-air" aria-expanded="false" aria-controls="here-by-air">
+           <i class="fa fa-plane" aria-hidden="true" title=""></i>
+            Getting Here by Air
+            <span class="pull-right clickable panel-collapsed">
+             <i class="glyphicon glyphicon-chevron-down"></i>
+            </span> <!-- see myJS -->
+          </a>
         </h2>
-	  <a role="button" data-toggle="collapse" href="#here-by-air" aria-expanded="false" aria-controls="here-by-air">
-       <span class="pull-right clickable panel-collapsed">
-        <i class="glyphicon glyphicon-chevron-down"></i>
-       </span> <!-- see myJS -->
-    </a>
-  </div>
-  <div class="panel-body collapse" id="here-by-air">  <!-- BS -->
+      </div>
+      <div class="panel-body collapse" id="here-by-air">  <!-- BS -->
 
-<p>We have some regular visitors who come for a week or two,
-and enjoy the surroundings as well as our dances.
-</p>
+         <p>We have some regular visitors who come for a week or two,
+        and enjoy the surroundings as well as our dances.
+        </p>
 
-<p>There are frequent UK and international flights to
-<a target="_blank" class="fa fa-external-link" 
-href="http://www.glasgowairport.com/">Glasgow</a>
-and 
-<a target="_blank" class="fa fa-external-link"
-href="http://www.edinburghairport.com/">Edinburgh</a>
-</p>
+        <p>There are frequent UK and international flights to
+          <a target="_blank" class="fa fa-external-link" 
+           href="http://www.glasgowairport.com/">Glasgow</a>
+           and 
+          <a target="_blank" class="fa fa-external-link"
+          href="http://www.edinburghairport.com/">Edinburgh</a>
+        </p>
+
+      </div>   <!-- BS panel-body -->
+    </div>  <!-- BS panel -->           
 
   </div>   <!-- BS panel-body -->
-</div>  <!-- BS panel -->           
-
-
-
-
-
-
-
-  </div>   <!-- BS panel-body -->
-</div>  <!-- BS panel -->           
+</div>  <!-- BS panel --> 
+ 
+<!-- .... end of HomePageTravelTabContent.html -->
