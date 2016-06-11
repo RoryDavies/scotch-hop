@@ -14,7 +14,7 @@
    .logo-image {
       display: block;    
       width:100%; height: 50px;   /* height half of image, full width */
-      background-image: url("../images/site/LSH tartan 2016/LSHtartan.jpg");  /* relative to CSS dir */
+      background-image: url("../images/site/LSH-tartan/LSHtartan.jpg");  /* relative to CSS dir */
    }
  .LSHbannerTitle {
    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;

@@ -14,8 +14,11 @@
 
 <!-- from BS based html -->
 
-    <!-- Bootstrap -->
-    <link href="BootstrapCSS/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap (local copy or CDN) 
+    <link href="BootstrapCSS/css/bootstrap.min.css" rel="stylesheet">   -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+    rel="stylesheet" crossorigin="anonymous">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,9 +29,12 @@
 
 
 
-<!-- FontAwesome -->
-<!-- The location here may rely on symlinks, or copies of the FA dirs, in our server. -->
-<link rel="stylesheet" href="FontAwesome/css/font-awesome.min.css">
+<!-- FontAwesome (local or CDN) -->
+<!-- If we use a local copy, the location here may rely on symlinks, or copies of the FA dirs, in our server.
+<link rel="stylesheet" href="FontAwesome/css/font-awesome.min.css">   -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" 
+integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" 
+rel="stylesheet" crossorigin="anonymous">
 
 
     
@@ -72,8 +78,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-
-    <script src="BootstrapCSS/js/bootstrap.min.js"></script>
+ <!-- Bootstrap JS (local copy or CDN) 
+    <script src="BootstrapCSS/js/bootstrap.min.js"></script>  -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
+crossorigin="anonymous">
+</script>    
 
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug - per view-source:http://getbootstrap.com/examples/jumbotron/#-->
         <!-- NB the dir referenced does not exist in our installation. http://getbootstrap.com/css/#grid-example-basic mentions it as part of Sass etc -->
