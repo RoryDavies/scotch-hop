@@ -1,13 +1,14 @@
 
 
-// from http://bootsnipp.com/snippets/featured/collapsible-panel
-// to collapse/expand a Bootstrap panel
-// Modified to remove the slide up/down functionality (done by Bootstrap)
-// so this just swaps the up/down arrow on the heading.
-// There may be a better BS way to detect the transition.
+// Based on code from http://bootsnipp.com/snippets/featured/collapsible-panel
+// BS does the actual expand/collapse (with its own html markup requirements).
+// This just swaps the up/down arrow on the heading, 
+// It expects the html to be something like the following ...
+//  <div class="panel-heading"> .....
+//            <span class="clickable panel-collapsed"> ...
+//              <i class="glyphicon glyphicon-chevron-down "></i> ...
 $(document).on('click', '.panel-heading span.clickable', function(e){
   var $this = $(this);
-//	var $panel = $($this.parents('.panel').find('.panel-body'));  // BS now does this.
 	if(!$this.hasClass('panel-collapsed')) {
 		$this.addClass('panel-collapsed');
 		$this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
@@ -28,3 +29,31 @@ $(window).load(function(){
         $("#"+tab).click();
     });
 })
+
+/* The Twitter script below should perhaps be elsewhere for tidiness, but here for now alongside the twitter html etc 
+*/
+/*
+!function(d,s,id){
+ var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+ if(!d.getElementById(id)){
+  js=d.createElement(s);
+  js.id=id;
+  js.src=p+"://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js,fjs);
+ }
+}
+(document,"script","twitter-wjs");
+*/
+
+
+/* The Facebook script below should perhaps be elsewhere for tidiness, but here for now alongside the twitter html etc 
+*/
+/*
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+*/

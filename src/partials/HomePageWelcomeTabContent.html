@@ -39,8 +39,17 @@
 
   <div class="col-md-6 text-center">  <!-- BS, col -->
  <h2 class="sr-only">Twitter</h2>
+
+ <!-- simple Twitter link (much lighter than a full widget) -->
+<a target="_blank" class="fa fa-external-link twitter-timeline" data-dnt="true" 
+ href="https://twitter.com/Scotchhopp"> 
+<img src="images/vendors/Twitter/twitter_32x30.gif" 
+width="32" height="30" alt="Twitter logo">
+Check our Twitter page
+</a>
  
 <!-- Insert of Twitter widget, created 30/3/16 by Rory, linebreaks added to script for legibility  -->
+<!--   don't want the full widget for now ....
  <a target="_blank" class="fa fa-external-link twitter-timeline" data-dnt="true" 
  href="https://twitter.com/Scotchhopp" 
  data-widget-id="715169898964582400"
@@ -49,37 +58,28 @@
  >
  Tweets by @Scotchhopp
  </a>
- <!-- The Twitter script below should perhaps be elsewhere for tidiness, but here for now alongside the twitter html etc -->
-<script>
-!function(d,s,id){
- var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
- if(!d.getElementById(id)){
-  js=d.createElement(s);
-  js.id=id;
-  js.src=p+"://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js,fjs);
- }
-}
-(document,"script","twitter-wjs");
-</script>
-<!-- end of Twitter widget -->
-
+ .... -->
+ <!-- end of Twitter widget -->
+ 
   </div>  <!-- BS, col -->
 
 
   <div class="col-md-6 text-center">  <!-- BS, col -->
 
   <h2 class="sr-only">Facebook</h2>
-   <!-- The Facebook script below should perhaps be elsewhere for tidiness, but here for now alongside the Facebook html etc -->
+
+ <!-- simple Facebook link (much lighter than a full widget) -->
+<a target="_blank" class="fa fa-external-link" 
+ href="https://www.facebook.com/linlithgowscotchhop"> 
+<img src="images/vendors/Facebook/facebook-button_170x65.png" 
+width="85" height="32.5" alt="Facebook logo">
+Check our Facebook page 
+</a>
+
+
    <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
- 
+
+<!-- Don't want the full widget for now ....  
 <div 
 class="fb-page" 
 data-href="https://www.facebook.com/linlithgowscotchhop" 
@@ -96,6 +96,7 @@ data-show-facepile="false"
  </blockquote></p>
  </div>
 </div>
+.... end of widget -->
 
   </div class="col-md-6">  <!-- BS, col -->
  </div>  <!-- BS, nested row 1 -->
@@ -162,7 +163,7 @@ data-show-facepile="false"
  Awards for All Scotland is helping to fund us in 2016.
  </p>
 
- <div class="col-xs-6">  <!-- BS, col --> 
+ <div class="col-xs-12">  <!-- BS, col --> 
  
  <p>&nbsp;</p> <!-- push the WL logo down a bit to centre vertically on Lottery logo -->
  <p  class="text-center"  >  <!-- BS -->
@@ -177,20 +178,6 @@ alt="logo of West Lothian Council"
 />
 </a>
 </p>
- </div> <!-- BS col -->
-
- <div class="col-xs-6">  <!-- BS, col --> 
- <p  class="text-center"  >  <!-- BS -->
- <a href="https://www.biglotteryfund.org.uk/scotland"
- title="We are very grateful to Awards for All Scotland for its help in funding Linlithgow Scotch Hop in 2016."
- >
- <!-- the Lottery image, natural size 180x135 -->
- <img src="images/vendors/AwardsForAllScotland/lottery-funded.jpg" 
- width="180" height="135" 
-alt="logo of Awards for All Scotland" 
- />
- </a>
- </p>
  </div> <!-- BS col -->
 
 </div>  <!-- BS, row 4 -->  
