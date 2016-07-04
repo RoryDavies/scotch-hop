@@ -14,10 +14,6 @@ isPage: true
 <%- @partial('HomePageWelcomeTabContent') %>
 </div>  <!-- BS, end of home tab -->
 
-<div role="tabpanel" class="tab-pane "  id="twitter">   <!-- BS tabbed page -->
-<%- @partial('HomePageTwitterTabContent') %>
-</div> <!-- BS end of Twitter tab -->
-
 <div role="tabpanel" class="tab-pane "  id="dancing">   <!-- BS tabbed page -->
 <%- @partial('HomePageProgrammesTabContent') %>
 </div> <!-- BS end of Programmes tab -->
@@ -26,35 +22,21 @@ isPage: true
 <%- @partial('HomePageTicketsTabContent') %>
 </div> <!-- BS end of Tickets tab -->
 
-<div role="tabpanel" class="tab-pane " id="travel">   <!-- BS tabbed page -->
+<div role="tabpanel" class="tab-pane " id="where">   <!-- BS tabbed page -->
 <%- @partial('HomePageTravelTabContent') %>
-</div> <!-- BS end of Travel tab -->
-
-<div role="tabpanel" class="tab-pane " id="venues">   <!-- BS tabbed page -->
 <%- @partial('HomePageVenuesTabContent') %>
-</div> <!-- BS end of Venues tab -->
+</div> <!-- BS end of Travel/Venues tab -->
 
-<div role="tabpanel" class="tab-pane " id="tourism">   <!-- BS tabbed page -->
-<%- @partial('HomePageTourismTabContent') %>
-</div> <!-- BS end of Tourism tab -->
-
-<div role="tabpanel" class="tab-pane " id="Q_A">   <!-- BS tabbed page -->
+<div role="tabpanel" class="tab-pane " id="FAQ">   <!-- BS tabbed page -->
 <%- @partial('HomePageQATabContent') %>
-</div> <!-- BS end of Q&A tab -->
+</div> <!-- BS end of FAQ tab -->
 
-<div role="tabpanel" class="tab-pane " id="about">   <!-- BS tabbed page -->
-<%- @partial('HomePageAboutTabContent') %>
-</div> <!-- BS end of About tab -->
-
-<div role="tabpanel" class="tab-pane " id="credits">   <!-- BS tabbed page -->
+<div role="tabpanel" class="tab-pane " id="thanks">   <!-- BS tabbed page -->
 <%- @partial('HomePageCreditsTabContent') %>
-</div> <!-- BS end of Credits tab -->
-
-
-
-
-
-
+<%- @partial('HomePageAboutTabContent') %>
+</div> <!-- BS end of thanks tab -->
 
 </div>  <!-- BS end of tabbed single page -->               
 
+ <!-- Google Analytics tracking code -->
+<%- @partial('GA-tracker') %>

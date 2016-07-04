@@ -43,6 +43,9 @@
 }
 </style>
 
+<!-- FontAwesome -->
+<!-- The location here may rely on symlinks, or copies of the FA dirs, in our server. -->
+<link rel="stylesheet" href="FontAwesome/css/font-awesome.min.css">
 
 
     

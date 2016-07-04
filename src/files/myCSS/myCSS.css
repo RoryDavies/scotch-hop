@@ -83,7 +83,7 @@ mainly for use on a mobile where there isn't enough space to show all the conten
 /* In our dance programmes, we want to show the tea break */
 /* In the html we use an empty <p> with a class, which makes some semantic sense.*/
 /* Here we add some standardised content */
-p.dance-tea:before {content:"(tea will be served about here)" ; color:green ;}
+p.dance-tea:before {content:"(Interval)" ; color:green ;}
 
 
 /* In our Q&A tab/page (and perhaps elsewhere) we've used <dl> with <dt> and <dd>.
