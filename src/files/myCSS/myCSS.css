@@ -1,4 +1,37 @@
 
+/* 
+ To allow us to avoid loading images on a mobile device (assumed low bandwidth) we load as a background image 
+ as suggested by https://www.smashingmagazine.com/2013/04/build-fast-loading-mobile-website/ 
+ This setup is specifically for our masthead logo  
+ We'd need to adapt this somehow to avoid replicating for each individual image. 
+ Bootstrap's .visible-*-* classes hide content - browser may prevent loading too?? 
+*/
+
+/* for our tartan banner, text is supplied separately in html*/
+ /* In our banner/logo, we need text bigger than normal. */
+/* But on small screens it can't be so big. */
+/* Define the mobile-first (smaller) sizes forst */
+   .logo-image {
+      display: block;    
+      width:100%; height: 50px;   /* height half of image, full width */
+      background-image: url("../images/site/LSH tartan 2016/LSHtartan.jpg");  /* relative to CSS dir */
+   }
+ .LSHbannerTitle {
+   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+   font-size: 25px;
+   line-height: 25px;
+   text-align:center;
+   color:white;
+ }
+@media (min-width:632px) {
+ .logo-image { width:100%; height: 100px; }  /* height to match the image, full width */
+ .LSHbannerTitle { font-size: 50px;  line-height: 50px; } /* bigger text to match */
+}
+
+/* default BS nav tabs are a little hard to read. We want them bold */
+ul.nav-tabs li a {font-weight:bold;}
+
+
 
 
 /* We use a google map, inserted per http://wrightshq.com/playground/placing-multiple-markers-on-a-google-map-using-api-3/  
@@ -6,7 +39,10 @@ The JS is in its own file, called by the html file.
 This is the CSS.  It may need modified to allow more than one map to be displayed.
 */
 #map_wrapper {
-    height: 200px; width: 300px;
+    height: 400px; width: 600px;
+}
+#map2 {
+    height: 400px; width: 600px; background:green; 
 }
 #map_canvas {
     width: 100%;
@@ -29,4 +65,39 @@ mainly for use on a mobile where there isn't enough space to show all the conten
 }
 */
 
+/* occasionally we need vertical spacing. Bootstrap doesn't include this (maybe later). */ 
+/* This copied (slightly modified) 5/5/16 from https://github.com/twbs/bootstrap/issues/4286 */
+.vspacer5 { height: 5px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.vspacer10 { height: 10px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.vspacer15 { height: 15px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.vspacer20 { height: 20px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.vspacer25 { height: 25px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.vspacer30 { height: 30px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.vspacer35 { height: 35px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.vspacer40 { height: 40px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.vspacer45 { height: 45px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.vspacer50 { height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.vspacer100 { height: 100px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.vspacer200 { height: 200px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+
+/* In our dance programmes, we want to show the tea break */
+/* In the html we use an empty <p> with a class, which makes some semantic sense.*/
+/* Here we add some standardised content */
+p.dance-tea:before {content:"(tea will be served about here)" ; color:green ;}
+
+
+/* In our Q&A tab/page (and perhaps elsewhere) we've used <dl> with <dt> and <dd>.
+By default, BS truncates the <dt> content, and leaves very little space between rows.
+The custom CSS below overrides default BS to improve it for us.
+In the selectors, we need to be at least as specific as the BS definitions, to have any effect.
+*/    
+/* show us the whole question, don't truncate it*/
+.dl-horizontal dt { overflow:auto; white-space:normal;
+}
+/* shade behind every 2nd Q/A, for readability 
+Wrapping each pair in a div confused something (in BS?).
+*/
+dl.dl-horizontal dt:nth-of-type(odd),
+dl.dl-horizontal dd:nth-of-type(odd) 
+{  background-color:#eee; }
 
