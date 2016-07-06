@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title><%= @document.title %> | My Website</title>
+<!-- above from BS header material -->
+
+    <%- @getBlock("meta").toHTML() %>
+
+
+
+<!-- from BS based html -->
+
+    <!-- Bootstrap (local copy or CDN) 
+    <link href="BootstrapCSS/css/bootstrap.min.css" rel="stylesheet">   -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+    rel="stylesheet" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+<!-- FontAwesome (local or CDN) -->
+<!-- If we use a local copy, the location here may rely on symlinks, or copies of the FA dirs, in our server.
+<link rel="stylesheet" href="FontAwesome/css/font-awesome.min.css">   -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" 
+integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" 
+rel="stylesheet" crossorigin="anonymous">
+
+
+    
+<!-- We use a google map, inserted per http://wrightshq.com/playground/placing-multiple-markers-on-a-google-map-using-api-3/  -->
+<!-- The JS is in its own file - this needs to be loaded after JQuery, so it's right at the end of this file -->
+<!-- The CSS is in its/my own file. -->
+<!-- Some of these pieces will need modified to allow use of multiple different maps -->
+   <link href="myCSS/myCSS.css" rel="stylesheet"> 
+
+ 
+<!-- to avoid loading images on a mobile device (assumed low bandwidth) we load as a background image -->
+<!-- as suggested by https://www.smashingmagazine.com/2013/04/build-fast-loading-mobile-website/ -->
+<!-- This setup is specifically for our masthead logo --> 
+<!-- We need to adapt this somehow so we don't need to replicate for each individual image -->
+<!-- Bootstrap's .visible-*-* classes hide content - may prevent loading too?? -->
+ 
+
+
+
+<!-- end of BS -->
+    
+    
+</head>
+
+
+<body class="body">
+
+<div class="container"> <!-- bootstrap outer container (other Bootstrap markup described with BS) -->
+
+<%- @content %>
+
+</div> <!-- BS outer container -->
+
+
+
+    <%- @getBlock("scripts").toHTML() %>
+
+
+<!-- BS tail material - JS loads after page -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+ <!-- Bootstrap JS (local copy or CDN) 
+    <script src="BootstrapCSS/js/bootstrap.min.js"></script>  -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
+crossorigin="anonymous">
+</script>    
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug - per view-source:http://getbootstrap.com/examples/jumbotron/#-->
+        <!-- NB the dir referenced does not exist in our installation. http://getbootstrap.com/css/#grid-example-basic mentions it as part of Sass etc -->
+<!--
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+-->    
+
+<!-- JS for panel collapsing (see above) -->   
+     <script src="myJS/myJS.js"></script>
+ 
+
+
+<!-- JS for google maps (see above) -->    
+<script src="myJS/myGoogle.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+   
+ <!-- end of BS -->
+
+</body>
+</html>

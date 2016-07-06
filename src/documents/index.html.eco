@@ -1,0 +1,42 @@
+---
+title: "Scotch Hop - Scottish Dancing for all in Linlithgow Palace"
+layout: "default"
+isPage: true
+---
+
+<%- @partial('header') %>
+<%- @partial('HomePageNavArea') %>
+
+<div class="tab-content" id="content">  <!-- BS, multi-tab single page -->
+<!-- Whichever tabpanel is marked "active" here, the corresponding nav tab should also be marked. -->
+
+<div role="tabpanel" class="tab-pane active" id="home">
+<%- @partial('HomePageWelcomeTabContent') %>
+</div>  <!-- BS, end of home tab -->
+
+<div role="tabpanel" class="tab-pane "  id="dancing">   <!-- BS tabbed page -->
+<%- @partial('HomePageProgrammesTabContent') %>
+</div> <!-- BS end of Programmes tab -->
+
+<div role="tabpanel" class="tab-pane " id="tickets">   <!-- BS tabbed page -->
+<%- @partial('HomePageTicketsTabContent') %>
+</div> <!-- BS end of Tickets tab -->
+
+<div role="tabpanel" class="tab-pane " id="where">   <!-- BS tabbed page -->
+<%- @partial('HomePageTravelTabContent') %>
+<%- @partial('HomePageVenuesTabContent') %>
+</div> <!-- BS end of Travel/Venues tab -->
+
+<div role="tabpanel" class="tab-pane " id="FAQ">   <!-- BS tabbed page -->
+<%- @partial('HomePageQATabContent') %>
+</div> <!-- BS end of FAQ tab -->
+
+<div role="tabpanel" class="tab-pane " id="thanks">   <!-- BS tabbed page -->
+<%- @partial('HomePageCreditsTabContent') %>
+<%- @partial('HomePageAboutTabContent') %>
+</div> <!-- BS end of thanks tab -->
+
+</div>  <!-- BS end of tabbed single page -->               
+
+ <!-- Google Analytics tracking code -->
+<%- @partial('GA-tracker') %>

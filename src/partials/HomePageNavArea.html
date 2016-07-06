@@ -1,0 +1,58 @@
+<!-- Nav (separate file) -->
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a> <!-- BS, accessibility -->
+
+<nav class="navbar navbar-default ">
+  <div class="container-fluid">
+    <!-- Brand and toggle button get grouped for better mobile display -->
+    <div class="navbar-header">  
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav nav-tabs" role="tablist">
+      <!-- in the list/link elements below, which enable different sections of the html as a tab, 
+         role="presentation" ....
+         id="tab-xxxx" (optional) uses JS to allow links in one tab to switch to another tab.
+         role="tab" data-toggle="tab"   ....  owned by the <ul role="tablist"> above 
+         and related to the various <div role="tabpanel"> further below (each enabled by one of the nav links).
+         role="tablist" (<UL> above) is a list of role="tab" elements, which are references to role="tabpanel" elements.
+         aria-controls="tickets" href="#tickets"  both refer to the id of the div which is the related tabpanel.
+         Normally one of the tabs in the nav area, and the corresponding tabpanel div, have class="active". 
+         If CSS is disabled (tabbed display does not work), these do not appear to function as links - odd ?
+         This may be a side effect of the tab role of each link. Fix unknown, if needed.
+      -->
+            <li role="presentation" class="active">
+            <a                  role="tab" data-toggle="tab" 
+            aria-controls="home"    href="#home"   >Home</a></li>
+                        
+            <li role="presentation"               >
+            <a id="tab-dancing" role="tab" data-toggle="tab" 
+            aria-controls="dancing" href="#dancing">Programmes</a></li>
+            
+            <li role="presentation"               >
+            <a id="tab-tickets" role="tab" data-toggle="tab" 
+            aria-controls="tickets" href="#tickets">Prices</a></li>            
+            
+            <li role="presentation"               >
+            <a id="tab-where"  role="tab" data-toggle="tab" 
+            aria-controls="where"  href="#where" >Where</a></li>             
+                        
+            <li role="presentation"               >
+            <a                  role="tab" data-toggle="tab" 
+            aria-controls="FAQ"     href="#FAQ"    >FAQ</a></li>
+                        
+            <li role="presentation"               >
+            <a                  role="tab" data-toggle="tab" 
+            aria-controls="thanks" href="#thanks">Thanks</a></li> 
+
+        </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+

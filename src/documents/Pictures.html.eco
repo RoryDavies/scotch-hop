@@ -1,0 +1,54 @@
+---
+title: "Scotch Hop - Scottish Dancing for all in Linlithgow Palace"
+layout: "default"
+isPage: true
+---
+
+<%- @partial('header') %>
+
+<table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td valign="top">
+<div align="center">
+
+	<table border="0" width="1002" bgcolor="#FFFFFF" cellpadding="2" background="images/Tartan%20stripe%2072%20Hortr.html">
+		<tr>
+			<td colspan="2" bgcolor="#FFFFFF">
+			<p align="center"><b><font size="5">Pictures&nbsp; from Scotch Hop 
+			2006 - 15</font></b></td>
+		</tr>
+		<tr>
+			<td width="48%" valign="bottom" align="center">
+<p align="center">
+<img border="0" src="images/Scotch%20Hop_26-07-06_63.jpg" width="486" height="321" alt="Scotch Hop 2006 Linlithgow Palace"></td>
+			<td width="50%" valign="bottom" align="center">
+			<p align="center">
+<img border="0" src="images/DSC_0049.jpg" width="490" height="324" alt="Scotch Hop at Linlithgow Palace"> </td>
+		</tr>
+		<tr>
+			<td width="48%" align="center">
+			<p align="center">
+<img border="0" src="images/DSC_0142.jpg" width="470" height="335" alt="Scotch Hop at Linlithgow Palace"></td>
+			<td width="50%" valign="top" align="center">
+			<p align="center">
+<img border="0" src="images/DSC_0073.jpg" width="490" height="324" alt="Scotch Hop Linlithgow Palace">&nbsp;&nbsp;&nbsp; </td>
+		</tr>
+		<tr>
+			<td align="center" colspan="2" valign="top" height="420">
+			<p align="center">
+			<img border="0" src="images/DSC_0179.jpg" width="311" height="397" alt="Scotch Hop Linlithgow Palace">&nbsp;
+			<img border="0" src="images/Crop%201.jpg" width="278" height="397" alt="Scotch Hop at the Low Port">&nbsp;
+			<img border="0" src="images/crop%202.jpg" width="247" height="397" alt="Scotch Hop at the Low Port"></td>
+		</tr>
+		<tr>
+			<td width="48%" align="center">
+			<img border="0" src="images/DSCF1667.jpg" width="480" height="340" alt="Scotch Hop Linlithgow Palace"></td>
+			<td width="50%" align="center">
+			<p align="center">
+			<img border="0" src="images/DSC_0111.jpg" width="490" height="324" alt="Scotch Hop Linlithgow Palace"></td>
+		</tr>
+		</table>
+</div>
+
+</td></tr>
+</table>

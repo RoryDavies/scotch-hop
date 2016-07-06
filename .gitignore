@@ -1,3 +1,6 @@
+BootstrapCSS
+node_modules
+out
 obj
 bin
 _ReSharper.*
