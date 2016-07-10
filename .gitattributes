@@ -1,0 +1,13 @@
+#default to non-text – git will leave it strictly alone
+* -text
+
+# list all known types which are definitely text, where we want LF line endings ...
+.gitignore  eol
+.gitattributes  eol
+*.eco  eol
+*.html  eol
+*.css   eol
+*.js   eol
+*.md   eol
+*.txt  eol
+

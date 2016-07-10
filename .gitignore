@@ -1,8 +1,10 @@
+#Directories to ignore ...
 BootstrapCSS
 node_modules
-out
 obj
 bin
+
+#File names / types to ignore ...
 _ReSharper.*
 *.csproj.user
 *.[Rr]e[Ss]harper.user
