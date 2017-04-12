@@ -4,6 +4,7 @@
   "description": "New DocPad project without using a skeleton",
   "dependencies": {
     "docpad": "~6.79.4",
+    "docpad-plugin-datafiles": "~2.3.1",
     "docpad-plugin-eco": "~2.1.0",
     "docpad-plugin-marked": "~2.3.0",
     "docpad-plugin-partials": "~2.9.2",

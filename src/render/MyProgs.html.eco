@@ -1,0 +1,42 @@
+---
+title: "Scotch Hop - Scottish Dancing for all in Linlithgow Palace"
+layout: "default"
+isPage: true
+greet: "HelloHello"
+---
+
+<%- @partial('header') %>
+
+Hello World
+
+<% greeting2 = "Hello Again" %>
+<%- greeting2  %>
+
+Should be a greeting from the YAML??
+<%= greet %>
+
+Bye
+
+<h1>Hello2</h1>
+<% greetings = ["Hello2", "Welcome2"]  %>
+<% for greet in greetings: %>
+<p><%- greet  %></p>
+<% end %>
+
+<h1>Hello3</h1>
+<% greetings = English: "Hello", French: "Bienvenu" %>
+<% for lang, greet of greetings: %>
+<p><%- greet  %> in <%- lang %>   </p>
+<% end %>
+
+
+
+
+
+<h1>Stuff from YAML </h1>
+
+<p> Anything here &quot; <%= @['myfile'].fred %> &quot; ?</p>
+
+
+
+
