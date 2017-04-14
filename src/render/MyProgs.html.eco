@@ -32,10 +32,29 @@ Bye
 
 
 
-
 <h1>Stuff from YAML </h1>
 
 <p> Anything here &quot; <%= @['myfile'].fred %> &quot; ?</p>
+
+<p> Anything here &quot; <%= @myfile.fred %> &quot; ?</p>
+
+<p>First dance of first week is on <%= @['myfile']['programmes'].week %>  </p>
+
+<p>2nd dance of first week is on <%= @myfile.programmes.week %>  </p>
+
+
+<h1>Stuff from Raw Coffeescript </h1>
+
+<% x = { fred: {ben: "isaac"}  }%>
+<p>Janny is <%= x.fred.ben %>  </p>
+
+<% y = { fred: {ben: "isaac" } } %>
+<p>contents are 
+<% for key1, obj1 of y :  %> 
+<% for key2, value of obj1 :  %> 
+<%= key1 %> --> <%= key2 %> --> <%= value %>
+<% end %>
+</p>
 
 
 

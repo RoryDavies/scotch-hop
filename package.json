@@ -13,5 +13,6 @@
   "main": "node_modules/.bin/docpad-server",
   "scripts": {
     "start": "node_modules/.bin/docpad-server"
-  }
+  },
+  "devDependencies": {}
 }
