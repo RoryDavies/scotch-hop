@@ -1,4 +1,25 @@
 fred: "yaml"
 programmes: 
    week: "1"
-  
+
+
+SchemaVersion: "1"
+LSHprog: 
+  - weekno: "1"
+    date: "2016-07-13"
+    time: "19.30"
+    band: 
+      name: "John Smith"
+      URL: "http://jsmith.com"
+    piper: 
+      name: "Jim Smith"
+      URL: "http://jsmith.com"
+    dances:
+      - name: "dance1"
+        type: "J32"
+      - name: "any"
+        type: "interval"
+      - name: "dance2"
+        type: "R40"
+
+

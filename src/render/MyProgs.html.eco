@@ -29,20 +29,6 @@ Bye
 <p><%- greet  %> in <%- lang %>   </p>
 <% end %>
 
-
-
-
-<h1>Stuff from YAML </h1>
-
-<p> Anything here &quot; <%= @['myfile'].fred %> &quot; ?</p>
-
-<p> Anything here &quot; <%= @myfile.fred %> &quot; ?</p>
-
-<p>First dance of first week is on <%= @['myfile']['programmes'].week %>  </p>
-
-<p>2nd dance of first week is on <%= @myfile.programmes.week %>  </p>
-
-
 <h1>Stuff from Raw Coffeescript </h1>
 
 <% x = { fred: {ben: "isaac"}  }%>
@@ -55,6 +41,44 @@ Bye
 <%= key1 %> --> <%= key2 %> --> <%= value %>
 <% end %>
 </p>
+
+
+
+
+<h1>Simple Stuff from YAML </h1>
+
+<p> Anything here &quot; <%= @['myfile'].fred %> &quot; ?</p>
+
+<p> Anything here &quot; <%= @myfile.fred %> &quot; ?</p>
+
+<p>First dance of first week is on <%= @['myfile']['programmes'].week %>  </p>
+
+<p>2nd dance of first week is on <%= @myfile.programmes.week %>  </p>
+
+<p> 3rd is
+<%= @myfile.LSHprog[0].weekno %> 
+</p>
+
+
+<h1>Programmes from YAML ...</h1>
+
+<% for week in  @myfile.LSHprog :  %> 
+<h2>Week <%= week.weekno %> </h2>
+<p> Music by our piper
+<%= week.piper.name %> (<%= week.piper.URL %>)
+and the band
+<%= week.band.name %> (<%= week.band.URL %>)
+</p>
+
+<ul><% for dance in  week.dances :  %> 
+<% if dance.type is 'interval' : %><li> (interval) </li>
+<% else: %><li> <%= dance.name %> (<%= dance.type %>) </li><% end %>
+<% end %> <% #for dance %>
+</ul><% end %> <% #for week %>
+
+
+
+
 
 
 
