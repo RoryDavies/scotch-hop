@@ -15,11 +15,9 @@ LSHprog:
       name: "Jim Smith"
       URL: "http://jsmith.com"
     dances:
-      - name: "dance1"
-        type: "J32"
-      - name: "any"
-        type: "interval"
-      - name: "dance2"
-        type: "R40"
+      - code: "dance1"
+      - code: ":interval:"
+      - code: "dance2"
+      - code: "dance3"
 
 

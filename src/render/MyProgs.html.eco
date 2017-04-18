@@ -71,8 +71,16 @@ and the band
 </p>
 
 <ul><% for dance in  week.dances :  %> 
-<% if dance.type is 'interval' : %><li> (interval) </li>
-<% else: %><li> <%= dance.name %> (<%= dance.type %>) </li><% end %>
+<li>
+<% if dance.code is ':interval:' : %> (interval)
+<% else: %>  
+<% dancedet = @dances.Dances[ dance.code ] %>
+<%= dancedet.name or '-no name-' %>
+<%= dancedet.style or '-no style-' %>
+<%= dancedet.notes or '-no notes-' %>
+<% end %><% #dance.code %>
+
+</li>
 <% end %> <% #for dance %>
 </ul><% end %> <% #for week %>
 

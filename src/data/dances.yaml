@@ -1,0 +1,23 @@
+
+SchemaVersion: "1"
+
+Dances: 
+  dance1:  
+    name: "reel of 51st"  
+    style: "J32"
+    notes: "ff njkjgjf"
+
+  dance2: 
+    name: "reel of 52st"  
+    style: "R40"
+    notes: "ff ccc"
+
+  dance3: 
+    name: "reel of 53st"  
+    style: "S32"
+    notes: "ff tttt"
+
+  dddd: "HELLO"
+
+
+
