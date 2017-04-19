@@ -2,22 +2,73 @@
 SchemaVersion: "1"
 
 Dances: 
-  dance1:  
-    name: "reel of 51st"  
-    style: "J32"
-    notes: "ff njkjgjf"
-
-  dance2: 
-    name: "reel of 52st"  
-    style: "R40"
-    notes: "ff ccc"
-
-  dance3: 
-    name: "reel of 53st"  
-    style: "S32"
-    notes: "ff tttt"
-
-  dddd: "HELLO"
+  ABordersWelcome:  { name: "A Borders Welcome", style: "R40", notes: "ff tttt"  }
+  ArgyllsFancy:   { name: "Argylls Fancy", style: "R40", notes: "ff tttt"  }
+  BlackDance:  { name: "Black Dance", style: "R40", notes: "ff tttt"  }
+  BritanniaTwoStep:  { name: "Britannia Two Step", style: "R40", notes: "ff tttt"  }
+  BrounsReel:  { name: "BrounsReel", style: "R40", notes: "ff tttt"  }
+  CallOfThePipes:  { name: "Call of the Pipes", style: "R40", notes: "ff tttt"  }
+  CanadianBarnDance:  { name: "Canadian Barn Dance", style: "R40", notes: "ff tttt"  }
+  CircassianCircle:  { name: "Circassian Circle", style: "R40", notes: "ff tttt"  }
+  CirclesFour:  { name: "Circles Four", style: "R40", notes: "ff tttt"  }
+  CumberlandReel:  { name: "Cumberland Reel", style: "R40", notes: "ff tttt"  }
+  DanielsDelight:  { name: "Daniels Delight", style: "R40", notes: "ff tttt"  }
+  DashingWhiteCircle:  { name: "Dashing White Circle", style: "R40", notes: "ff tttt"  }
+  DashingWhiteSergeant:  { name: "Dashing White Sergeant", style: "R40", notes: "ff tttt"  }
+  DhoonJig:  { name: "Dhoon Jig", style: "R40", notes: "ff tttt"  }
+  EightsomeReel:  { name: "Eightsome Reel", style: "R40", notes: "ff tttt"  }
+  EspieMcNab:  { name: "Espie McNab", style: "R40", notes: "ff tttt"  }
+  Eva3Step:  { name: "Eva 3 Step", style: "R40", notes: "ff tttt"  }
+  FionasFancy:  { name: "Fiona's Fancy", style: "R40", notes: "ff tttt"  }
+  FlyingScotsman:  { name: "Flying Scotsman", style: "R40", notes: "ff tttt"  }
+  FoulaReel:  { name: "Foula Reel", style: "R40", notes: "ff tttt"  }
+  FriendlyWaltz:  { name: "Friendly Waltz", style: "R40", notes: "ff tttt"  }
+  GallowayHouse:  { name: "Galloway House", style: "R40", notes: "ff tttt"  }
+  GayGordons: { name: "Gay Gordons", style: "S32", notes: "ff tttt"  }
+  GrassmarketReel:  { name: "Grassmarket Reel", style: "R40", notes: "ff tttt"  }
+  GypsyTap:  { name: "Gypsy Tap", style: "R40", notes: "ff tttt"  }
+  HaymakersJig:  { name: "Haymakers Jig", style: "R40", notes: "ff tttt"  }
+  HighlandSchottische :  { name: "Highland Schottische", style: "R40", notes: "ff tttt"  }
+  HighlandWelcome:  { name: "A Highland Welcome", style: "R40", notes: "ff tttt"  }
+  InvernessReel:  { name: "Inverness Reel", style: "R40", notes: "ff tttt"  }
+  IsleOfSkye:  { name: "Isle of Skye", style: "R40", notes: "ff tttt"  }
+  JackyTarTwoStep:  { name: "Jacky Tar Two Step", style: "R40", notes: "ff tttt"  }
+  JigToTheMusic:  { name: "Jig to the Music", style: "R40", notes: "ff tttt"  }
+  JohnnyGroatsHouse:  { name: "Johnny Groat's House", style: "R40", notes: "ff tttt"  }
+  JoieDeVivre:  { name: "Joie De Vivre", style: "R40", notes: "ff tttt"  }
+  LassieComeAndDanceWithMe:  { name: "Lassie Come and Dance with Me:", style: "R40", notes: "ff tttt"  }
+  LeapYear: { name: "Leap Year", style: "R40", notes: "ff tttt"  }
+  LintonPloughman:  { name: "Linton Ploughman", style: "R40", notes: "ff tttt"  }
+  LochNessMonster:  { name: "Loch Ness Monster", style: "R40", notes: "ff tttt"  }
+  LomondWaltz:  { name: "Lomond Waltz", style: "R40", notes: "ff tttt"  }
+  LuckySeven:  { name: "Lucky Seven", style: "R40", notes: "ff tttt"  }
+  MairisWedding:  { name: "Mairi's Wedding", style: "R40", notes: "ff tttt"  }
+  MarchesHop:  { name: "Marches Hop", style: "R40", notes: "ff tttt"  }
+  Marine4Step:  { name: "Marine 4 Step", style: "R40", notes: "ff tttt"  }
+  MilitaryTwoStep:  { name: "Military Two Step", style: "R40", notes: "ff tttt"  }
+  MississippiDip:  { name: "Mississippi Dip", style: "R40", notes: "ff tttt"  }
+  NiceAndEasy:   { name: "Nice And Easy", style: "R40", notes: "ff tttt"  }
+  OrcadianStripTheWillow:  { name: "Orcadian Strip the Willow", style: "R40", notes: "ff tttt"  }
+  OXOReel:  { name: "OXO Reel", style: "R40", notes: "ff tttt"  }
+  PolkaCountryDance:  { name: "Polka Country Dance", style: "R40", notes: "ff tttt"  }
+  PrideOfErinWaltz:  { name: "Pride Of Erin Waltz", style: "R40", notes: "ff tttt"  }
+  RabbiesReel:  { name: "Rabbie's Reel", style: "R40", notes: "ff tttt"  }
+  RebeccasRoundabout:  { name: "Rebecca's Roundabout", style: "R40", notes: "ff tttt"  }
+  ReelOfThe51st:  { name: "Reel of the 51st", style: "R40", notes: "ff tttt"  }
+  RiversideJig:  { name: "Riverside Jig", style: "R40", notes: "ff tttt"  }
+  RussianBallet:  { name: "Russian Ballet", style: "R40", notes: "ff tttt"  }
+  SaturdayMorningJig:  { name: "Saturday Morning Jig", style: "R40", notes: "ff tttt"  }
+  ScotchRose:  { name: "Scotch Rose", style: "R40", notes: "ff tttt"  }
+  ScottMeikle:  { name: "Scott Meikle", style: "R40", notes: "ff tttt"  }
+  SevenStepPolka:  { name: "Seven Step Polka", style: "R40", notes: "ff tttt"  }
+  ShortbreadDance:  { name: "Shortbread Dance", style: "R40", notes: "ff tttt"  }
+  SouthernRoseWaltz:  { name: "Southern Rose Waltz", style: "R40", notes: "ff tttt"  }
+  StBernardsWaltz:  { name: "St Bernards Waltz", style: "R40", notes: "ff tttt"  }
+  StripTheWillow:  { name: "Strip The Willow", style: "R40", notes: "ff tttt"  }
+  SwedishMasquerade:  { name: "Swedish Masquerade", style: "R40", notes: "ff tttt"  }
+  VienneseWaltz:  { name: "Viennese Waltz", style: "R40", notes: "ff tttt"  }
+  VirginiaReel:  { name: "Virginia Reel", style: "R40", notes: "ff tttt"  }
+  WestGarletonMeander:  { name: "West Garleton Meander", style: "R40", notes: "ff tttt"  }
 
 
 

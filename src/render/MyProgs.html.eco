@@ -45,39 +45,32 @@ Bye
 
 
 
-<h1>Simple Stuff from YAML </h1>
-
-<p> Anything here &quot; <%= @['myfile'].fred %> &quot; ?</p>
-
-<p> Anything here &quot; <%= @myfile.fred %> &quot; ?</p>
-
-<p>First dance of first week is on <%= @['myfile']['programmes'].week %>  </p>
-
-<p>2nd dance of first week is on <%= @myfile.programmes.week %>  </p>
-
-<p> 3rd is
-<%= @myfile.LSHprog[0].weekno %> 
-</p>
-
 
 <h1>Programmes from YAML ...</h1>
 
-<% for week in  @myfile.LSHprog :  %> 
+<% for week in  @programme.LSHprog :  %> 
 <h2>Week <%= week.weekno %> </h2>
 <p> Music by our piper
-<%= week.piper.name %> (<%= week.piper.URL %>)
+
+<% pcode = week.piper.code %>
+<% piperdet = @bands.Pipers[ pcode ] %>
+<%= piperdet.name %> (<%= piperdet.URL %>)
+
 and the band
-<%= week.band.name %> (<%= week.band.URL %>)
+<% bcode = week.band.code %>
+<% banddet = @bands.Bands[ bcode ] %>
+<%= banddet.name %> (<%= banddet.URL %>)
 </p>
 
 <ul><% for dance in  week.dances :  %> 
 <li>
 <% if dance.code is ':interval:' : %> (interval)
-<% else: %>  
-<% dancedet = @dances.Dances[ dance.code ] %>
-<%= dancedet.name or '-no name-' %>
-<%= dancedet.style or '-no style-' %>
-<%= dancedet.notes or '-no notes-' %>
+<% else if dancedet = @dances.Dances[ dance.code ] : %>
+<%=  dancedet.name  or dance.code + ' (-no name-)' %>
+ <%= dancedet.style or dance.code + ' (-no style-)' %>
+<%=  ' (progressive)' if dancedet.prog %>
+ <%= dancedet.notes or dance.code + ' (-no notes-)' %>
+<% else: %>DANCE CODE <%= dance.code %> MISSING FROM DATABASE! 
 <% end %><% #dance.code %>
 
 </li>
