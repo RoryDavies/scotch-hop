@@ -8,12 +8,13 @@ LSHprog:
       code: TheIanMuirSound
     piper: 
       code: EdwardSeaman
+
     dances:
       - code:   GayGordons
       - code:   FlyingScotsman  
       - code:   HighlandWelcome  
       - code:   LeapYear
-      - code:   ArgyllsFancy  
+        code2:   ArgyllsFancy  
       - code:   CanadianBarnDance 
       - code:   NiceAndEasy  
       - code:   StBernardsWaltz
@@ -49,7 +50,7 @@ LSHprog:
       - code: ABordersWelcome
       - code: MilitaryTwoStep
       - code: FionasFancy
-      - code: JoieDeVivre
+        code2: JoieDeVivre
       - code: LomondWaltz
       - code: CirclesFour
       - code: DhoonJig
@@ -58,16 +59,16 @@ LSHprog:
     date: "2016-07-27"
     time: "19.30"
     band: 
-      code: NicolMcLarenGlencraigDanceBand
+      code2: NicolMcLarenGlencraigDanceBand
     piper: 
-      code: RachelGray
+      code2: RachelGray
     dances:
       - code: GayGordons 
       - code: DashingWhiteSergeant 
       - code: LintonPloughman
       - code: SouthernRoseWaltz  
       - code: IsleOfSkye
-      - code: ReelOfThe51st 
+        code2: ReelOfThe51st 
       - code: GypsyTap
       - code: RebeccasRoundabout
       - code: FlyingScotsman
@@ -96,7 +97,7 @@ LSHprog:
       - code: CumberlandReel
       - code: VienneseWaltz
       - code: RabbiesReel
-      - code: ScottMeikle  
+        code2: ScottMeikle  
       - code: JigToTheMusic
       - code: ":interval:"
       - code: RussianBallet
@@ -104,7 +105,7 @@ LSHprog:
       - code: FriendlyWaltz
       - code: CallOfThePipes
       - code: EspieMcNab
-      - code: LassieComeAndDanceWithMe
+        code2: LassieComeAndDanceWithMe
       - code: JackyTarTwoStep
       - code: OrcadianStripTheWillow
 
@@ -122,7 +123,7 @@ LSHprog:
       - code: ShortbreadDance
       - code: HighlandSchottische 
       - code: BlackDance
-      - code: BrounsReel 
+        code2: BrounsReel 
       - code: PrideOfErinWaltz
       - code: StripTheWillow
       - code: ":interval:"
@@ -133,7 +134,7 @@ LSHprog:
       - code: DashingWhiteSergeant
       - code: Marine4Step
       - code: GrassmarketReel
-      - code: MairisWedding
+        code2: MairisWedding
 
 
 

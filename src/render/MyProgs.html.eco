@@ -50,20 +50,56 @@ Bye
 
 <% for week in  @programme.LSHprog :  %> 
 <h2>Week <%= week.weekno %> </h2>
-<p> Music by our piper
 
-<% pcode = week.piper.code %>
-<% piperdet = @bands.Pipers[ pcode ] %>
-<%= piperdet.name %> (<%= piperdet.URL %>)
+<p>
+Music by 
 
-and the band
-<% bcode = week.band.code %>
-<% banddet = @bands.Bands[ bcode ] %>
-<%= banddet.name %> (<%= banddet.URL %>)
-</p>
+<% # programme database formats - either week.piper.code (single piper) or week.piper[list of codes] (multiple). %>
+<% # Either way, details of bands and pipers are held in a separate file. %>
+<% if pdetail = @bands.Pipers[ week.piper.code ] :  %> <% # a single piper? %>
+our piper
+ <%= pdetail.name  or week.piper.code + ' (-no name-)' %> 
+(<%= pdetail.URL  or week.piper.code + ' (-no URL-)' %>)
+and
+<% else if week.piper.length : %> <% # a list of pipers? %>
+our pipers
+<% for p in week.piper : %> 
+<% pdetail = @bands.Pipers[ p.code ] %>
+, <%= pdetail.name  or p.code + ' (-no name-)' %> 
+(<%= pdetail.URL  or p.code + ' (-no URL-)' %>)
+<% end %> <% #for p %>
+and
+<% # else no pipers this week %>
+<% end %><% #if week.piper (single/multiple) %>
+
+<% # database formats - either week.band.code (single piper) or week.band[list of codes] (multiple) %>
+<% # Either way, details of bands and pipers are held in a separate file. %>
+<% if bdetail = @bands.Bands[ week.band.code ] :  %> <% # a single band? %>
+the band
+ <%= bdetail.name  or week.band.code + ' (-no name-)' %> 
+(<%= bdetail.URL  or week.band.code + ' (-no URL-)' %>)
+<% else if week.band.length : %> <% # a list of bands? %>
+our bands this week
+<% for b in week.band : %> 
+<% bdetail = @bands.Bands[ b.code ] %>
+, <%= bdetail.name  or b.code + ' (-no name-)' %> 
+(<%= bdetail.URL  or b.code + ' (-no URL-)' %>)
+<% end %> <% #for b %>
+<% # else no bands this week %>
+<% end %><% #if week.band (single/multiple) %>
+
+</p> <!-- music -->
+
+
 
 <ul><% for dance in  week.dances :  %> 
 <li>
+
+<% # In the programmes database, we have a list of dances, each entry is a hash/object. %>
+<% # In most cases (a single dance), the hash contains only one entry, code. %>
+<% # Where a 2nd dance is to be done at the same time (for "experts") we also have a code2. %>
+<% # In all cases, details of the dances are held in a separate file. %> 
+
 <% if dance.code is ':interval:' : %> (interval)
 <% else if dancedet = @dances.Dances[ dance.code ] : %>
 <%=  dancedet.name  or dance.code + ' (-no name-)' %>
@@ -73,9 +109,19 @@ and the band
 <% else: %>DANCE CODE <%= dance.code %> MISSING FROM DATABASE! 
 <% end %><% #dance.code %>
 
+<% if dance.code2  : %> +  <% # 2nd (expert) dance optional %>
+<%  if dancedet = @dances.Dances[ dance.code2 ] : %>
+<%=  dancedet.name  or dance.code2 + ' (-no name-)' %>
+ <%= dancedet.style or dance.code2 + ' (-no style-)' %>
+<%=  ' (progressive)' if dancedet.prog %>
+ <%= dancedet.notes or dance.code2 + ' (-no notes-)' %>
+<% else: %>DANCE CODE <%= dance.code2 %> MISSING FROM DATABASE! 
+<% end %><% #dancedet %>
+<% end %><% #dance.code2 %>
+
 </li>
 <% end %> <% #for dance %>
-</ul><% end %> <% #for week %>
+</ul><% end %> <% #for week %> <!-- dances -->
 
 
 
