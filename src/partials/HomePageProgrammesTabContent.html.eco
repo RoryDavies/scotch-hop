@@ -1,0 +1,155 @@
+
+<div class="row">  <!-- BS, row, programmes -->
+
+  <div class="col-md-12">  <!-- BS, col -->
+
+    <div class="panel panel-default">   <!-- BS -->
+      <div class="panel-heading">
+        <h1 class="panel-title" id="dancing-panel">Music and Dancing</h1>
+      </div>
+      <div class="panel-body">  <!-- BS -->
+
+  <p>Each night we have a high quality live Scottish band. 
+There is a wide range of Scottish dances, 
+enjoyed by a wide range of ages, abilities and nationalities. 
+Our experienced caller gives instruction, before and during the dance.
+The programme usually ends about 10.00 p.m.
+  </p>
+<p>The 2016 programmes below are typical, the 2017 details will be added as soon as they are available.
+</p>
+
+      </div>   <!-- BS panel-body -->
+    </div>  <!-- BS panel -->           
+  </div >  <!-- BS, col -->
+
+</div >  <!-- BS, row -->
+
+
+
+<div class="row">  <!-- BS, row, programmes -->
+
+
+<% for week, weekno in  @programme.LSHprog :  %> 
+<% weekno = weekno + 1 # convert from 0-based %>
+
+<% # add clearfix when needed, to prevent too many columns on wide displays %>
+<% if weekno is 4 : %>
+  <!-- Add clearfix so 2 blocks below are in one row below the 3 above (in md displays and wider) -->
+  <div class="clearfix visible-md-block"></div>
+<% end %><% # weekno for clearfix %>
+
+
+
+  <div class="col-md-4">  <!-- BS, col -->
+    <div class="panel panel-default">   <!-- BS -->
+      <div class="panel-heading">
+        <h2 class="panel-title">
+	        <a role="button" data-toggle="collapse" href="#prog<%= weekno %>" aria-expanded="false" aria-controls="prog<%= weekno %>">
+            <span class=" clickable panel-collapsed">
+              <%= week.date %> = Wednesday 13th July 2016 at 7.30pm
+              <i class="glyphicon glyphicon-chevron-down pull-right"></i>
+            </span> <!-- see myJS -->
+          </a>
+        </h2>
+      </div>
+      <div class="panel-body collapse" id="prog<%= weekno %>">  <!-- BS -->
+
+<p>
+<strong>
+Music by 
+<!-- PIPER(S) ... -->
+<% # programme database formats - either week.piper.code (single piper) or week.piper[list of codes] (multiple). %>
+<% # Either way, details of bands and pipers are held in a separate file. %>
+<% if pdetail = @bands.Pipers[ week.piper.code ] :  %> <% # a single piper? %>
+our piper </strong>
+<% if pdetail.URL : %>
+<a target="_blank" class="fa fa-external-link" href="<%= pdetail.URL %>">
+<%= pdetail.name  or week.piper.code + ' (-no name-)' %> </a>
+<% end %> <% # pdetail.URL %>
+and
+<% else if week.piper.length : %> <% # a list of pipers? %>
+our pipers </strong>(
+<% for p, pnum in week.piper : %> 
+<% pdetail = @bands.Pipers[ p.code ] %>
+<% if pdetail.URL : %>
+<a target="_blank" class="fa fa-external-link" href="<%= pdetail.URL %>">
+<%= pdetail.name  or week.piper.code + ' (-no name-)' %></a><% if pnum < week.piper.length-1 : %>, <% end %>
+<% end %> <% # pdetail.URL %>
+<% end %> <% #for p %>
+) and
+<% else : %> <% # no pipers this week %>
+ </strong>
+<% end %><% #if week.piper (single/multiple) %>
+
+<!-- BAND(S) ... -->
+<strong>
+<% # programme database formats - either week.piper.code (single piper) or week.piper[list of codes] (multiple). %>
+<% # Either way, details of bands and pipers are held in a separate file. %>
+<% if bdetail = @bands.Bands[ week.band.code ] :  %> <% # a single band? %>
+the band </strong>
+<% if bdetail.URL : %>
+<a target="_blank" class="fa fa-external-link" href="<%= bdetail.URL %>">
+<%= bdetail.name  or week.band.code + ' (-no name-)' %> </a>
+<% end %> <% # bdetail.URL %>
+<% else if week.band.length : %> <% # a list of bands? %>
+our bands </strong>(
+<% for b, bnum in week.band : %> 
+<% bdetail = @bands.Bands[ b.code ] %>
+<% if bdetail.URL : %>
+<a target="_blank" class="fa fa-external-link" href="<%= bdetail.URL %>">
+<%= bdetail.name  or week.band.code + ' (-no name-)' %></a><% if bnum < week.band.length-1 : %>, <% end %>
+<% end %> <% # bdetail.URL %>
+<% end %> <% #for b %>
+)
+<% else : %> <% #no bands this week %>
+ </strong>
+<% end %><% #if week.band (single/multiple) %>
+
+</p>
+
+<!-- DANCES ... -->
+<% for dance in  week.dances :  %> 
+
+<% # In the programmes database, we have a list of dances, each entry is a hash/object. %>
+<% # In most cases (a single dance), the hash contains only one entry, code. %>
+<% # Where a 2nd dance is to be done at the same time (for "experts") we also have a code2. %>
+<% # In all cases, details of the dances are held in a separate file. %> 
+
+<% if dance.code is ':interval:' : %> <p class="dance-tea"></p>
+<% else: %> 
+<p>
+
+<% # main dance (for all) %>
+<% if dancedet = @dances.Dances[ dance.code ] : %>
+<%=  dancedet.name  or dance.code + ' (-no name-)' %>
+ <%= dancedet.style or dance.code + ' (-no style-)' %>
+<%=  ' (progressive)' if dancedet.prog %>
+ <%= dancedet.notes or dance.code + ' (-no notes-)' %>
+<% else: %>DANCE CODE <%= dance.code %> MISSING FROM DATABASE! 
+<% end %><% #if dancedet %>
+
+<% # possible 2nd dance (for expert dancers) %>
+<% if dance.code2  : %> ( plus  <% # 2nd (expert) dance optional %>
+<%  if dancedet = @dances.Dances[ dance.code2 ] : %>
+<%=  dancedet.name  or dance.code2 + ' (-no name-)' %>
+ <%= dancedet.style or dance.code2 + ' (-no style-)' %>
+<%=  ' (progressive)' if dancedet.prog %>
+ <%= dancedet.notes or dance.code2 + ' (-no notes-)' %>
+<% else: %><p>DANCE CODE <%= dance.code2 %> MISSING FROM DATABASE!
+<% end %><% #dancedet %>
+)<% end %><% #dance.code2 %>
+
+</p>
+<% end %> <% #dance.code (interval / other) %>
+<% end %> <% #for dance %>
+
+      </div>   <!-- BS panel-body -->
+    </div>  <!-- BS panel -->           
+  </div >  <!-- BS, col -->
+
+
+<% end %> <% #for week %>
+
+
+</div>  <!-- BS, row, programmes -->
+

@@ -33,9 +33,9 @@ LSHprog:
     date: "2016-07-20"
     time: "19.30"
     band: 
-      code: JohnCarmichael
+       code: JohnCarmichael
     piper: 
-      code: GraemeSinclair
+       code: GraemeSinclair
     dances:
       - code: GayGordons
       - code: SaturdayMorningJig
@@ -59,9 +59,9 @@ LSHprog:
     date: "2016-07-27"
     time: "19.30"
     band: 
-      code2: NicolMcLarenGlencraigDanceBand
+      code: NicolMcLarenGlencraigDanceBand
     piper: 
-      code2: RachelGray
+      code: RachelGray
     dances:
       - code: GayGordons 
       - code: DashingWhiteSergeant 

@@ -48,8 +48,8 @@ Bye
 
 <h1>Programmes from YAML ...</h1>
 
-<% for week in  @programme.LSHprog :  %> 
-<h2>Week <%= week.weekno %> </h2>
+<% for week, weekno in  @programme.LSHprog :  %> 
+<h2>Week <%= weekno %> = <%= week.weekno %></h2>
 
 <p>
 Music by 
