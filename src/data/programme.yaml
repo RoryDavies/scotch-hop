@@ -3,7 +3,7 @@ Year: "2016"
 LSHprog: 
   - weekno: "1"
     date: "2016-07-13"
-    time: "19.30"
+    time: "19:30"
     band: 
       code: TheIanMuirSound
     piper: 
@@ -31,7 +31,7 @@ LSHprog:
 
   - weekno: "2"
     date: "2016-07-20"
-    time: "19.30"
+    time: "19:30"
     band: 
        code: JohnCarmichael
     piper: 
@@ -57,7 +57,7 @@ LSHprog:
 
   - weekno: "3"
     date: "2016-07-27"
-    time: "19.30"
+    time: "19:30"
     band: 
       code: NicolMcLarenGlencraigDanceBand
     piper: 
@@ -84,7 +84,7 @@ LSHprog:
 
   - weekno: "4"
     date: "2016-08-03"
-    time: "19.30"
+    time: "19:30"
     band: 
       code: GarySutherlandScottishCeilidhBand
     piper: 
@@ -111,7 +111,7 @@ LSHprog:
 
   - weekno: "5"
     date: "2016-08-10"
-    time: "19.30"
+    time: "19:30"
     band: 
       code: JimLindsayScottishDanceBand
     piper: 

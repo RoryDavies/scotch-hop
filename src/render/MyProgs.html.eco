@@ -52,6 +52,14 @@ Bye
 <h2>Week <%= weekno %> = <%= week.weekno %></h2>
 
 <p>
+Text date &quot;<%= week.date %>&quot;, time&quot;<%= week.time %>&quot; 
+<br \>Date string &quot;<%= datestr = week.date + 'T' + week.time + '+01:00' %>&quot;
+<br \>Raw date<%= date = new Date( week.date + "T" + week.time + "+01:00" )   %>
+<br \> Nice date <%= @moment(date).format("dddd D MMM YYYY [at] h:mm a")   %>
+</p>
+
+
+<p>
 Music by 
 
 <% # programme database formats - either week.piper.code (single piper) or week.piper[list of codes] (multiple). %>

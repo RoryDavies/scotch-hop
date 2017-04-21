@@ -16,6 +16,8 @@ Our experienced caller gives instruction, before and during the dance.
 The programme usually ends about 10.00 p.m.
   </p>
 <p>The 2016 programmes below are typical, the 2017 details will be added as soon as they are available.
+Sometimes a second, more difficult, dance is danced at the same time.
+Experienced dancers enjoy the challenge, and those not dancing may enjoy watching. 
 </p>
 
       </div>   <!-- BS panel-body -->
@@ -31,6 +33,9 @@ The programme usually ends about 10.00 p.m.
 
 <% for week, weekno in  @programme.LSHprog :  %> 
 <% weekno = weekno + 1 # convert from 0-based %>
+<% if (''+weekno) isnt week.weekno : %> <p>WEEK NUMBERS INCONSISTENT! (<%= weekno + "/" + week.weekno %>)</p> <% end %>
+<% # Convert date and time strings to an Object we can use, with our time zone (BST = GMT+1) %>
+<% date = new Date(  week.date + "T" + week.time + "+01:00"   ) %>
 
 <% # add clearfix when needed, to prevent too many columns on wide displays %>
 <% if weekno is 4 : %>
@@ -39,14 +44,13 @@ The programme usually ends about 10.00 p.m.
 <% end %><% # weekno for clearfix %>
 
 
-
   <div class="col-md-4">  <!-- BS, col -->
     <div class="panel panel-default">   <!-- BS -->
       <div class="panel-heading">
         <h2 class="panel-title">
 	        <a role="button" data-toggle="collapse" href="#prog<%= weekno %>" aria-expanded="false" aria-controls="prog<%= weekno %>">
             <span class=" clickable panel-collapsed">
-              <%= week.date %> = Wednesday 13th July 2016 at 7.30pm
+              <%= @moment(date).format("dddd Do MMM YYYY [at] h:mm a") %> 
               <i class="glyphicon glyphicon-chevron-down pull-right"></i>
             </span> <!-- see myJS -->
           </a>
