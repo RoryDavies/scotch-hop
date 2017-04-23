@@ -8,7 +8,7 @@ docpadConfig = {
 #Plugin config - for datafiles etc ...
 plugins: {
   datafiles: 
-    dataPaths: [ 'data' ],
+    dataPaths: [ 'data', 'data/progs' ],
     camelCase: true,
     alwaysReload: false
   moment:

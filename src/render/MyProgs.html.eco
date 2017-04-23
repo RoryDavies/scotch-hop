@@ -48,81 +48,46 @@ Bye
 
 <h1>Programmes from YAML ...</h1>
 
-<% for week, weekno in  @programme.LSHprog :  %> 
-<h2>Week <%= weekno %> = <%= week.weekno %></h2>
-
-<p>
-Text date &quot;<%= week.date %>&quot;, time&quot;<%= week.time %>&quot; 
-<br \>Date string &quot;<%= datestr = week.date + 'T' + week.time + '+01:00' %>&quot;
-<br \>Raw date<%= date = new Date( week.date + "T" + week.time + "+01:00" )   %>
-<br \> Nice date <%= @moment(date).format("dddd D MMM YYYY [at] h:mm a")   %>
+<% ourprogs = [] %>
+<% for key, object of this : %>
+<p>key = <%= key %>
+<% if key.match(/^prog20\d\d$/) : %>
+OURS
+<% ourprogs.push key %>
+<% end %>
 </p>
 
+<% end %>
 
-<p>
-Music by 
+<% WeekOcc = {}  #initialise our collection of total years/weeks %>   
+<% DanceOcc = {}  #initialise our collection of when each dance was done %>   
 
-<% # programme database formats - either week.piper.code (single piper) or week.piper[list of codes] (multiple). %>
-<% # Either way, details of bands and pipers are held in a separate file. %>
-<% if pdetail = @bands.Pipers[ week.piper.code ] :  %> <% # a single piper? %>
-our piper
- <%= pdetail.name  or week.piper.code + ' (-no name-)' %> 
-(<%= pdetail.URL  or week.piper.code + ' (-no URL-)' %>)
-and
-<% else if week.piper.length : %> <% # a list of pipers? %>
-our pipers
-<% for p in week.piper : %> 
-<% pdetail = @bands.Pipers[ p.code ] %>
-, <%= pdetail.name  or p.code + ' (-no name-)' %> 
-(<%= pdetail.URL  or p.code + ' (-no URL-)' %>)
-<% end %> <% #for p %>
-and
-<% # else no pipers this week %>
-<% end %><% #if week.piper (single/multiple) %>
+<% for progname in ourprogs : %>
+<% year = @[ progname ].Year %>
+<%  WeekOcc[ year ] = {} unless WeekOcc[ year ]?  %>
 
-<% # database formats - either week.band.code (single piper) or week.band[list of codes] (multiple) %>
-<% # Either way, details of bands and pipers are held in a separate file. %>
-<% if bdetail = @bands.Bands[ week.band.code ] :  %> <% # a single band? %>
-the band
- <%= bdetail.name  or week.band.code + ' (-no name-)' %> 
-(<%= bdetail.URL  or week.band.code + ' (-no URL-)' %>)
-<% else if week.band.length : %> <% # a list of bands? %>
-our bands this week
-<% for b in week.band : %> 
-<% bdetail = @bands.Bands[ b.code ] %>
-, <%= bdetail.name  or b.code + ' (-no name-)' %> 
-(<%= bdetail.URL  or b.code + ' (-no URL-)' %>)
-<% end %> <% #for b %>
-<% # else no bands this week %>
-<% end %><% #if week.band (single/multiple) %>
+<% for week, weekno in  @[ progname ].LSHprog :  %> 
+<h2><%= year %> Week <%= weekno %> = <%= week.weekno %></h2>
 
-</p> <!-- music -->
-
-
+<%  WeekOcc[ year ][ week.weekno ] = 'Y' unless WeekOcc[ year ][ week.weekno ]?  %>
 
 <ul><% for dance in  week.dances :  %> 
 <li>
 
-<% # In the programmes database, we have a list of dances, each entry is a hash/object. %>
-<% # In most cases (a single dance), the hash contains only one entry, code. %>
-<% # Where a 2nd dance is to be done at the same time (for "experts") we also have a code2. %>
-<% # In all cases, details of the dances are held in a separate file. %> 
-
 <% if dance.code is ':interval:' : %> (interval)
 <% else if dancedet = @dances.Dances[ dance.code ] : %>
 <%=  dancedet.name  or dance.code + ' (-no name-)' %>
- <%= dancedet.style or dance.code + ' (-no style-)' %>
-<%=  ' (progressive)' if dancedet.prog %>
- <%= dancedet.notes or dance.code + ' (-no notes-)' %>
+
+<%  DanceOcc[ dance.code ] = {} unless DanceOcc[ dance.code ]?  %>
+<%  DanceOcc[ dance.code ][ year ] = {} unless DanceOcc[ dance.code ][ year ]?  %>
+<%  DanceOcc[ dance.code ][ year ][ week.weekno ] = 'Y' #add its appearance %>
+
 <% else: %>DANCE CODE <%= dance.code %> MISSING FROM DATABASE! 
 <% end %><% #dance.code %>
 
 <% if dance.code2  : %> +  <% # 2nd (expert) dance optional %>
 <%  if dancedet = @dances.Dances[ dance.code2 ] : %>
 <%=  dancedet.name  or dance.code2 + ' (-no name-)' %>
- <%= dancedet.style or dance.code2 + ' (-no style-)' %>
-<%=  ' (progressive)' if dancedet.prog %>
- <%= dancedet.notes or dance.code2 + ' (-no notes-)' %>
 <% else: %>DANCE CODE <%= dance.code2 %> MISSING FROM DATABASE! 
 <% end %><% #dancedet %>
 <% end %><% #dance.code2 %>
@@ -131,8 +96,24 @@ our bands this week
 <% end %> <% #for dance %>
 </ul><% end %> <% #for week %> <!-- dances -->
 
+<% end %> <% # for progname %>
 
 
+
+<h2>Which Dance When? </h2>
+
+<ul>
+<% for dancecode, data of  DanceOcc :  %> 
+<li><%= dancecode %> : 
+<% for year, yeard of WeekOcc : %> <%= year %>
+<% for week, weekd of yeard : %> <%= week %>
+<% if data[ year ][ week ] :  %> Y <% else: %> - <% end %>
+<% end %> <% # for week %>
+<% end %> <% # for year %>
+</li>
+
+<% end %> <% #for dancecode %>
+</ul>
 
 
 
