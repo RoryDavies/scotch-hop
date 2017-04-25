@@ -2,139 +2,145 @@ SchemaVersion: "1"
 Year: "2017"
 LSHprog: 
   - weekno: "1"
-    date: "2017-07-13"
+    date: "2017-07-12"
     time: "19:30"
     band: 
       code: TheIanMuirSound
     piper: 
-      code: EdwardSeaman
+      codeno: EdwardSeaman
 
     dances:
       - code:   GayGordons
-      - code:   FlyingScotsman  
-      - code:   HighlandWelcome  
-      - code:   LeapYear
-        code2:   ArgyllsFancy  
+      - code:   DashingWhiteSergeant 
+      - code:   JigToTheMusic  
       - code:   CanadianBarnDance 
-      - code:   NiceAndEasy  
+      - code:   FlowersOfEdinburgh 
       - code:   StBernardsWaltz
-      - code:   EightsomeReel 
-      - code: ":interval:"
       - code:   BritanniaTwoStep 
-      - code:   DashingWhiteCircle 
-      - code:   FionasFancy 
-      - code:   MississippiDip 
-      - code:   GallowayHouse 
-      - code:   HighlandSchottische 
-      - code:   VirginiaReel 
+      - code:   GoodheartedGlasgow 
+      - code: ":interval:"
+
+      - code:   CircassianCircle 
+      - code:   Kelvingrove2Step 
+      - code:   ShortbreadDance
+      - code:   MissippiHotDog 
+      - code:   WitchesReel
+        code2:  BlackMountainReel 
+      - code:   StripTheWillow 
 
 
   - weekno: "2"
-    date: "2017-07-20"
+    date: "2017-07-19"
     time: "19:30"
     band: 
-       code: JohnCarmichael
+       code: IainMacPhail
     piper: 
-       code: GraemeSinclair
+       codeno: GraemeSinclair
     dances:
       - code: GayGordons
-      - code: SaturdayMorningJig
-      - code: OXOReel
-      - code: JackyTarTwoStep
-      - code: HaymakersJig
-      - code: Eva3Step
-      - code: DanielsDelight
+      - code: ComeUnderMyPlaidie
+      - code: GrassmarketReel
+      - code: HighlandSchottische
+      - code: HullichansJig
+      - code: FlyingScotsman
+        code2: MrsMacLeod
+      - code: PrideOfErinWaltz
       - code: RiversideJig
       - code: ":interval:"
-      - code: LochNessMonster
+
       - code: ABordersWelcome
       - code: MilitaryTwoStep
-      - code: FionasFancy
-        code2: JoieDeVivre
-      - code: LomondWaltz
-      - code: CirclesFour
-      - code: DhoonJig
+      - code: EightsomeReel
+      - code: GypsyTap
+      - code: CumberlandReel
+        code2: BeesOfMaggieknockater
+      - code: CallOfThePipes
+      - code: BarleyBree
 
   - weekno: "3"
-    date: "2016-07-27"
+    date: "2017-07-26"
     time: "19:30"
     band: 
-      code: NicolMcLarenGlencraigDanceBand
+      code: TheOccasionals
     piper: 
-      code: RachelGray
+      codeno: RachelGray
     dances:
       - code: GayGordons 
-      - code: DashingWhiteSergeant 
-      - code: LintonPloughman
-      - code: SouthernRoseWaltz  
-      - code: IsleOfSkye
-        code2: ReelOfThe51st 
-      - code: GypsyTap
-      - code: RebeccasRoundabout
-      - code: FlyingScotsman
+      - code: CumberlandReel 
+      - code: OverTheTop
+      - code: VirginiaReel	  
+      - code: JackyTar	
+      - code: GallowayHouse 
+      - code: SouthernRoseWaltz
+      - code: Dhoon
+      - code: Willow
       - code: ":interval:"
-      - code: ScotchRose
-      - code: JohnnyGroatsHouse
-      - code: SwedishMasquerade
-      - code: CircassianCircle
-      - code: FoulaReel
+
+      - code: CirclesFour
+      - code: ShortbreadDance
+        code2: IanPowriesFarewell
+      - code: MississippiDip
+      - code: WaltzCountryDance
+      - code: HighlandSchottische
       - code: CanadianBarnDance
-      - code: InvernessReel
+      - code: OrcadianStripTheWillow
 
 
   - weekno: "4"
-    date: "2016-08-03"
-    time: "19:30"
-    band: 
-      code: GarySutherlandScottishCeilidhBand
-    piper: 
-      code: EdwardSeaman
-    dances:
-      - code: GayGordons 
-      - code: SaturdayMorningJig
-      - code: IsleOfSkye
-      - code: MilitaryTwoStep
-      - code: CumberlandReel
-      - code: VienneseWaltz
-      - code: RabbiesReel
-        code2: ScottMeikle  
-      - code: JigToTheMusic
-      - code: ":interval:"
-      - code: RussianBallet
-      - code: PolkaCountryDance
-      - code: FriendlyWaltz
-      - code: CallOfThePipes
-      - code: EspieMcNab
-        code2: LassieComeAndDanceWithMe
-      - code: JackyTarTwoStep
-      - code: OrcadianStripTheWillow
-
-  - weekno: "5"
-    date: "2016-08-10"
+    date: "2017-08-02"
     time: "19:30"
     band: 
       code: JimLindsayScottishDanceBand
     piper: 
-      code: GraemeSinclair
+      codeno: EdwardSeaman
     dances:
       - code: GayGordons 
-      - code: VirginiaReel
-      - code: BritanniaTwoStep
-      - code: ShortbreadDance
-      - code: HighlandSchottische 
-      - code: BlackDance
-        code2: BrounsReel 
-      - code: PrideOfErinWaltz
-      - code: StripTheWillow
+      - code: ScotchRose
+      - code: GypsyThread
+      - code: WestrayOneStep
+      - code: ScottishReform
+      - code: ABordersWelcome
+      - code: CanadianBarnDance
+      - code: GeraldinesGigue  
       - code: ":interval:"
-      - code: SevenStepPolka
-      - code: WestGarletonMeander
-      - code: MarchesHop
-      - code: LuckySeven
+
+      - code: HaymakersJig
+      - code: GayGordonTwoStep
+      - code: AReelForJeannie
+        code2: MontgomeriesRant
+      - code: HankieSchottische
+      - code: LaRosaWaltz
+      - code: SternPolka
+      - code: NiceAndEasy
+        code2: BrounsReel
+
+  - weekno: "5"
+    date: "2017-08-09"
+    time: "19:30"
+    band: 
+      code: GordonPattulloAndFriends
+    piper: 
+      codeno: GraemeSinclair
+    dances:
+      - code: GayGordons 
       - code: DashingWhiteSergeant
-      - code: Marine4Step
-      - code: GrassmarketReel
-        code2: MairisWedding
+      - code: AnotherWoodlandWander
+      - code: MilitaryTwoStep
+      - code: JohnnyGroatsHouse
+      - code: Domino 
+      - code: LomondWaltz
+      - code: BridgeOfAthlone	
+      - code: ":interval:"
+
+      - code: AtlanticMixer
+      - code: BritanniaTwoStep
+      - code: IsleOfSkye
+        code2: KissingBridge 
+      - code: JackyTar
+      - code: JigToTheMusic
+      - code: StBernardsWaltz
+      - code: StripTheWillow
+ 
 
 
 

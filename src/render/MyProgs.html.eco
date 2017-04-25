@@ -7,114 +7,93 @@ greet: "HelloHello"
 
 <%- @partial('header') %>
 
-Hello World
-
-<% greeting2 = "Hello Again" %>
-<%- greeting2  %>
-
-Should be a greeting from the YAML??
-<%= greet %>
-
-Bye
-
-<h1>Hello2</h1>
-<% greetings = ["Hello2", "Welcome2"]  %>
-<% for greet in greetings: %>
-<p><%- greet  %></p>
-<% end %>
-
-<h1>Hello3</h1>
-<% greetings = English: "Hello", French: "Bienvenu" %>
-<% for lang, greet of greetings: %>
-<p><%- greet  %> in <%- lang %>   </p>
-<% end %>
-
-<h1>Stuff from Raw Coffeescript </h1>
-
-<% x = { fred: {ben: "isaac"}  }%>
-<p>Janny is <%= x.fred.ben %>  </p>
-
-<% y = { fred: {ben: "isaac" } } %>
-<p>contents are 
-<% for key1, obj1 of y :  %> 
-<% for key2, value of obj1 :  %> 
-<%= key1 %> --> <%= key2 %> --> <%= value %>
-<% end %>
-</p>
-
-
-
-
-
-<h1>Programmes from YAML ...</h1>
-
-<% ourprogs = [] %>
-<% for key, object of this : %>
-<p>key = <%= key %>
-<% if key.match(/^prog20\d\d$/) : %>
-OURS
-<% ourprogs.push key %>
-<% end %>
-</p>
-
-<% end %>
-
-<% WeekOcc = {}  #initialise our collection of total years/weeks %>   
-<% DanceOcc = {}  #initialise our collection of when each dance was done %>   
-
-<% for progname in ourprogs : %>
-<% year = @[ progname ].Year %>
-<%  WeekOcc[ year ] = {} unless WeekOcc[ year ]?  %>
-
-<% for week, weekno in  @[ progname ].LSHprog :  %> 
-<h2><%= year %> Week <%= weekno %> = <%= week.weekno %></h2>
-
-<%  WeekOcc[ year ][ week.weekno ] = 'Y' unless WeekOcc[ year ][ week.weekno ]?  %>
-
-<ul><% for dance in  week.dances :  %> 
-<li>
-
-<% if dance.code is ':interval:' : %> (interval)
-<% else if dancedet = @dances.Dances[ dance.code ] : %>
-<%=  dancedet.name  or dance.code + ' (-no name-)' %>
-
-<%  DanceOcc[ dance.code ] = {} unless DanceOcc[ dance.code ]?  %>
-<%  DanceOcc[ dance.code ][ year ] = {} unless DanceOcc[ dance.code ][ year ]?  %>
-<%  DanceOcc[ dance.code ][ year ][ week.weekno ] = 'Y' #add its appearance %>
-
-<% else: %>DANCE CODE <%= dance.code %> MISSING FROM DATABASE! 
-<% end %><% #dance.code %>
-
-<% if dance.code2  : %> +  <% # 2nd (expert) dance optional %>
-<%  if dancedet = @dances.Dances[ dance.code2 ] : %>
-<%=  dancedet.name  or dance.code2 + ' (-no name-)' %>
-<% else: %>DANCE CODE <%= dance.code2 %> MISSING FROM DATABASE! 
-<% end %><% #dancedet %>
-<% end %><% #dance.code2 %>
-
-</li>
-<% end %> <% #for dance %>
-</ul><% end %> <% #for week %> <!-- dances -->
-
-<% end %> <% # for progname %>
-
-
-
 <h2>Which Dance When? </h2>
 
-<ul>
-<% for dancecode, data of  DanceOcc :  %> 
-<li><%= dancecode %> : 
-<% for year, yeard of WeekOcc : %> <%= year %>
-<% for week, weekd of yeard : %> <%= week %>
-<% if data[ year ][ week ] :  %> Y <% else: %> - <% end %>
-<% end %> <% # for week %>
+<% # Before we can list the dances and when we did them, we have to analyse our programmes %>
+<% # Find our list of programmes, from directory progs, named prog2016.yaml etc, available as @prog2016 etc.%>
+<% ourprogs = [] %>
+<%   for key, object of this : %>
+<%   if key.match(/^prog20\d\d$/) : %>
+<%     ourprogs.push key %>
+<%   end %>
+<% end %>
+<% # This gives a list of programme names, saved in ourprogs, which will be used below %>
+
+<% #Now scan these programmes to see which dance was done in which weeks of which years. %>
+
+<% WeekOcc = {}  #initialise our collection of total years/weeks (Week Occurrences) %>  
+<% # Datanbase of which years/weeks we organised a dance e.g. WeekOcc[ '2016' ][ 1 ] = 'Y' if we planned a dance that week %>
+
+<% DanceOcc = {}  #initialise our collection of when each dance was done (Dance Occurrences) %>   
+<% # Database, for each dance, of years/weeks it was danced e.g. DanceOcc[ 'GayGordons' ][ '2016' ][ 1 ] = '5' if was dance 5 that week (5E for expert dance) %>
+
+<% for progname in ourprogs : %> <% #each year's programme of dances %>
+<%   year = @[ progname ].Year %>
+<%   WeekOcc[ year ] = {} unless WeekOcc[ year ]?  %>
+<%   for week, weekno in  @[ progname ].LSHprog :  %> 
+<%     WeekOcc[ year ][ week.weekno ] = 'Y' unless WeekOcc[ year ][ week.weekno ]?  %>
+<%       for dance, danceno in  week.dances :  %> 
+<%         if dance.code? and dance.code isnt ':interval:' : %>  <% # normal dance  %>
+<%           DanceOcc[ dance.code ] = {} unless DanceOcc[ dance.code ]?  %>
+<%           DanceOcc[ dance.code ][ year ] = {} unless DanceOcc[ dance.code ][ year ]?  %>
+<%           DanceOcc[ dance.code ][ year ][ week.weekno ] = danceno+1 #add its appearance %>
+<%         end %><% #dance.code %>
+<%         if dance.code2?  : %>  <% # 2nd (expert) dance optional %>
+<%           DanceOcc[ dance.code2 ] = {} unless DanceOcc[ dance.code2 ]?  %>
+<%           DanceOcc[ dance.code2 ][ year ] = {} unless DanceOcc[ dance.code2 ][ year ]?  %>
+<%           DanceOcc[ dance.code2 ][ year ][ week.weekno ] =  (danceno+1) + 'E'  #add its appearance %>
+<%       end %><% #dance.code2 %>
+<%     end %> <% #for dance %>
+<%   end %> <% #for week %> <!-- dances -->
+<% end %> <% # for progname %>
+<% # Now we're ready to start outputting the data in human form ... %>
+
+<p>In the table below, the dances we've used in all years are listed. 
+It's alphabetical, except that we've ignored &quot;The&quot; and &quot;A/An&quot;at the start of the name.
+<br \>We've shown the number of the dance each week it has been danced (first is 1, last might be 16). 
+Where it's been danced as the &quot;expert&quot; dance it's shown with an E.
+</p>
+
+<table border=1> <% # It really is a table, no need to get CSS to do any of this %>
+<tr><th colspan=4>Dance</th> <% # first row of header - mainly the years%>
+<% for year, yeard of WeekOcc : %> 
+<th colspan=<%= Object.keys(yeard).length %>><%= year %></th>
 <% end %> <% # for year %>
-</li>
+</tr>
+<tr><% # second row of header - mainly the weeks %>
+<th>Name</th><th>Style</th><th>Prog</th><th>Notes</th>
+<% for year, yeard of WeekOcc : %>
+<%   for week, weekd of yeard : %><th><%= week %></th><% end %> <% # for week %>
+<% end %> <% # for year %>
+</tr>
 
+<% # get our list of all dances performed, in the order we want to list them %>
+<% dances = [] ; for code, data of DanceOcc : %> <%  dances.push code %> <% end %> <% #get list of dance codes %>
+<% dances.sort() # put dance codes in alphabetical order %>
+
+<% # now list each dance, with its properties and which week(s) it was danced %>
+<% for dancecode in  dances :  %> 
+<%   data = DanceOcc[dancecode] %>
+<tr><!-- <%= dancecode %> -->
+
+<%   if @dances.Dances[ dancecode ]? : %>
+<%     dancedet = @dances.Dances[ dancecode ] %>
+<td><%=  dancedet.name  or dancecode + ' (-no name-)' %></td>
+<td><%= dancedet.style or dancecode + ' (-no style-)' %></td>
+<td><%=  ' (progressive)' if dancedet.prog %></td>
+<td><%= dancedet.notes or dance.code + ' (-no notes-)' %></td>
+<%   else: %><td colspan=4><B>DANCE CODE <%= dancecode %> MISSING FROM DATABASE! </B></td>
+<%   end %><% #Dances[dancecode] %>
+
+<%   for year, yeard of WeekOcc : %> 
+<%     for week, weekd of yeard : %> 
+<td><%= data[ year ]?[ week ] or ' - ' %></td>
+<%     end %> <% # for week %>
+<%   end %> <% # for year %>
+
+</tr>
 <% end %> <% #for dancecode %>
-</ul>
-
+</table>
 
 
 

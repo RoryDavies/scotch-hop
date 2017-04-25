@@ -9,7 +9,8 @@
     "docpad-plugin-marked": "~2.3.0",
     "docpad-plugin-moment": "^2.0.2",
     "docpad-plugin-partials": "~2.9.2",
-    "docpad-plugin-stylus": "~2.13.0"
+    "docpad-plugin-stylus": "~2.13.0",
+    "underscore": "^1.8.3"
   },
   "main": "node_modules/.bin/docpad-server",
   "scripts": {
