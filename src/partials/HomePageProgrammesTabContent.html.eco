@@ -28,10 +28,37 @@ Experienced dancers enjoy the challenge, and those not dancing may enjoy watchin
 
 
 
+
+
+
+
+<%  proglist = [ '2016', '2017' ] %>
+
+<% # Before we can list the dances and when we did them, we have to analyse our programmes %>
+<% # Find our list of programmes, from directory progs, named prog2016.yaml etc, available as @prog2016 etc.%>
+<% ourprogs = [] %>
+<% for key, object of this : %>
+<%   if `typeof proglist !== "undefined"`  and proglist? : %>
+<%     key2 = key.match(/\d{4}/)  # get the year out of the file name %>
+<%     if key2? :  %>
+<%       ourprogs.push key if key2[0] in proglist  %>
+<%     end %> <% # if key2 %>
+<%   else : %> <% ourprogs.push key %> <% end %>
+<% #   ourprogs.push key if ( not proglist? ) or ( proglist? and ( key2 = key.match(/\d{4}/) ) and key2? and key2[0] in proglist ) %>
+
+
+
+
+<% end %><% # for key ... %>
+<% # This gives a list of programme names, saved in ourprogs, which will be used below %>
+
+
+
 <div class="row">  <!-- BS, row, programmes -->
 
+<% for prog in ourprogs : %>
 
-<% for week, weekno in  @prog2017.LSHprog :  %> 
+<% for week, weekno in  @[ prog ].LSHprog :  %> 
 <% weekno = weekno + 1 # convert from 0-based %>
 <% if (''+weekno) isnt week.weekno : %> <p>WEEK NUMBERS INCONSISTENT! (<%= weekno + "/" + week.weekno %>)</p> <% end %>
 <% # Convert date and time strings to an Object we can use, with our time zone (BST = GMT+1) %>
@@ -146,6 +173,7 @@ our bands </strong>(
 
 
 <% end %> <% #for week %>
+<% end %><% # for prog %>
 
 
 </div>  <!-- BS, row, programmes -->

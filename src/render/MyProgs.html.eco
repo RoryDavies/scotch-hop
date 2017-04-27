@@ -7,6 +7,9 @@ greet: "HelloHello"
 
 <%- @partial('header') %>
 
+<%- @partial('HomePageProgrammesTabContent') %>
+
+
 <h2>Which Dance When? </h2>
 
 <% # Before we can list the dances and when we did them, we have to analyse our programmes %>
