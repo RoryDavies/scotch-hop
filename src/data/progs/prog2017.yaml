@@ -26,6 +26,7 @@ LSHprog:
       - code:   MissippiHotDog 
       - code:   WitchesReel
         code2:  BlackMountainReel 
+      - code:   MarchesHop
       - code:   StripTheWillow 
 
 
@@ -39,16 +40,16 @@ LSHprog:
     dances:
       - code: GayGordons
       - code: ComeUnderMyPlaidie
-      - code: GrassmarketReel
-      - code: HighlandSchottische
-      - code: HullichansJig
       - code: FlyingScotsman
         code2: MrsMacLeod
-      - code: PrideOfErinWaltz
+      - code: HullichansJig
+      - code: HighlandSchottische
       - code: RiversideJig
+      - code: PrideOfErinWaltz
+      - code: GrassmarketReel
       - code: ":interval:"
 
-      - code: ABordersWelcome
+      - code: BordersWelcome
       - code: MilitaryTwoStep
       - code: EightsomeReel
       - code: GypsyTap
@@ -99,14 +100,14 @@ LSHprog:
       - code: GypsyThread
       - code: WestrayOneStep
       - code: ScottishReform
-      - code: ABordersWelcome
+      - code: BordersWelcome
       - code: CanadianBarnDance
       - code: GeraldinesGigue  
       - code: ":interval:"
 
       - code: HaymakersJig
       - code: GayGordonTwoStep
-      - code: AReelForJeannie
+      - code: ReelForJeannie
         code2: MontgomeriesRant
       - code: HankieSchottische
       - code: LaRosaWaltz
@@ -127,7 +128,7 @@ LSHprog:
       - code: AnotherWoodlandWander
       - code: MilitaryTwoStep
       - code: JohnnyGroatsHouse
-      - code: Domino 
+      - code: Domino5 
       - code: LomondWaltz
       - code: BridgeOfAthlone	
       - code: ":interval:"

@@ -15,7 +15,8 @@ isPage: true
 </div>  <!-- BS, end of home tab -->
 
 <div role="tabpanel" class="tab-pane "  id="dancing">   <!-- BS tabbed page -->
-<%- @partial('HomePageProgrammesTabContent') %>
+<%  proglist = [ '2017' ] # define the current year, to display only programmes for that year %>
+<%- @partial('HomePageProgrammesTabContent', { proglist: proglist } ) %>
 </div> <!-- BS end of Programmes tab -->
 
 <div role="tabpanel" class="tab-pane " id="tickets">   <!-- BS tabbed page -->

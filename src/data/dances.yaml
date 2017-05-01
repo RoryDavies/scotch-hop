@@ -10,131 +10,128 @@ Dances:
 
 # Each dance has various attribute ...
 # name: as you'd like to show it in our programme for the public
-# style: R40, J32, S40, W etc - speed and style.
+# style: R40, J32, S40, W etc - speed and style. "R40, 4C" for 4 couple etc.
 # prog: Y if progressive.
+# instURL: web page giving instructions (single or array for multiple)
 
-  ABordersWelcome:  { name: "A Borders Welcome", style: "R40", notes: "ff tttt"  }
-  AnotherWoodlandWander:   { name: "Another Woodland Wander", style: "R40", notes: "ff tttt"  }
-  AReelForJeannie:   { name: "A Reel For Jeannie", style: "R40", notes: "ff tttt"  }
-  ArgyllsFancy:   { name: "Argylls Fancy", style: "R40", notes: "ff tttt"  }
+  AnotherWoodlandWander:   { name: "Another Woodland Wander", style: "4xJ32, 4C", notes: "ff tttt", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/another-woodland-wander.html"  }
+  ArgyllsFancy:   { name: "Argylls Fancy", style: "4xJ48, 4C", notes: "ff tttt", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/argylls-fancy.html"  }
   AtlanticMixer:  { name: "The Atlantic Mixer", style: "??", notes: "a", prog: 'Y'  }
 
-  BarleyBree:  { name: "Barley Bree", style: "R40", notes: "ff tttt"  }
-  BeesOfMaggieknockater:  { name: "Bees Of Maggie knockater", style: "R40", notes: "ff tttt"  }
-  BlackDance:  { name: "Black Dance", style: "R40", notes: "ff tttt"  }
-  BlackMountainReel:  { name: "Black Mountain Reel", style: "R40", notes: "ff tttt"  }
-  BridgeOfAthlone:  { name: "Bridge Of Athlone", style: "R40", notes: "ff tttt"  }
-  BritanniaTwoStep:  { name: "Britannia Two Step", style: "R40", notes: "ff tttt"  }
-  BrounsReel:  { name: "BrounsReel", style: "R40", notes: "ff tttt"  }
+  BarleyBree:  { name: "Barley Bree", style: "4xJ40, 4C", notes: "ff tttt", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/barley-bree.html"  }
+  BeesOfMaggieknockater:  { name: "The Bees Of Maggieknockater", style: "8xJ32, 4C", notes: "b", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/bees-of-maggieknockater.html"  }
+  BlackDance:  { name: "Black Dance", style: "8xR32, 3C", notes: "b", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/black-dance.html"  }
+  BlackMountainReel:  { name: "Black Mountain Reel", style: "5xR32, 5C", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/black-mountain-reel.html"  }
+  BordersWelcome:  { name: "A Borders Welcome", style: "R32, 3+3", , prog:"Y",notes: "round room", instURL="https://www.scottish-country-dancing-dictionary.com/dance-crib/borders-welcome.html"  }
+  BridgeOfAthlone:  { name: "Bridge Of Athlone", style: "5xR48, 5C", notes: "ff tttt", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/bridge-of-athlone.html"  }
+  BritanniaTwoStep:  { name: "Britannia Two Step", style: "M16, 3p", notes: "in 3s, separate", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/britannia-twostep.html"  }
+  BrounsReel:  { name: "Brouns Reel", style: "8xR32, 3C", notes: "= Duke of Perth", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/duke-of-perth.html"  }
 
-  CallOfThePipes:  { name: "Call of the Pipes", style: "R40", notes: "ff tttt"  }
-  CanadianBarnDance:  { name: "Canadian Barn Dance", style: "R40", notes: "ff tttt"  }
-  CircassianCircle:  { name: "Circassian Circle", style: "R40", notes: "ff tttt", prog: 'Y'  }
+  CallOfThePipes:  { name: "Call of the Pipes", style: "R40", notes: "c"  }
+  CanadianBarnDance:  { name: "Canadian Barn Dance", style: "M16, 2p", prog:"opt", notes: "c", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/canadian-barn-dance.html"  }
+  CircassianCircle:  { name: "Circassian Circle", style: "R32, 2+2", notes: "round room", prog: 'Y', instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/circassian-circle.html"  }
   CirclesFour:  { name: "Circles Four", style: "R40", notes: "ff tttt", prog: Y  }
-  ComeUnderMyPlaidie:  { name: "Come Under My Plaidie", style: "R40", notes: "ff tttt"  }
-  CumberlandReel:  { name: "Cumberland Reel", style: "R40", notes: "ff tttt"  }
+  ComeUnderMyPlaidie:  { name: "Come Under My Plaidie", style: "J32, 2+2", notes: "round room", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/come-under-my-plaidie.html"  }
+  CumberlandReel:  { name: "Cumberland Reel", style: "4xJ32, 4C", notes: "c", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/cumberland-reel.html"  }
 
   DanielsDelight:  { name: "Daniels Delight", style: "R40", notes: "ff tttt"  }
   DashingWhiteCircle:  { name: "Dashing White Circle", style: "R40", notes: "ff tttt"  }
-  DashingWhiteSergeant:  { name: "Dashing White Sergeant", style: "R40", notes: "ff tttt"  }
-  Dhoon:  { name: "The Dhoon", style: "??", notes: "a"  }
-  DhoonJig:  { name: "Dhoon Jig", style: "R40", notes: "ff tttt"  }
-  Domino:  { name: "Domino", style: "R40", notes: "ff tttt"  }
+  DashingWhiteSergeant:  { name: "Dashing White Sergeant", style: "R32, 3+3", prog:"Y", notes: "round room", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/dashing-white-sergeant.html"  }
+  Dhoon:  { name: "The Dhoon", style: "4xJ32, 4C", notes: "a", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/dhoon.html"  }
+  Domino5:  { name: "Domino Five", style: "5xR32, 5p", notes: "square set, p5 in centre", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/domino-five.html"  }
 
-  EightsomeReel:  { name: "Eightsome Reel", style: "R40", notes: "ff tttt"  }
-  EspieMcNab:  { name: "Espie McNab", style: "R40", notes: "ff tttt"  }
-  Eva3Step:  { name: "Eva 3 Step", style: "R40", notes: "ff tttt"  }
+  EightsomeReel:  { name: "Eightsome Reel", style: "R40+8x48+40, 4C", notes: "square set", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/eightsome-reel.html"  }
+  EspieMcNab:  { name: "Espie McNabb", style: "8xJ32, 3C", notes: "", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/espie-mcnabb.html"  }
+  Eva3Step:  { name: "Eva 3 Step", style: "???", notes: "e"  }
 
-  FionasFancy:  { name: "Fiona's Fancy", style: "R40", notes: "ff tttt"  }
-  FlowersOfEdinburgh:  { name: "Flowers Of Edinburgh", style: "R40", notes: "ff tttt"  }
-  FlyingScotsman:  { name: "Flying Scotsman", style: "R40", notes: "ff tttt"  }
-  FoulaReel:  { name: "Foula Reel", style: "R40", notes: "ff tttt"  }
-  FriendlyWaltz:  { name: "Friendly Waltz", style: "R40", notes: "ff tttt"  }
+  FionasFancy:  { name: "Fiona's Fancy", style: "R32, 2+2", notes: "round room", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/fionas-fancy.html"  }
+  FlowersOfEdinburgh:  { name: "Flowers Of Edinburgh", style: "8xR32, 3C", notes: "f", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/flowers-of-edinburgh.html"  }
+  FlyingScotsman:  { name: "Flying Scotsman", style: "8xJ32", notes: "f", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/flying-scotsman.html"  }
+  FoulaReel:  { name: "Foula Reel", style: "8xJ48, 4C", notes: "running step", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/foula-reel.html" }
+  FriendlyWaltz:  { name: "Friendly Waltz", style: "W", notes: "f"  }
 
-  GallowayHouse:  { name: "Galloway House", style: "R40", notes: "ff tttt"  }
-  GayGordons: { name: "Gay Gordons", style: "S32", notes: "ff tttt"  }
-  GayGordonTwoStep: { name: "Gay Gordon TwoStep", style: "S32", notes: "ff tttt", prog: 'Y'  }
+  GallowayHouse:  { name: "Galloway House", style: "8xR32, 2C", notes: "g", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/galloway-house.html"  }
+  GayGordons: { name: "Gay Gordons", style: "M16, 1C", notes: "round room", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/gay-gordons.html"  }
+  GayGordonTwoStep: { name: "Gay Gordon TwoStep", style: "??", notes: "g", prog: 'Y'  }
   GeraldinesGigue: { name: "Geraldine's Gigue", style: "S32", notes: "ff tttt"  }
-  GoodheartedGlasgow: { name: "Goodhearted Glasgow", style: "S32", notes: "ff tttt"  }
-  GrassmarketReel:  { name: "Grassmarket Reel", style: "R40", notes: "ff tttt"  }
-  GypsyTap:  { name: "Gypsy Tap", style: "R40", notes: "ff tttt"  }
-  GypsyThread:  { name: "The Gypsy Thread", style: "??", notes: "a"  }
+  GoodheartedGlasgow: { name: "Goodhearted Glasgow", style: "8xJ32, 3C", notes: "g", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/good-hearted-glasgow.html"  }
+  GrassmarketReel:  { name: "Grassmarket Reel", style: "R32, 3+3", notes: "round room", prog:Y, instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/grassmarket-reel.html"  }
+  GypsyTap:  { name: "Gypsy Tap", style: "??", notes: "g"  }
+  GypsyThread:  { name: "The Gypsy Thread", style: "4xJ32, 4C", notes: "g", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/gypsy-thread.html"  }
 
   HankieSchottische:  { name: "The Hankie Schottische", style: "??", notes: "a"  }
-  HaymakersJig:  { name: "Haymakers Jig", style: "R40", notes: "ff tttt"  }
-  HighlandSchottische :  { name: "Highland Schottische", style: "R40", notes: "ff tttt"  }
-  HighlandWelcome:  { name: "A Highland Welcome", style: "R40", notes: "ff tttt"  }
-  HullichansJig:  { name: "Hullichan's Jig", style: "R40", notes: "ff tttt"  }
+  HaymakersJig:  { name: "The Haymakers Jig", style: "4xJ48, 4C", notes: "h", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/haymakers.html"  }
+  HighlandSchottische :  { name: "Highland Schottische", style: "??, 1C", notes: "round room"  }
+  HighlandWelcome:  { name: "A Highland Welcome", style: "R32, 2+2", prog:Y, notes: "round room", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/highland-welcome.html"  }
+  HullichansJig:  { name: "Hullichan's Jig", style: "Jxx", notes: "h"  }
 
-  IanPowriesFarewell:  { name: "Ian Powries Farewell to Auchterarder", style: "R40", notes: "ff tttt"  }
-  InvernessReel:  { name: "Inverness Reel", style: "R40", notes: "ff tttt"  }
-  IsleOfSkye:  { name: "The Isle of Skye", style: "R40", notes: "ff tttt"  }
+  IanPowriesFarewell:  { name: "Ian Powries Farewell to Auchterarder", style: "J128, 4C", notes: "square set", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/ian-powries-farewell-to-auchterarder.html"  }
+  InvernessReel:  { name: "Inverness Reel", style: "8xR32, 2C", notes: "i", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/inverness-reel.html"  }
+  IsleOfSkye:  { name: "The Isle of Skye", style: "8xR32, 3C", notes: "ff tttt", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/isle-of-skye.html"  }
 
-  JackyTar:  { name: "The Jacky Tar", style: "??", notes: "a"  }
-  JackyTarTwoStep:  { name: "Jacky Tar Two Step", style: "R40", notes: "ff tttt"  }
-  JigToTheMusic:  { name: "Jig to the Music", style: "R40", notes: "ff tttt"  }
-  JohnnyGroatsHouse:  { name: "Johnny Groat's House", style: "R40", notes: "ff tttt"  }
-  JoieDeVivre:  { name: "Joie De Vivre", style: "R40", notes: "ff tttt"  }
+  JackyTar:  { name: "The Jacky Tar", style: "??", notes: "j"  }
+  JackyTarTwoStep:  { name: "Jacky Tar Two Step", style: "??", notes: "j"  }
+  JigToTheMusic:  { name: "Jig to the Music", style: "3xJ32, 3C", notes: "j", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/jig-to-the-music.html"  }
+  JohnnyGroatsHouse:  { name: "Johnny Groat's House", style: "8xR32, 3C", notes: "j", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/johnny-groats-house.html"  }
+  JoieDeVivre:  { name: "Joie De Vivre", style: "8xJ32, 3C", notes: "j", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/joie-de-vivre.html"  }
 
-  Kelvingrove2Step:  { name: "Kelvingrove 2 Step", style: "R40", notes: "ff tttt"  }
+  Kelvingrove2Step:  { name: "Kelvingrove 2 Step", style: "??", notes: "k"  }
+  KissingBridge:  { name: "The Kissing Bridge", style: "8xR32, 3C", notes: "a" , instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/kissing-bridge.html" }
 
-  LaRosaWaltz:  { name: "La Rosa Waltz", style: "W", notes: "ff tttt"  }
-  LassieComeAndDanceWithMe:  { name: "Lassie Come and Dance with Me", style: "R40", notes: "ff tttt"  }
-  LeapYear: { name: "Leap Year", style: "R40", notes: "ff tttt"  }
-  LintonPloughman:  { name: "Linton Ploughman", style: "R40", notes: "ff tttt"  }
-  LochNessMonster:  { name: "Loch Ness Monster", style: "R40", notes: "ff tttt"  }
-  LomondWaltz:  { name: "Lomond Waltz", style: "R40", notes: "ff tttt"  }
-  LuckySeven:  { name: "Lucky Seven", style: "R40", notes: "ff tttt"  }
+  LaRosaWaltz:  { name: "La Rosa Waltz", style: "W", notes: "l"  }
+  LassieComeAndDanceWithMe:  { name: "Lassie Come and Dance with Me", style: "8xJ32, 3C", notes: "l", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/lassie-come-and-dance-with-me.html"  }
+  LeapYear: { name: "Leap Year", style: "8xJ24, 2C", notes: "l", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/leap-year.html"  }
+  LintonPloughman:  { name: "Linton Ploughman", style: "8xJ32, 2C", notes: "l", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/linton-ploughman.html"  }
+  LochNessMonster:  { name: "Loch Ness Monster", style: "??", notes: "3 to choose from!"  }
+  LomondWaltz:  { name: "Lomond Waltz", style: "W32", notes: "round room" , instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/lomond-waltz.html" }
+  LuckySeven:  { name: "Lucky Seven", style: "R40", notes: "l"  }
 
-  KissingBridge:  { name: "The Kissing Bridge", style: "??", notes: "a"  }
 
-  MairisWedding:  { name: "Mairi's Wedding", style: "R40", notes: "ff tttt"  }
-  MarchesHop:  { name: "Marches Hop", style: "R40", notes: "ff tttt"  }
-  Marine4Step:  { name: "Marine 4 Step", style: "R40", notes: "ff tttt"  }
-  MilitaryTwoStep:  { name: "Military Two Step", style: "R40", notes: "ff tttt"  }
+  MairisWedding:  { name: "Mairi's Wedding", style: "8xR40, 3C", notes: "m", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/mairis-wedding.html"  }
+  MarchesHop:  { name: "Marches Hop", style: "?", notes: "m"  }
+  Marine4Step:  { name: "Marine 4 Step", style: "?", notes: "m"  }
+  MilitaryTwoStep:  { name: "Military Two Step", style: "M16?", notes: "round room"  }
   MississippiDip:  { name: "Mississippi Dip", style: "R40", notes: "ff tttt"  }
-  MissippiHotDog:  { name: "Mississippi Hot Dog", style: "R40", notes: "ff tttt"  }
-  MontgomeriesRant:  { name: "Montgomeries Rant", style: "R40", notes: "ff tttt"  }
-  MrsMacLeod:  { name: "Mrs MacLeod", style: "R40", notes: "ff tttt"  }
+  MissippiHotDog:  { name: "Mississippi Hot Dog", style: "?", notes: "m"  }
+  MontgomeriesRant:  { name: "Montgomeries Rant", style: "8xR32, 3C", notes: "m", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/montgomeries-rant.html"  }
+  MrsMacLeod:  { name: "Mrs MacLeod", style: "8xR32, 3C", notes: "ff tttt", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/mrs-macleod.html"  }
 
-  NiceAndEasy:   { name: "Nice And Easy", style: "R40", notes: "ff tttt"  }
+  NiceAndEasy:   { name: "Nice And Easy", style: "4xR32, 4C", notes: "n", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/nice-and-easy.html"  }
 
-  OrcadianStripTheWillow:  { name: "Orcadian Strip the Willow", style: "R40", notes: "ff tttt"  }
-  OverTheTop:  { name: "Over The Top", style: "R40", notes: "ff tttt"  }
-  OXOReel:  { name: "OXO Reel", style: "R40", notes: "ff tttt"  }
+  OrcadianStripTheWillow:  { name: "Orcadian Strip the Willow", style: "?", notes: "o"  }
+  OverTheTop:  { name: "Over The Top", style: "R40", notes: "o"  }
+  OXOReel:  { name: "OXO Reel", style: "6xR32, 6C", notes: "o", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/oxo-reel.html"  }
 
-  PolkaCountryDance:  { name: "Polka Country Dance", style: "R40", notes: "ff tttt"  }
-  PrideOfErinWaltz:  { name: "Pride Of Erin Waltz", style: "R40", notes: "ff tttt"  }
+  PolkaCountryDance:  { name: "Polka Country Dance", style: "8xR32, 2C", notes: "p", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/polka-country-dance.html"  }
+  PrideOfErinWaltz:  { name: "Pride Of Erin Waltz", style: "W", notes: "p"  }
 
-  RabbiesReel:  { name: "Rabbie's Reel", style: "R40", notes: "ff tttt"  }
-  RebeccasRoundabout:  { name: "Rebecca's Roundabout", style: "R40", notes: "ff tttt"  }
-  ReelOfThe51st:  { name: "Reel of the 51st", style: "R40", notes: "ff tttt"  }
-  RiversideJig:  { name: "Riverside Jig", style: "R40", notes: "ff tttt"  }
+  RabbiesReel:  { name: "Rabbie's Reel", style: "4xR32, 4C", notes: "ff tttt" ,instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/rabbies-reel.html" }
+  RebeccasRoundabout:  { name: "Rebecca's Roundabout", style: "?", notes: "r"  }
+  ReelForJeannie:   { name: "A Reel For Jeannie", style: "4xR32, 4C", notes: "r", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/reel-for-jeannie.html"  }
+  ReelOfThe51st:  { name: "Reel of the 51st", style: "8xR32, 3C", notes: "r", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/reel-of-the-51st-division.html"  }
+  RiversideJig:  { name: "Riverside Jig", style: "NxJ32", notes: "2 couples down over entire length", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/riverside.html" }
   RussianBallet:  { name: "Russian Ballet", style: "R40", notes: "ff tttt"  }
 
-  SaturdayMorningJig:  { name: "Saturday Morning Jig", style: "R40", notes: "ff tttt"  }
+  SaturdayMorningJig:  { name: "Saturday Morning Jig", style: "Jxx", notes: "j"  }
   ScotchRose:  { name: "Scotch Rose", style: "R40", notes: "ff tttt"  }
-  ScottishReform:  { name: "Scottish Reform", style: "R40", notes: "ff tttt"  }
-  ScottMeikle:  { name: "Scott Meikle", style: "R40", notes: "ff tttt"  }
-  SevenStepPolka:  { name: "Seven Step Polka", style: "R40", notes: "ff tttt"  }
-  ShortbreadDance:  { name: "Shortbread Dance", style: "R40", notes: "ff tttt"  }
-  SouthernRoseWaltz:  { name: "Southern Rose Waltz", style: "R40", notes: "ff tttt"  }
-  StBernardsWaltz:  { name: "St Bernards Waltz", style: "R40", notes: "ff tttt"  }
-  SternPolka:  { name: "TheSternPolka", style: "??", notes: "a", prog: 'Y'  }
-  StripTheWillow:  { name: "Strip The Willow", style: "R40", notes: "ff tttt"  }
-  SwedishMasquerade:  { name: "Swedish Masquerade", style: "R40", notes: "ff tttt"  }
+  ScottishReform:  { name: "Scottish Reform", style: "8xJ32, 2C", notes: "s", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/scottish-reform.html"  }
+  ScottMeikle:  { name: "Scott Meikle", style: "4xR32, 4C", notes: "s" ,instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/scott-meikle.html" }
+  SevenStepPolka:  { name: "Seven Step Polka", style: "?", notes: "s"  }
+  ShortbreadDance:  { name: "Shortbread Dance", style: "?", notes: "s"  }
+  SouthernRoseWaltz:  { name: "Southern Rose Waltz", style: "W", notes: "s"  }
+  StBernardsWaltz:  { name: "St Bernards Waltz", style: "W16, 1C", notes: "s" ,instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/st-bernards-waltz.html" }
+  SternPolka:  { name: "The Stern Polka", style: "??", notes: "s", prog: 'Y'  }
+  StripTheWillow:  { name: "Strip The Willow", style: "4xJ40", notes: "s", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/strip-the-willow.html"  }
+  SwedishMasquerade:  { name: "Swedish Masquerade", style: "?", notes: "s"  }
 
-  Sample:  { name: "Sample", style: "??", notes: "a"  }
-  Sample:  { name: "Sample", style: "??", notes: "a"  }
+  VienneseWaltz:  { name: "Viennese Waltz", style: "W", notes: "v"  }
+  VirginiaReel:  { name: "Virginia Reel", style: "4xR40, 4C", notes: "v" ,instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/virginia-reel.html" }
 
-  VienneseWaltz:  { name: "Viennese Waltz", style: "R40", notes: "ff tttt"  }
-  VirginiaReel:  { name: "Virginia Reel", style: "R40", notes: "ff tttt"  }
-
-  WaltzCountryDance:  { name: "Waltz Country Dance", style: "R40", notes: "ff tttt"  }
-  WestGarletonMeander:  { name: "West Garleton Meander", style: "R40", notes: "ff tttt"  }
+  WaltzCountryDance:  { name: "Waltz Country Dance", style: "W40, 2+2", prog:Y, notes: "round room" ,instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/waltz-country-dance.html" }
+  WestGarletonMeander:  { name: "West Garleton Meander", style: "?", notes: "w"  }
   WestrayOneStep:  { name: "The Westray One Step", style: "??", notes: "a"  }
-  Willow:  { name: "Willow", style: "??", notes: "a"  }
-  WitchesReel:  { name: "Witches Reel", style: "??", notes: "a"  }
+  Willow:  { name: "Willow", style: "??", notes: "w"  }
+  WitchesReel:  { name: "Witches Reel", style: "??", notes: "w"  }
 
 
 

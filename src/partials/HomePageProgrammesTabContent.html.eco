@@ -15,9 +15,9 @@ enjoyed by a wide range of ages, abilities and nationalities.
 Our experienced caller gives instruction, before and during the dance.
 The programme usually ends about 10.00 p.m.
   </p>
-<p>The 2016 programmes below are typical, the 2017 details will be added as soon as they are available.
+<p>
 Sometimes a second, more difficult, dance is danced at the same time.
-Experienced dancers enjoy the challenge, and those not dancing may enjoy watching. 
+Experienced dancers enjoy the challenge, and anyone not dancing the main dance may enjoy watching. 
 </p>
 
       </div>   <!-- BS panel-body -->
@@ -30,28 +30,31 @@ Experienced dancers enjoy the challenge, and those not dancing may enjoy watchin
 
 
 
+<% # If array proglist is passed into this partial, it should be a list of the required years to display. %>
+<% # e.g. %>
+<% # proglist = [ '2016', '2017' ] # defines the list of years %>
+<% # @partial('HomePageProgrammesTabContent', { proglist: proglist } ) # passes the array as a property. %>
+<% # In this partial, the array is accessed as this.proglist (accessing the passed property). %>
 
-
-<%  proglist = [ '2016', '2017' ] %>
 
 <% # Before we can list the dances and when we did them, we have to analyse our programmes %>
 <% # Find our list of programmes, from directory progs, named prog2016.yaml etc, available as @prog2016 etc.%>
+<% # Collect them all, or just the ones listed in proglist. %>
 <% ourprogs = [] %>
 <% for key, object of this : %>
-<%   if `typeof proglist !== "undefined"`  and proglist? : %>
-<%     key2 = key.match(/\d{4}/)  # get the year out of the file name %>
-<%     if key2? :  %>
-<%       ourprogs.push key if key2[0] in proglist  %>
-<%     end %> <% # if key2 %>
-<%   else : %> <% ourprogs.push key %> <% end %>
+<%   key2 = null %>
+<%   key2 = key.match(/\d{4}/)  # get the year out of the file name %>
+<%   if key2? :  %>
+<%     if this.proglist? : %>
+<%       ourprogs.push key if key2[0] in this.proglist  %>
+<%     else : %> 
+<%       ourprogs.push key %> 
+<%     end %> <% # if proglist %>
+<%   end %> <% # if key2 ... %>
 <% #   ourprogs.push key if ( not proglist? ) or ( proglist? and ( key2 = key.match(/\d{4}/) ) and key2? and key2[0] in proglist ) %>
-
-
-
 
 <% end %><% # for key ... %>
 <% # This gives a list of programme names, saved in ourprogs, which will be used below %>
-
 
 
 <div class="row">  <!-- BS, row, programmes -->
@@ -157,11 +160,12 @@ our bands </strong>(
 <% end %><% #if dancedet %>
 
 <% # possible 2nd dance (for expert dancers) %>
-<% if dance.code2  : %> ( plus  <% # 2nd (expert) dance optional %>
-<%=  if dancedet = @dances.Dances[ dance.code2 ] : %>
-<% else: %><p>DANCE CODE <%= dance.code2 %> MISSING FROM DATABASE!
-<% end %><% #dancedet %>
-)<% end %><% #dance.code2 %>
+<% if dance.code2  : %> (plus  <% # 2nd (expert) dance optional %>
+<%   if dancedet = @dances.Dances[ dance.code2 ] : %>
+<%=    dancedet.name  or dance.code2 + ' (-no name-)' %>)
+<%   else: %><p>DANCE CODE <%= dance.code2 %> MISSING FROM DATABASE!)
+<%   end %><% #dancedet %>
+<% end %><% #dance.code2 %>
 
 </p>
 <% end %> <% #dance.code (interval / other) %>
@@ -177,4 +181,5 @@ our bands </strong>(
 
 
 </div>  <!-- BS, row, programmes -->
+
 

@@ -2,7 +2,7 @@ SchemaVersion: "1"
 Year: "2016"
 LSHprog: 
   - weekno: "1"
-    date: "2017-07-13"
+    date: "2016-07-13"
     time: "19:30"
     band: 
       code: TheIanMuirSound
@@ -30,7 +30,7 @@ LSHprog:
 
 
   - weekno: "2"
-    date: "2017-07-20"
+    date: "2016-07-20"
     time: "19:30"
     band: 
        code: JohnCarmichael
@@ -47,13 +47,13 @@ LSHprog:
       - code: RiversideJig
       - code: ":interval:"
       - code: LochNessMonster
-      - code: ABordersWelcome
+      - code: BordersWelcome
       - code: MilitaryTwoStep
       - code: FionasFancy
         code2: JoieDeVivre
       - code: LomondWaltz
       - code: CirclesFour
-      - code: DhoonJig
+      - code: Dhoon
 
   - weekno: "3"
     date: "2016-07-27"

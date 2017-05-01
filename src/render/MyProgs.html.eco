@@ -7,7 +7,10 @@ greet: "HelloHello"
 
 <%- @partial('header') %>
 
-<%- @partial('HomePageProgrammesTabContent') %>
+<% # proglist = [ '2017' ] # which year(s) programmes to show - %>
+<%- # @partial('HomePageProgrammesTabContent', { proglist: proglist } ) %>
+
+<%- @partial('HomePageProgrammesTabContent' ) #  default to show all years %>
 
 
 <h2>Which Dance When? </h2>
@@ -25,7 +28,7 @@ greet: "HelloHello"
 <% #Now scan these programmes to see which dance was done in which weeks of which years. %>
 
 <% WeekOcc = {}  #initialise our collection of total years/weeks (Week Occurrences) %>  
-<% # Datanbase of which years/weeks we organised a dance e.g. WeekOcc[ '2016' ][ 1 ] = 'Y' if we planned a dance that week %>
+<% # Database of which years/weeks we organised a dance e.g. WeekOcc[ '2016' ][ 1 ] = 'Y' if we planned a dance that week %>
 
 <% DanceOcc = {}  #initialise our collection of when each dance was done (Dance Occurrences) %>   
 <% # Database, for each dance, of years/weeks it was danced e.g. DanceOcc[ 'GayGordons' ][ '2016' ][ 1 ] = '5' if was dance 5 that week (5E for expert dance) %>
@@ -55,17 +58,24 @@ greet: "HelloHello"
 It's alphabetical, except that we've ignored &quot;The&quot; and &quot;A/An&quot;at the start of the name.
 <br \>We've shown the number of the dance each week it has been danced (first is 1, last might be 16). 
 Where it's been danced as the &quot;expert&quot; dance it's shown with an E.
+<br \>The type of dance is shown (Strathspey/Reel/Jig/March) with the length (e.g. 32 bars)
+and the number of times normally repeated ( e.g 8xR32) and the number of dancing couples (2C) or people (2p) per set. Most dances use longwise sets (men with left shoulder to the band, facing women), some use square sets, or are danced around the room.
 </p>
 
-<table border=1> <% # It really is a table, no need to get CSS to do any of this %>
-<tr><th colspan=4>Dance</th> <% # first row of header - mainly the years%>
-<% for year, yeard of WeekOcc : %> 
+<% # We will want to show the years in reverse order (latest to the left of the web page). %>
+<% # The best way seems to be to get a list of the years, and reverse it before use. %>
+<% ouryears = []; for own year of WeekOcc : %> <% ouryears.push year %> <% end %> 
+<% ouryears.reverse() %>
+
+<table border=1> <% # It really is a table, no need to get CSS to do any of this, except prettiness %>
+<tr><th colspan=5>Dance</th> <% # first row of header - mainly the years %>
+<% for year in ouryears : %> <% yeard = WeekOcc[ year ] %> 
 <th colspan=<%= Object.keys(yeard).length %>><%= year %></th>
 <% end %> <% # for year %>
 </tr>
 <tr><% # second row of header - mainly the weeks %>
-<th>Name</th><th>Style</th><th>Prog</th><th>Notes</th>
-<% for year, yeard of WeekOcc : %>
+<th>Name</th><th>Style</th><th>Prog</th><th>Notes</th><th>Web</th>
+<% for year in ouryears : %> <% yeard = WeekOcc[ year ] %> 
 <%   for week, weekd of yeard : %><th><%= week %></th><% end %> <% # for week %>
 <% end %> <% # for year %>
 </tr>
@@ -83,12 +93,13 @@ Where it's been danced as the &quot;expert&quot; dance it's shown with an E.
 <%     dancedet = @dances.Dances[ dancecode ] %>
 <td><%=  dancedet.name  or dancecode + ' (-no name-)' %></td>
 <td><%= dancedet.style or dancecode + ' (-no style-)' %></td>
-<td><%=  ' (progressive)' if dancedet.prog %></td>
-<td><%= dancedet.notes or dance.code + ' (-no notes-)' %></td>
-<%   else: %><td colspan=4><B>DANCE CODE <%= dancecode %> MISSING FROM DATABASE! </B></td>
+<td><% if dancedet.prog : %><%= dancedet.prog %><% else : %><%- '&nbsp;' %><% end %></td>
+<td><%= dancedet.notes or ' ' %></td>
+<td><% if dancedet.instURL? : %><%- '<a href="' + dancedet.instURL + '">_?_</a>' %><% else : %><%- '---' %><% end %></td>
+<%   else: %><td colspan=5><B>DANCE CODE <%= dancecode %> MISSING FROM DATABASE! </B></td>
 <%   end %><% #Dances[dancecode] %>
 
-<%   for year, yeard of WeekOcc : %> 
+<% for year in ouryears : %> <% yeard = WeekOcc[ year ] %> 
 <%     for week, weekd of yeard : %> 
 <td><%= data[ year ]?[ week ] or ' - ' %></td>
 <%     end %> <% # for week %>
