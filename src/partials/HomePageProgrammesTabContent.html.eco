@@ -156,13 +156,15 @@ our bands </strong>(
 <% # main dance (for all) %>
 <% if dancedet = @dances.Dances[ dance.code ] : %>
 <%=  dancedet.name  or dance.code + ' (-no name-)' %>
+<%   if dancedet.instURL? : %><%- '<a  target="_blank" class="fa fa-external-link" href="' + dancedet.instURL + '"><i class="fa fa-info-circle" aria-hidden="true"></i></a>' %><% end %>
 <% else: %>DANCE CODE <%= dance.code %> MISSING FROM DATABASE! 
 <% end %><% #if dancedet %>
 
 <% # possible 2nd dance (for expert dancers) %>
 <% if dance.code2  : %> (plus  <% # 2nd (expert) dance optional %>
 <%   if dancedet = @dances.Dances[ dance.code2 ] : %>
-<%=    dancedet.name  or dance.code2 + ' (-no name-)' %>)
+<%=    dancedet.name  or dance.code2 + ' (-no name-)' %>
+<%     if dancedet.instURL? : %><%- '<a  target="_blank" class="fa fa-external-link" href="' + dancedet.instURL + '"><i class="fa fa-info-circle" aria-hidden="true"></i></a>' %><% end %>)
 <%   else: %><p>DANCE CODE <%= dance.code2 %> MISSING FROM DATABASE!)
 <%   end %><% #dancedet %>
 <% end %><% #dance.code2 %>

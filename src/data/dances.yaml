@@ -42,7 +42,7 @@ Dances:
 
   EightsomeReel:  { name: "Eightsome Reel", style: "R40+8x48+40, 4C", notes: "square set", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/eightsome-reel.html"  }
   EspieMcNab:  { name: "Espie McNabb", style: "8xJ32, 3C", notes: "", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/espie-mcnabb.html"  }
-  Eva3Step:  { name: "Eva 3 Step", style: "???", notes: "e"  }
+  Eva3Step:  { name: "Eva 3 Step", style: "???", notes: "e", instURL:"https://www.scottish-country-dancing-dictionary.com/video/eva-three-step.html"  }
 
   FionasFancy:  { name: "Fiona's Fancy", style: "R32, 2+2", notes: "round room", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/fionas-fancy.html"  }
   FlowersOfEdinburgh:  { name: "Flowers Of Edinburgh", style: "8xR32, 3C", notes: "f", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/flowers-of-edinburgh.html"  }
@@ -103,7 +103,7 @@ Dances:
   OXOReel:  { name: "OXO Reel", style: "6xR32, 6C", notes: "o", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/oxo-reel.html"  }
 
   PolkaCountryDance:  { name: "Polka Country Dance", style: "8xR32, 2C", notes: "p", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/polka-country-dance.html"  }
-  PrideOfErinWaltz:  { name: "Pride Of Erin Waltz", style: "W", notes: "p"  }
+  PrideOfErinWaltz:  { name: "Pride Of Erin Waltz", style: "W", notes: "p", instURL:"https://www.scottish-country-dancing-dictionary.com/video/pride-of-erin-waltz.html"  }
 
   RabbiesReel:  { name: "Rabbie's Reel", style: "4xR32, 4C", notes: "ff tttt" ,instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/rabbies-reel.html" }
   RebeccasRoundabout:  { name: "Rebecca's Roundabout", style: "?", notes: "r"  }

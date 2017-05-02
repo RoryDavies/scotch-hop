@@ -13,7 +13,20 @@ greet: "HelloHello"
 <%- @partial('HomePageProgrammesTabContent' ) #  default to show all years %>
 
 
-<h2>Which Dance When? </h2>
+
+<div class="panel panel-default">   <!-- BS -->
+  <div class="panel-heading">
+    <h1 class="panel-title" id="dancing-panel">Dance History and Details</h1>
+  </div>
+  <div class="panel-body">  <!-- BS -->
+
+<p>In the table below, the dances we've used in all years are listed. 
+It's alphabetical, except that we've ignored &quot;The&quot; and &quot;A/An&quot;at the start of the name.
+<br \>We've shown the number of the dance each week it has been danced (first is 1, last might be 16). 
+Where it's been danced as the &quot;expert&quot; dance it's shown with an E.
+<br \>The type of dance is shown (Strathspey/Reel/Jig/March) with the length (e.g. 32 bars)
+and the number of times normally repeated ( e.g 8xR32) and the number of dancing couples (2C) or people (2p) per set. Default is longwise sets, others are noted (square sets, or around the room).
+</p>
 
 <% # Before we can list the dances and when we did them, we have to analyse our programmes %>
 <% # Find our list of programmes, from directory progs, named prog2016.yaml etc, available as @prog2016 etc.%>
@@ -54,20 +67,15 @@ greet: "HelloHello"
 <% end %> <% # for progname %>
 <% # Now we're ready to start outputting the data in human form ... %>
 
-<p>In the table below, the dances we've used in all years are listed. 
-It's alphabetical, except that we've ignored &quot;The&quot; and &quot;A/An&quot;at the start of the name.
-<br \>We've shown the number of the dance each week it has been danced (first is 1, last might be 16). 
-Where it's been danced as the &quot;expert&quot; dance it's shown with an E.
-<br \>The type of dance is shown (Strathspey/Reel/Jig/March) with the length (e.g. 32 bars)
-and the number of times normally repeated ( e.g 8xR32) and the number of dancing couples (2C) or people (2p) per set. Most dances use longwise sets (men with left shoulder to the band, facing women), some use square sets, or are danced around the room.
-</p>
 
 <% # We will want to show the years in reverse order (latest to the left of the web page). %>
 <% # The best way seems to be to get a list of the years, and reverse it before use. %>
 <% ouryears = []; for own year of WeekOcc : %> <% ouryears.push year %> <% end %> 
 <% ouryears.reverse() %>
 
-<table border=1> <% # It really is a table, no need to get CSS to do any of this, except prettiness %>
+<% # Our data really is a table. We use Bootstrap CSS for prettiness. %>
+<table class="table table-bordered table-hover table-sm table-responsive"> 
+<thead>
 <tr><th colspan=5>Dance</th> <% # first row of header - mainly the years %>
 <% for year in ouryears : %> <% yeard = WeekOcc[ year ] %> 
 <th colspan=<%= Object.keys(yeard).length %>><%= year %></th>
@@ -79,6 +87,7 @@ and the number of times normally repeated ( e.g 8xR32) and the number of dancing
 <%   for week, weekd of yeard : %><th><%= week %></th><% end %> <% # for week %>
 <% end %> <% # for year %>
 </tr>
+</thead>
 
 <% # get our list of all dances performed, in the order we want to list them %>
 <% dances = [] ; for code, data of DanceOcc : %> <%  dances.push code %> <% end %> <% #get list of dance codes %>
@@ -95,9 +104,12 @@ and the number of times normally repeated ( e.g 8xR32) and the number of dancing
 <td><%= dancedet.style or dancecode + ' (-no style-)' %></td>
 <td><% if dancedet.prog : %><%= dancedet.prog %><% else : %><%- '&nbsp;' %><% end %></td>
 <td><%= dancedet.notes or ' ' %></td>
-<td><% if dancedet.instURL? : %><%- '<a href="' + dancedet.instURL + '">_?_</a>' %><% else : %><%- '---' %><% end %></td>
+<td><% if dancedet.instURL? : %><%- '<a  target="_blank" class="fa fa-external-link" href="' + dancedet.instURL + '"><i class="fa fa-info-circle" aria-hidden="true"></i></a>' %>
+<%     else : %><%- '---' %><% end %></td>
 <%   else: %><td colspan=5><B>DANCE CODE <%= dancecode %> MISSING FROM DATABASE! </B></td>
 <%   end %><% #Dances[dancecode] %>
+
+
 
 <% for year in ouryears : %> <% yeard = WeekOcc[ year ] %> 
 <%     for week, weekd of yeard : %> 
@@ -109,6 +121,7 @@ and the number of times normally repeated ( e.g 8xR32) and the number of dancing
 <% end %> <% #for dancecode %>
 </table>
 
-
+  </div>   <!-- BS panel-body -->
+</div>  <!-- BS panel -->           
 
 

@@ -24,8 +24,8 @@ Directory/folder "out/" contains all the files to be uploaded to the live websit
 |   node_modules/ (when docpad installed as described)
 |
 |-  src/
-|    |-  documents/
-|    |-  files/
+|    |-  render/   # previously named "documents"
+|    |-  static/   # previously named "files"
 |    |-  layouts/
 |    |-  partials/
 |
@@ -78,7 +78,7 @@ Docpad, running on your development machine, does the main work
 to combine the various source files together.
 Here is an overview of how the main files in src work together in docpad.
 
-The file(s) in **src/documents** define each html file in out/ - 
+The file(s) in **src/render** define each html file in out/ - 
 Docpad processes the files in documents (e.g. index.html.eco) 
 in a series of passes to convert to html (e.g. index.html),
 pulling in content from other files as it goes, under the control of data in each file.
@@ -94,11 +94,11 @@ Files in **src/partials/** are referenced by those in documents to form the comp
 for easier development (and re-use) of the separate partials.
 These too can be processed by Docpad to augment their content.
 
-Files in **src/files/** are copied unmodified to out/ by Docpad.
+Files in **src/static/** are copied unmodified to out/ by Docpad.
 This includes images, CSS and Javascript.
 
 
-## Main file - documents/index.html.eco
+## Main file - render/index.html.eco
 This is the primary file for the site -
 it implements the major tabs of the user interface,
 allowing fast switches between the content panels without referring back to the server. 

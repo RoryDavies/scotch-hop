@@ -18,8 +18,8 @@ are maintained in GitHub (<a href="https://github.com/RoryDavies/scotch-hop/">ht
 |   node_modules/ (when docpad installed as described)
 |
 |-  src/
-|    |-  documents/
-|    |-  files/
+|    |-  render/   # previously named &quot;documents&quot;
+|    |-  static/   # previously named &quot;files&quot;
 |    |-  layouts/
 |    |-  partials/
 |
@@ -55,7 +55,7 @@ are used to link to our places there (if these don&#39;t make our pages too heav
 <p>Docpad, running on your development machine, does the main work
 to combine the various source files together.
 Here is an overview of how the main files in src work together in docpad.</p>
-<p>The file(s) in <strong>src/documents</strong> define each html file in out/ - 
+<p>The file(s) in <strong>src/render</strong> define each html file in out/ - 
 Docpad processes the files in documents (e.g. index.html.eco) 
 in a series of passes to convert to html (e.g. index.html),
 pulling in content from other files as it goes, under the control of data in each file.
@@ -68,9 +68,9 @@ linking to external packages of CSS, Javascript etc
 <p>Files in <strong>src/partials/</strong> are referenced by those in documents to form the complete page,
 for easier development (and re-use) of the separate partials.
 These too can be processed by Docpad to augment their content.</p>
-<p>Files in <strong>src/files/</strong> are copied unmodified to out/ by Docpad.
+<p>Files in <strong>src/static/</strong> are copied unmodified to out/ by Docpad.
 This includes images, CSS and Javascript.</p>
-<h2 id="main-file-documents-index-html-eco">Main file - documents/index.html.eco</h2>
+<h2 id="main-file-render-index-html-eco">Main file - render/index.html.eco</h2>
 <p>This is the primary file for the site -
 it implements the major tabs of the user interface,
 allowing fast switches between the content panels without referring back to the server. </p>
