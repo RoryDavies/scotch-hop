@@ -38,7 +38,7 @@ Dances:
   DashingWhiteCircle:  { name: "Dashing White Circle", style: "R40", notes: "ff tttt"  }
   DashingWhiteSergeant:  { name: "Dashing White Sergeant", style: "R32, 3+3", prog:"Y", notes: "round room", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/dashing-white-sergeant.html"  }
   Dhoon:  { name: "The Dhoon", style: "4xJ32, 4C", notes: "a", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/dhoon.html"  }
-  Domino5:  { name: "Domino Five", style: "5xR32, 5p", notes: "square set, p5 in centre", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/domino-five.html"  }
+  Domino5:  { name: "Domino 5", style: "5xR32, 5p", notes: "square set, p5 in centre", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/domino-five.html"  }
 
   EightsomeReel:  { name: "Eightsome Reel", style: "R40+8x48+40, 4C", notes: "square set", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/eightsome-reel.html"  }
   EspieMcNab:  { name: "Espie McNabb", style: "8xJ32, 3C", notes: "", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/espie-mcnabb.html"  }
@@ -52,7 +52,7 @@ Dances:
 
   GallowayHouse:  { name: "Galloway House", style: "8xR32, 2C", notes: "g", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/galloway-house.html"  }
   GayGordons: { name: "Gay Gordons", style: "M16, 1C", notes: "round room", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/gay-gordons.html"  }
-  GayGordonTwoStep: { name: "Gay Gordon TwoStep", style: "??", notes: "g", prog: 'Y'  }
+  GayGordonTwoStep: { name: "Gay Gordon Two Step", style: "??", notes: "g", prog: 'Y'  }
   GeraldinesGigue: { name: "Geraldine's Gigue", style: "S32", notes: "ff tttt"  }
   GoodheartedGlasgow: { name: "Goodhearted Glasgow", style: "8xJ32, 3C", notes: "g", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/good-hearted-glasgow.html"  }
   GrassmarketReel:  { name: "Grassmarket Reel", style: "R32, 3+3", notes: "round room", prog:Y, instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/grassmarket-reel.html"  }
@@ -75,7 +75,7 @@ Dances:
   JohnnyGroatsHouse:  { name: "Johnny Groat's House", style: "8xR32, 3C", notes: "j", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/johnny-groats-house.html"  }
   JoieDeVivre:  { name: "Joie De Vivre", style: "8xJ32, 3C", notes: "j", instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/joie-de-vivre.html"  }
 
-  Kelvingrove2Step:  { name: "Kelvingrove 2 Step", style: "??", notes: "k"  }
+  Kelvingrove2Step:  { name: "Kelvingrove Two Step", style: "??", notes: "k"  }
   KissingBridge:  { name: "The Kissing Bridge", style: "8xR32, 3C", notes: "a" , instURL:"https://www.scottish-country-dancing-dictionary.com/dance-crib/kissing-bridge.html" }
 
   LaRosaWaltz:  { name: "La Rosa Waltz", style: "W", notes: "l"  }

@@ -131,3 +131,12 @@ dl.dl-horizontal dt:nth-of-type(odd),
 dl.dl-horizontal dd:nth-of-type(odd) 
 {  background-color:#eee; }
 
+
+/* FontAwesome has icons for Facebook, Twitter etc */
+/* But they don't (as of 5/5/17) enforce the brand colours */
+/* So we do that here */
+.fa-facebook, .fa-facebook-square {color: #3b5998}
+.fa-twitter, .fa-twitter-square {color: #00aced}
+
+
+

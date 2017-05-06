@@ -17,19 +17,31 @@ Bands:
   NicolMcLarenGlencraigDanceBand: 
     name: "Nicol McLaren & the Glencraig Dance Band"
     URL: "http://www.glencraigsdb.co.uk"
+
   GarySutherlandScottishCeilidhBand: 
     name: "Gary Sutherland Scottish Ceilidh Band"
     URL: "https://twitter.com/gsceilidhband"
+
   JimLindsayScottishDanceBand: 
     name: "Jim Lindsay & his Scottish Dance Band"
     URL: "http://www.jimlindsay.co.uk/"
 
+  IainMacphail: 
+    name: "Iain MacPhail & his Scottish Dance Band"
+    URL: "https://projects.handsupfortrad.scot/hall-of-fame/iain-macphail/"
+
+  TheOccasionals: 
+    name: "The Occasionals"
+    URL: "http://www.theoccasionals.com/"
+
+  GordonPattulloAndFriends: 
+    name: "Gordon Pattullo and Friends"
+    URL: "http://www.gordonpattullo.co.uk/"
+
+
+
 
 Pipers:  
-
-  p1: 
-    name: "Edward Seaman"
-    URL: "http://jsmith.com"
 
   EdwardSeaman: 
     name: "Edward Seaman"
@@ -42,9 +54,7 @@ Pipers:
   RachelGray: 
     name: "Rachel Gray"
     URL: "http://www.agraypiping.uk/rachel-gray.html"
-  p1: 
-    name: "Edward Seaman"
-    URL: "http://jsmith.com"
+
 
 
 

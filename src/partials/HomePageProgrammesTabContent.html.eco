@@ -78,7 +78,7 @@ Experienced dancers enjoy the challenge, and anyone not dancing the main dance m
     <div class="panel panel-default">   <!-- BS -->
       <div class="panel-heading">
         <h2 class="panel-title">
-	        <a role="button" data-toggle="collapse" href="#prog<%= weekno %>" aria-expanded="false" aria-controls="prog<%= weekno %>">
+	        <a role="button" data-toggle="collapse" href="#prog<%= prog %>-<%= weekno %>" aria-expanded="false" aria-controls="prog<%= prog %>-<%= weekno %>">
             <span class=" clickable panel-collapsed">
               <%= @moment(date).format("dddd Do MMM YYYY [at] h:mm a") %> 
               <i class="glyphicon glyphicon-chevron-down pull-right"></i>
@@ -86,7 +86,7 @@ Experienced dancers enjoy the challenge, and anyone not dancing the main dance m
           </a>
         </h2>
       </div>
-      <div class="panel-body collapse" id="prog<%= weekno %>">  <!-- BS -->
+      <div class="panel-body collapse" id="prog<%= prog %>-<%= weekno %>">  <!-- BS -->
 
 <p>
 <strong>

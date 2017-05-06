@@ -32,7 +32,7 @@ $(window).load(function(){
 
 /* The Twitter script below should perhaps be elsewhere for tidiness, but here for now alongside the twitter html etc 
 */
-/*
+/* 
 !function(d,s,id){
  var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
  if(!d.getElementById(id)){
@@ -43,7 +43,7 @@ $(window).load(function(){
  }
 }
 (document,"script","twitter-wjs");
-*/
+ */
 
 
 /* The Facebook script below should perhaps be elsewhere for tidiness, but here for now alongside the twitter html etc 
