@@ -156,7 +156,7 @@ our bands </strong>(
 <% # main dance (for all) %>
 <% if dancedet = @dances.Dances[ dance.code ] : %>
 <%=  dancedet.name  or dance.code + ' (-no name-)' %>
-<%   if dancedet.instURL? : %><%- '<a  target="_blank" class="fa fa-external-link" href="' + dancedet.instURL + '"><i class="fa fa-info-circle" aria-hidden="true"></i></a>' %><% end %>
+<%   if false and dancedet.instURL? : %><%- '<a  target="_blank" class="fa fa-external-link" href="' + dancedet.instURL + '"><i class="fa fa-info-circle" aria-hidden="true"></i></a>' %><% end %>
 <% else: %>DANCE CODE <%= dance.code %> MISSING FROM DATABASE! 
 <% end %><% #if dancedet %>
 
