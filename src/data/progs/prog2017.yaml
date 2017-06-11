@@ -7,7 +7,7 @@ LSHprog:
     band: 
       code: TheIanMuirSound
     piper: 
-      codeno: EdwardSeaman
+      code: RachelGray
 
     dances:
       - code:   GayGordons
@@ -36,7 +36,7 @@ LSHprog:
     band: 
        code: IainMacphail
     piper: 
-       codeno: GraemeSinclair
+       code: GraemeSinclair
     dances:
       - code: GayGordons
       - code: ComeUnderMyPlaidie
@@ -64,7 +64,7 @@ LSHprog:
     band: 
       code: TheOccasionals
     piper: 
-      codeno: RachelGray
+      code: RachelGray
     dances:
       - code: GayGordons 
       - code: CumberlandReel 
@@ -91,9 +91,9 @@ LSHprog:
     date: "2017-08-02"
     time: "19:30"
     band: 
-      code: JimLindsayScottishDanceBand
+      code: GordonPattulloAndFriends
     piper: 
-      codeno: EdwardSeaman
+      code: RachelGray
     dances:
       - code: GayGordons 
       - code: ScotchRose
@@ -119,9 +119,9 @@ LSHprog:
     date: "2017-08-09"
     time: "19:30"
     band: 
-      code: GordonPattulloAndFriends
+      code: JimLindsayScottishDanceBand
     piper: 
-      codeno: GraemeSinclair
+      code: GraemeSinclair
     dances:
       - code: GayGordons 
       - code: DashingWhiteSergeant
