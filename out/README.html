@@ -1,8 +1,8 @@
-<h1 id="scotch-hop2">scotch-hop2</h1>
+<h1 id="scotch-hop-web-development">Scotch Hop Web Development</h1>
 <p>This is the web site for the annual Linlithgow Scotch Hop - 
 Scottish Dancing For All, in Linlithgow Palace, the birthplace of Mary Queen of Scots.</p>
 <p>The development files, and the resulting files to be copied to the live site, 
-are maintained in GitHub (<a href="https://github.com/RoryDavies/scotch-hop/">https://github.com/RoryDavies/scotch-hop/</a>).</p>
+are maintained in GitHub (<a href="https://github.com/RoryDavies/scotch-hop/)">https://github.com/RoryDavies/scotch-hop/)</a>.</p>
 <h2 id="files-for-the-website">Files for the Website</h2>
 <p>Directory/folder &quot;out/&quot; contains all the files to be uploaded to the live website
 (<a href="http://www.scotchhop.org.uk/">http://www.scotchhop.org.uk/</a>) including this one.</p>
@@ -15,13 +15,14 @@ are maintained in GitHub (<a href="https://github.com/RoryDavies/scotch-hop/">ht
 |
 |-  docpad.coffee
 |-  package.json
-|   node_modules/ (when docpad installed as described)
+|-  node_modules/ (when docpad installed as described)
 |
 |-  src/
-|    |-  render/   # previously named &quot;documents&quot;
+|    |-  render/   # previously named &quot;documents&quot; (includes README.html.md)
 |    |-  static/   # previously named &quot;files&quot;
 |    |-  layouts/
 |    |-  partials/
+|    |-  data/
 |
 |-  out/
 |
@@ -31,14 +32,19 @@ Folder .git is created when the repository is cloned, it is not in GitHub.</p>
 <p>Files docpad.coffee and package.json relate to the Docpad build environment (see below). </p>
 <p>The bulk of the source files etc (used to build the files in &quot;out/&quot;) are in directory/folder &quot;src/&quot;.</p>
 <p>File README.md is essentially this file, which you are reading. 
-It is also symlinked into src/documents/ (as README.html.md) 
-to make it visible in the live website, and testable in the development environment.</p>
+It is also symlinked into src/render/ (as README.html.md) 
+to make it visible in the live website, and testable in the development environment.
+Some implementations of git may remove the symlink, 
+making README.html.md a separate file which should be maintained identical manually.</p>
 <h2 id="build-environment-docpad">Build Environment - Docpad</h2>
 <p>The html file(s) in out/, and the content of the other folders there,
 are derived or copied from files in the src/ tree, using Docpad (<a href="http://docpad.org/">http://docpad.org/</a>) version 6.78.4.
 To continue development in the same way, you will need to have Docpad on your machine,
 and a few extra modules (as defined in package.json).
 Docpad also requires Node.js (<a href="https://nodejs.org/">https://nodejs.org/</a>) to be installed.</p>
+<p>After cloning the git repo and installing docpad etc on your machine,
+ you will need to install the required plugins in the repo
+ (they are not part of the commit, but the list of required plugins is).<br>docpad update   #run this in the top level of the git repo</p>
 <p>We hope that the description here will help future developers, 
 whether they continue to use Docpad or choose to use something else.</p>
 <h2 id="standing-on-the-shoulders-of-giants">Standing on the Shoulders of Giants</h2>
@@ -56,20 +62,22 @@ are used to link to our places there (if these don&#39;t make our pages too heav
 to combine the various source files together.
 Here is an overview of how the main files in src work together in docpad.</p>
 <p>The file(s) in <strong>src/render</strong> define each html file in out/ - 
-Docpad processes the files in documents (e.g. index.html.eco) 
+Docpad processes the files in render (e.g. index.html.eco) 
 in a series of passes to convert to html (e.g. index.html),
 pulling in content from other files as it goes, under the control of data in each file.
 We also place CSS files there, in folder <strong>styles/</strong>,
  so that pre-processors such as LESS can be used.</p>
-<p>Each file in src/documents/ references a file in <strong>src/layouts</strong> 
+<p>Each file in src/render/ references a file in <strong>src/layouts</strong> 
 which establishes the overall html + head + body structure,
 linking to external packages of CSS, Javascript etc 
 (e.g. Bootstrap, FontAwesome, Google, Twitter, Facebook).</p>
 <p>Files in <strong>src/partials/</strong> are referenced by those in documents to form the complete page,
 for easier development (and re-use) of the separate partials.
-These too can be processed by Docpad to augment their content.</p>
+These too can be processed by Docpad to augment their content.
+A few are worthy of separate description - see below.</p>
 <p>Files in <strong>src/static/</strong> are copied unmodified to out/ by Docpad.
 This includes images, CSS and Javascript.</p>
+<p>Files in <strong>src/data/</strong> are used by others (e.g. .eco files in <strong>src/</strong> or <strong>src/partials/</strong>) - see below.</p>
 <h2 id="main-file-render-index-html-eco">Main file - render/index.html.eco</h2>
 <p>This is the primary file for the site -
 it implements the major tabs of the user interface,
@@ -87,3 +95,13 @@ In a few cases (mainly to do with our tartan logo, and the background image),
 the break is controlled by explicit CSS outside of Bootstrap.</p>
 <p>In a few cases, we have found additional CSS (in folder myCSS) 
 is needed to cope with interactions between Bootstrap and other technologies (Facebook/Twitter/Google).</p>
+<h2 id="dance-programmes-from-yaml-databases">Dance Programmes from YAML databases</h2>
+<p>Rather than hand-write html for each dance programme, we maintain the programmes,
+and related information about each dance, and each band/soloist,
+in a set of YAML data files in <strong>src/data/</strong>.</p>
+<p>One partial file (HomePageProgrammesTabContent.html.eco)
+ included in the main site (index.html)
+ processes the yaml to create the programme for that year only.</p>
+<p> A separate file src/render/ProgDetails.html.eco scans the whole of our programmes database
+  to construct a display of all our programmes over the years, 
+  which is sometimes useful when planning future programmes.</p>
