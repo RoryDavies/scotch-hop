@@ -3,7 +3,7 @@ title: "Scotch Hop - Scottish Dancing for all in Linlithgow Palace"
 layout: "default"
 isPage: true
 ---
-
+ 
 <%- @partial('header') %>
 <%- @partial('HomePageNavArea') %>
 

@@ -1,4 +1,4 @@
-# scotch-hop2
+# Scotch Hop Web Development
 
 This is the web site for the annual Linlithgow Scotch Hop - 
 Scottish Dancing For All, in Linlithgow Palace, the birthplace of Mary Queen of Scots.
@@ -21,13 +21,14 @@ Directory/folder "out/" contains all the files to be uploaded to the live websit
 |
 |-  docpad.coffee
 |-  package.json
-|   node_modules/ (when docpad installed as described)
+|-  node_modules/ (when docpad installed as described)
 |
 |-  src/
-|    |-  render/   # previously named "documents"
+|    |-  render/   # previously named "documents" (includes README.html.md)
 |    |-  static/   # previously named "files"
 |    |-  layouts/
 |    |-  partials/
+|    |-  data/
 |
 |-  out/
 |
@@ -42,8 +43,10 @@ Files docpad.coffee and package.json relate to the Docpad build environment (see
 The bulk of the source files etc (used to build the files in "out/") are in directory/folder "src/".
 
 File README.md is essentially this file, which you are reading. 
-It is also symlinked into src/documents/ (as README.html.md) 
+It is also symlinked into src/render/ (as README.html.md) 
 to make it visible in the live website, and testable in the development environment.
+Some implementations of git may remove the symlink, 
+making README.html.md a separate file which should be maintained identical manually.
 
 ## Build Environment - Docpad
 
@@ -52,6 +55,11 @@ are derived or copied from files in the src/ tree, using Docpad (http://docpad.o
 To continue development in the same way, you will need to have Docpad on your machine,
 and a few extra modules (as defined in package.json).
 Docpad also requires Node.js (https://nodejs.org/) to be installed.
+
+After cloning the git repo and installing docpad etc on your machine,
+ you will need to install the required plugins in the repo
+ (they are not part of the commit, but the list of required plugins is).  
+docpad update   #run this in the top level of the git repo
 
 We hope that the description here will help future developers, 
 whether they continue to use Docpad or choose to use something else.
@@ -79,13 +87,13 @@ to combine the various source files together.
 Here is an overview of how the main files in src work together in docpad.
 
 The file(s) in **src/render** define each html file in out/ - 
-Docpad processes the files in documents (e.g. index.html.eco) 
+Docpad processes the files in render (e.g. index.html.eco) 
 in a series of passes to convert to html (e.g. index.html),
 pulling in content from other files as it goes, under the control of data in each file.
 We also place CSS files there, in folder **styles/**,
  so that pre-processors such as LESS can be used.
 
-Each file in src/documents/ references a file in **src/layouts** 
+Each file in src/render/ references a file in **src/layouts** 
 which establishes the overall html + head + body structure,
 linking to external packages of CSS, Javascript etc 
 (e.g. Bootstrap, FontAwesome, Google, Twitter, Facebook).
@@ -93,10 +101,12 @@ linking to external packages of CSS, Javascript etc
 Files in **src/partials/** are referenced by those in documents to form the complete page,
 for easier development (and re-use) of the separate partials.
 These too can be processed by Docpad to augment their content.
+A few are worthy of separate description - see below.
 
 Files in **src/static/** are copied unmodified to out/ by Docpad.
 This includes images, CSS and Javascript.
 
+Files in **src/data/** are used by others (e.g. .eco files in **src/** or **src/partials/**) - see below.
 
 ## Main file - render/index.html.eco
 This is the primary file for the site -
@@ -121,4 +131,15 @@ the break is controlled by explicit CSS outside of Bootstrap.
 In a few cases, we have found additional CSS (in folder myCSS) 
 is needed to cope with interactions between Bootstrap and other technologies (Facebook/Twitter/Google).
 
- 
+## Dance Programmes from YAML databases
+Rather than hand-write html for each dance programme, we maintain the programmes,
+and related information about each dance, and each band/soloist,
+in a set of YAML data files in **src/data/**.
+
+One partial file (HomePageProgrammesTabContent.html.eco)
+ included in the main site (index.html)
+ processes the yaml to create the programme for that year only.
+
+ A separate file src/render/ProgDetails.html.eco scans the whole of our programmes database
+  to construct a display of all our programmes over the years, 
+  which is sometimes useful when planning future programmes.
