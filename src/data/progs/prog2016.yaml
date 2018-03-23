@@ -1,0 +1,142 @@
+SchemaVersion: "1"
+Year: "2016"
+LSHprog: 
+  - weekno: "1"
+    date: "2016-07-13"
+    time: "19:30"
+    band: 
+      code: TheIanMuirSound
+    piper: 
+      code: EdwardSeaman
+
+    dances:
+      - code:   GayGordons
+      - code:   FlyingScotsman  
+      - code:   HighlandWelcome  
+      - code:   LeapYear
+        code2:   ArgyllsFancy  
+      - code:   CanadianBarnDance 
+      - code:   NiceAndEasy  
+      - code:   StBernardsWaltz
+      - code:   EightsomeReel 
+      - code: ":interval:"
+      - code:   BritanniaTwoStep 
+      - code:   DashingWhiteCircle 
+      - code:   FionasFancy 
+      - code:   MississippiDip 
+      - code:   GallowayHouse 
+      - code:   HighlandSchottische 
+      - code:   VirginiaReel 
+
+
+  - weekno: "2"
+    date: "2016-07-20"
+    time: "19:30"
+    band: 
+       code: JohnCarmichael
+    piper: 
+       code: GraemeSinclair
+    dances:
+      - code: GayGordons
+      - code: SaturdayMorningJig
+      - code: OXOReel
+      - code: JackyTarTwoStep
+      - code: HaymakersJig
+      - code: Eva3Step
+      - code: DanielsDelight
+      - code: RiversideJig
+      - code: ":interval:"
+      - code: LochNessMonster
+      - code: BordersWelcome
+      - code: MilitaryTwoStep
+      - code: FionasFancy
+        code2: JoieDeVivre
+      - code: LomondWaltz
+      - code: CirclesFour
+      - code: Dhoon
+
+  - weekno: "3"
+    date: "2016-07-27"
+    time: "19:30"
+    band: 
+      code: NicolMcLarenGlencraigDanceBand
+    piper: 
+      code: RachelGray
+    dances:
+      - code: GayGordons 
+      - code: DashingWhiteSergeant 
+      - code: LintonPloughman
+      - code: SouthernRoseWaltz  
+      - code: IsleOfSkye
+        code2: ReelOfThe51st 
+      - code: GypsyTap
+      - code: RebeccasRoundabout
+      - code: FlyingScotsman
+      - code: ":interval:"
+      - code: ScotchRose
+      - code: JohnnyGroatsHouse
+      - code: SwedishMasquerade
+      - code: CircassianCircle
+      - code: FoulaReel
+      - code: CanadianBarnDance
+      - code: InvernessReel
+
+
+  - weekno: "4"
+    date: "2016-08-03"
+    time: "19:30"
+    band: 
+      code: GarySutherlandScottishCeilidhBand
+    piper: 
+      code: EdwardSeaman
+    dances:
+      - code: GayGordons 
+      - code: SaturdayMorningJig
+      - code: IsleOfSkye
+      - code: MilitaryTwoStep
+      - code: CumberlandReel
+      - code: VienneseWaltz
+      - code: RabbiesReel
+        code2: ScottMeikle  
+      - code: JigToTheMusic
+      - code: ":interval:"
+      - code: RussianBallet
+      - code: PolkaCountryDance
+      - code: FriendlyWaltz
+      - code: CallOfThePipes
+      - code: EspieMcNab
+        code2: LassieComeAndDanceWithMe
+      - code: JackyTarTwoStep
+      - code: OrcadianStripTheWillow
+
+  - weekno: "5"
+    date: "2016-08-10"
+    time: "19:30"
+    band: 
+      code: JimLindsayScottishDanceBand
+    piper: 
+      code: GraemeSinclair
+    dances:
+      - code: GayGordons 
+      - code: VirginiaReel
+      - code: BritanniaTwoStep
+      - code: ShortbreadDance
+      - code: HighlandSchottische 
+      - code: BlackDance
+        code2: BrounsReel 
+      - code: PrideOfErinWaltz
+      - code: StripTheWillow
+      - code: ":interval:"
+      - code: SevenStepPolka
+      - code: WestGarletonMeander
+      - code: MarchesHop
+      - code: LuckySeven
+      - code: DashingWhiteSergeant
+      - code: Marine4Step
+      - code: GrassmarketReel
+        code2: MairisWedding
+
+
+
+
+

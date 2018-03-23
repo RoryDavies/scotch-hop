@@ -1,0 +1,127 @@
+---
+title: "Scotch Hop - Scottish Dancing for all in Linlithgow Palace"
+layout: "default"
+isPage: true
+greet: "HelloHello"
+---
+
+<%- @partial('header') %>
+
+<% # proglist = [ '2017' ] # which year(s) programmes to show - %>
+<%- # @partial('HomePageProgrammesTabContent', { proglist: proglist } ) %>
+
+<%- @partial('HomePageProgrammesTabContent' ) #  default to show all years %>
+
+
+
+<div class="panel panel-default">   <!-- BS -->
+  <div class="panel-heading">
+    <h1 class="panel-title" id="dancing-panel">Dance History and Details</h1>
+  </div>
+  <div class="panel-body">  <!-- BS -->
+
+<p>In the table below, the dances we've used in all years are listed. 
+It's alphabetical, except that we've ignored &quot;The&quot; and &quot;A/An&quot;at the start of the name.
+<br \>We've shown the number of the dance each week it has been danced (first is 1, last might be 16). 
+Where it's been danced as the &quot;expert&quot; dance it's shown with an E.
+<br \>The type of dance is shown (Strathspey/Reel/Jig/March) with the length (e.g. 32 bars)
+and the number of times normally repeated ( e.g 8xR32) and the number of dancing couples (2C) or people (2p) per set. Default is longwise sets, others are noted (square sets, or around the room).
+</p>
+
+<% # Before we can list the dances and when we did them, we have to analyse our programmes %>
+<% # Find our list of programmes, from directory progs, named prog2016.yaml etc, available as @prog2016 etc.%>
+<% ourprogs = [] %>
+<%   for key, object of this : %>
+<%   if key.match(/^prog20\d\d$/) : %>
+<%     ourprogs.push key %>
+<%   end %>
+<% end %>
+<% # This gives a list of programme names, saved in ourprogs, which will be used below %>
+
+<% #Now scan these programmes to see which dance was done in which weeks of which years. %>
+
+<% WeekOcc = {}  #initialise our collection of total years/weeks (Week Occurrences) %>  
+<% # Database of which years/weeks we organised a dance e.g. WeekOcc[ '2016' ][ 1 ] = 'Y' if we planned a dance that week %>
+
+<% DanceOcc = {}  #initialise our collection of when each dance was done (Dance Occurrences) %>   
+<% # Database, for each dance, of years/weeks it was danced e.g. DanceOcc[ 'GayGordons' ][ '2016' ][ 1 ] = '5' if was dance 5 that week (5E for expert dance) %>
+
+<% for progname in ourprogs : %> <% #each year's programme of dances %>
+<%   year = @[ progname ].Year %>
+<%   WeekOcc[ year ] = {} unless WeekOcc[ year ]?  %>
+<%   for week, weekno in  @[ progname ].LSHprog :  %> 
+<%     WeekOcc[ year ][ week.weekno ] = 'Y' unless WeekOcc[ year ][ week.weekno ]?  %>
+<%       for dance, danceno in  week.dances :  %> 
+<%         if dance.code? and dance.code isnt ':interval:' : %>  <% # normal dance  %>
+<%           DanceOcc[ dance.code ] = {} unless DanceOcc[ dance.code ]?  %>
+<%           DanceOcc[ dance.code ][ year ] = {} unless DanceOcc[ dance.code ][ year ]?  %>
+<%           DanceOcc[ dance.code ][ year ][ week.weekno ] = danceno+1 #add its appearance %>
+<%         end %><% #dance.code %>
+<%         if dance.code2?  : %>  <% # 2nd (expert) dance optional %>
+<%           DanceOcc[ dance.code2 ] = {} unless DanceOcc[ dance.code2 ]?  %>
+<%           DanceOcc[ dance.code2 ][ year ] = {} unless DanceOcc[ dance.code2 ][ year ]?  %>
+<%           DanceOcc[ dance.code2 ][ year ][ week.weekno ] =  (danceno+1) + 'E'  #add its appearance %>
+<%       end %><% #dance.code2 %>
+<%     end %> <% #for dance %>
+<%   end %> <% #for week %> <!-- dances -->
+<% end %> <% # for progname %>
+<% # Now we're ready to start outputting the data in human form ... %>
+
+
+<% # We will want to show the years in reverse order (latest to the left of the web page). %>
+<% # The best way seems to be to get a list of the years, and reverse it before use. %>
+<% ouryears = []; for own year of WeekOcc : %> <% ouryears.push year %> <% end %> 
+<% ouryears.reverse() %>
+
+<% # Our data really is a table. We use Bootstrap CSS for prettiness. %>
+<table class="table table-bordered table-hover table-sm table-responsive"> 
+<thead>
+<tr><th colspan=5>Dance</th> <% # first row of header - mainly the years %>
+<% for year in ouryears : %> <% yeard = WeekOcc[ year ] %> 
+<th colspan=<%= Object.keys(yeard).length %>><%= year %></th>
+<% end %> <% # for year %>
+</tr>
+<tr><% # second row of header - mainly the weeks %>
+<th>Name</th><th>Style</th><th>Prog</th><th>Notes</th><th>Web</th>
+<% for year in ouryears : %> <% yeard = WeekOcc[ year ] %> 
+<%   for week, weekd of yeard : %><th><%= week %></th><% end %> <% # for week %>
+<% end %> <% # for year %>
+</tr>
+</thead>
+
+<% # get our list of all dances performed, in the order we want to list them %>
+<% dances = [] ; for code, data of DanceOcc : %> <%  dances.push code %> <% end %> <% #get list of dance codes %>
+<% dances.sort() # put dance codes in alphabetical order %>
+
+<% # now list each dance, with its properties and which week(s) it was danced %>
+<% for dancecode in  dances :  %> 
+<%   data = DanceOcc[dancecode] %>
+<tr><!-- <%= dancecode %> -->
+
+<%   if @dances.Dances[ dancecode ]? : %>
+<%     dancedet = @dances.Dances[ dancecode ] %>
+<td><%=  dancedet.name  or dancecode + ' (-no name-)' %></td>
+<td><%= dancedet.style or dancecode + ' (-no style-)' %></td>
+<td><% if dancedet.prog : %><%= dancedet.prog %><% else : %><%- '&nbsp;' %><% end %></td>
+<td><%= dancedet.notes or ' ' %></td>
+<td><% if dancedet.instURL? : %><%- '<a  target="_blank" class="fa fa-external-link" href="' + dancedet.instURL + '"><i class="fa fa-info-circle" aria-hidden="true"></i></a>' %>
+<%     else : %><%- '---' %><% end %></td>
+<%   else: %><td colspan=5><B>DANCE CODE <%= dancecode %> MISSING FROM DATABASE! </B></td>
+<%   end %><% #Dances[dancecode] %>
+
+
+
+<% for year in ouryears : %> <% yeard = WeekOcc[ year ] %> 
+<%     for week, weekd of yeard : %> 
+<td><%= data[ year ]?[ week ] or ' - ' %></td>
+<%     end %> <% # for week %>
+<%   end %> <% # for year %>
+
+</tr>
+<% end %> <% #for dancecode %>
+</table>
+
+  </div>   <!-- BS panel-body -->
+</div>  <!-- BS panel -->           
+
+

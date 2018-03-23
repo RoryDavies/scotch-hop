@@ -4,13 +4,17 @@
   "description": "New DocPad project without using a skeleton",
   "dependencies": {
     "docpad": "~6.79.4",
+    "docpad-plugin-datafiles": "~2.3.1",
     "docpad-plugin-eco": "~2.1.0",
     "docpad-plugin-marked": "~2.3.0",
+    "docpad-plugin-moment": "^2.0.2",
     "docpad-plugin-partials": "~2.9.2",
-    "docpad-plugin-stylus": "~2.13.0"
+    "docpad-plugin-stylus": "~2.13.0",
+    "underscore": "^1.8.3"
   },
   "main": "node_modules/.bin/docpad-server",
   "scripts": {
     "start": "node_modules/.bin/docpad-server"
-  }
+  },
+  "devDependencies": {}
 }
